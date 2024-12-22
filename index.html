@@ -91,6 +91,60 @@
            
         </div>
         </section>
+        <section id="second-section">
+            <p>Book your dream stay !</p>
+            
+                <div>
+                    <button class="icon" onclick="scrolll()"><i class="fas fa-angle-left"></i></button>
+                </div>
+                <div id="cover">
+                 <ul id="scroll-images">
+                <li class="child">
+                    <a href="spain.html">
+                        <img class="cild-img" src="images/barcelona.webp" alt="Barcelona">   
+                    </a>
+                </li>
+                <li class="child">
+                    <a href="sweden.html">
+                        <img class="cild-img" src="images/stockholm.jpg" alt="Stockholm">
+                    </a>
+                </li>
+                <li class="child">
+                    <a href="albania.html">
+                        <img class="child-img" src="images/albania.jpg" alt="Ksamil">    
+                    </a>
+                </li>
+                <li class="child">
+                    <a href="greece.html">
+                        <img class="child-img" src="images/santorini.jpg" alt="Santorini">
+                    </a>
+                </li>
+                <li class="child">
+                    <a href="uk.html">
+                        <img class="child-img" src="images/uk.jpg" alt="London">
+                    </a>
+                </li>
+                <li class="child">
+                    <a href="italy.html">
+                        <img class="child-img" src="images/italyy.jpg" alt="Venecia">
+                    </a>
+                </li>
+            </ul>
+            </div>
+            <button class="icon" onclick="scrollr()"><i class="fas fa-angle-right"></i></button>
+
+            <script>
+                function scrolll(){
+                    var left=document.querySelector(".scroll-images");
+                    left.scrollBy(350, 0);
+                }
+                function scrollr(){
+                    var right=document.querySelector(".scroll-images");
+                    right.scrollBy(-350, 0);
+                }
+            </script>
+           
+        </section>
     </main>
 </body>
 </html>

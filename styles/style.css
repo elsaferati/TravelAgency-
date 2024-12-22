@@ -60,3 +60,93 @@ body {
     font-weight: bold;
     color: rgb(255, 255, 255);
   }
+  #second-section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 254, 254);
+  }
+  #second-section p {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(37, 34, 47);
+  }
+  
+  #cover {
+    position: relative;
+    width: 70%;
+    height: 50%;
+    margin-left: 10rem;
+  }
+  .cover::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+    background-image: linear-gradient(90deg, rgb(240, 214, 214), transparent);
+  }
+  .cover::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+    background-image: linear-gradient(-90deg, rgb(236, 212, 212), transparent);
+  }
+  #scroll-images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+  
+  #scroll-images::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  #scroll-images::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 62, 82);
+    border-radius: 6px;
+  }
+  
+  #scroll-images::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(196, 174, 148);
+  }
+  .child {
+    min-width: 350px;
+    height: 300px;
+    margin: 1px 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    overflow: hidden;
+    border: 2px solid rgb(232, 219, 219);
+    box-shadow: 2px 4px 8px rgb(61, 58, 58);
+    margin-bottom: 2rem;
+  }
+  
+  .child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .icon {
+    color: rgb(245, 232, 232);
+    background-color: rgb(249, 235, 235);
+    font-size: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    cursor: pointer;
+  }
