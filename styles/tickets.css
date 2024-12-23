@@ -54,8 +54,9 @@ body {
     justify-content: center;
     align-items: center;
     background-position: center;
-    background-size: 100% 100%;
-    flex-wrap: wrap;
+     flex-wrap: wrap;
+     background-size: 100% 100%;
+   
 }
 
 .checkbox {
