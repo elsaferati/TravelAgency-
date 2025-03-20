@@ -146,3 +146,6 @@ main{
 .form-box{
   height: 600px;
 }
+input[type="email"]{
+  font-size: 20px;
+}
