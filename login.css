@@ -186,3 +186,6 @@ span{
   .hero{
     height: fit-content;
 }
+.hero video{
+  width: 95%;
+} 
