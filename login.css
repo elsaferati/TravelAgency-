@@ -8,3 +8,15 @@ body{
 height: fit-content;
 margin-top: 100px;
 }
+
+.hero{
+  display: flex;
+  justify-content: space-between;
+  height: 650px;
+  width: 100%;
+  background-color:rgb(25, 32, 49);
+  background: linear-gradient(180deg, rgb(25, 32, 49),  rgb(25, 32, 49));
+background-position: center;
+background-size: cover;
+position: absolute;
+}
