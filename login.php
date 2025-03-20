@@ -119,3 +119,43 @@ if (isset($_POST['loginbtn'])) {
      </form>
    </div>
    </div>
+
+    
+            
+       
+   <script>
+  
+
+  let emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+  let passRegex = /^[a-z1-9]{8,15}$/;
+  let userRegex = /^[a-zA-Z]$/;
+  
+  
+  function validateLoginForm() {
+  
+      let emailInput = document.getElementById('userId');
+      let emailError = document.getElementById('emailError');
+      let passInput = document.getElementById('password');
+      let passError = document.getElementById('passError');
+      
+  
+      emailError.innerText = '';
+      passError.innerText = '';
+  
+  
+      if (!emailRegex.test(emailInput.value)) {
+          emailInput.style.border = "1px solid red";
+          emailError.innerText = 'Invalid email';
+          return false;
+      }
+  
+      if (!passRegex.test(passInput.value)) {
+          passInput.style.border = "1px solid red";
+          passError.innerText = 'Invalid password';
+          return false;
+      }
+  
+      alert('Login form submitted successfully!');
+      return true;
+  }
+  
