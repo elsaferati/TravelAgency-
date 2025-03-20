@@ -179,3 +179,10 @@ span{
     width: 750px;
 }
 }
+@media only screen and (max-width: 540px){
+  main{
+      width: 540px;
+  }
+  .hero{
+    height: fit-content;
+}
