@@ -197,3 +197,7 @@ span{
   main{
       width: 412px;
   }
+  .hero video{
+    width: 400px;
+} 
+}
