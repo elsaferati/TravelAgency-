@@ -195,4 +195,32 @@ alert('Register form submitted successfully!');
 return true;
 }
 
+       
+</script>
+    </main>
+    <footer style="margin-top: 43.5rem;">
+        <div id="footer-part">
+            <section id="social-part">
+           <h3>Social</h3>
+             <ul class="footer-content-special">
+       <li > 
+           <a href="https://www.facebook.com">
+               <img class="last-img" src="images/facebook.jpg" alt="facebook">
+           </a>
+          
+       <li>
+           <a href="https://www.instagram.com">
+               <img  class="last-img" src="images/insta.jpg" alt="instagram"></li>
+           </a>
+       <li> 
+           <a href="https://www.linkedIn">
+               <img  class="last-img" src="images/in.jpg" alt="linkedin"></li>
+           </a>
+        <li> 
+           <a href="https://www.youtube.com">
+               <img  class="last-img" src="images/youtube.jpg" alt="youtube"></li>
+           </a>
+        <li><a href="https://twitter.com"> 
+           <img  class="last-img" src="images/twitter.jpg" alt="twitter"></li>
+       </a>
   
