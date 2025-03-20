@@ -151,3 +151,37 @@ input[type=submit]:hover {
     border-color: rgb(75, 255, 75);
 
 }
+@media only screen and (max-width:1080px){
+    .foto{
+        width: 1060px;
+    }
+    .checkbox{
+        width: 120vh;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+}
+
+}
+@media only screen and (max-width:1024px){
+    main{
+        width: 1024px;
+    }
+    .foto{
+        height: 570px;
+        width: 1024px;
+    }
+    .checkbox{
+        height: 280px;
+        width: 700px;
+        margin-right: 50px;
+        margin-bottom: 20px;
+    }
+    .from{
+        margin-right: 60px;
+    }
+    .date1{
+        margin-right: 56px;
+    }
+}

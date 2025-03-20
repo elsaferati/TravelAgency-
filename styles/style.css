@@ -150,3 +150,63 @@ body {
     padding: 0px 20px;
     cursor: pointer;
   }
+
+  #third-section {
+    background-color: rgb(52, 52, 69);
+    padding: 15px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    width: 98%;
+  
+  }
+  #third-section p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  #third-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  #third-section a:hover {
+    border: 3px solid rgb(232, 230, 230);
+    border-radius: 9px;
+    padding: 10px;
+    color: rgb(156, 152, 152);
+  }
+ 
+#fourth-section {
+  display: flex;
+  margin-bottom: 0;
+}
+#fourth-section img {
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  margin: 3rem 2.8rem;
+  width: 40%;
+  height: 40rem;
+}
+#fourth-section-content {
+  flex-direction: column;
+  margin: 3rem 1.5rem;
+  bottom: 4rem;
+}
+#fourth-section-content {
+  margin-left: 5rem;
+}
+.title-number {
+  font-weight: bolder;
+  margin-top: 0.2;
+}
+.number {
+  font-family: "Croissant One", sans-serif;
+  font-size: 2rem;
+  color: rgb(209, 163, 102);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+#contact-us-part{
+ margin-left: 1rem;
+}
