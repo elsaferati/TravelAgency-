@@ -225,3 +225,5 @@ span{
 }
 @media only screen and (max-width: 375px){
   main{
+    width: 375px;
+        }
