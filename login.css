@@ -193,3 +193,7 @@ span{
   margin-top: 70rem;
 }
 }
+@media only screen and (max-width: 412px){
+  main{
+      width: 412px;
+  }
