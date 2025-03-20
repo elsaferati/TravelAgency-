@@ -150,3 +150,29 @@ body {
     padding: 0px 20px;
     cursor: pointer;
   }
+
+  #third-section {
+    background-color: rgb(52, 52, 69);
+    padding: 15px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    width: 98%;
+  
+  }
+  #third-section p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  #third-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  #third-section a:hover {
+    border: 3px solid rgb(232, 230, 230);
+    border-radius: 9px;
+    padding: 10px;
+    color: rgb(156, 152, 152);
+  }
