@@ -30,3 +30,10 @@ position: absolute;
   overflow: hidden;
   border-radius: 15px;
 }
+.button-box{
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #7424ff1f;
+  border-radius: 30px;
+}
