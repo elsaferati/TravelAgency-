@@ -124,3 +124,11 @@ footer{
   main{
       width: 1024px;
   }
+  .hero video{
+    width: 600px;
+}
+}
+@media only screen and (max-width: 912px){
+main{
+width: 912px;
+}
