@@ -87,3 +87,15 @@ position: absolute;
   background: transparent;
 
 }
+.submit-btn{
+  width: 85%;
+  padding: 10px 30px;
+   cursor: pointer;
+   display: block;
+   margin: auto;
+   background: linear-gradient(to right,#2d3c91,#2549a3);
+   border: 0;
+   outline: none;
+   border-radius: 30px;
+
+}
