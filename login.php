@@ -1,51 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Website</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
-    <script>
-        function showPasswordResetForm() {
-            document.getElementById('password-reset-form').style.display = 'block';
+<?php
+session_start();
+
+require_once('config2.php');
+include_once('userRepository.php');
+include_once('user.php');
+
+if (isset($_POST['loginbtn'])) {
+    if (empty($_POST['email']) || empty($_POST['password'])) {
+        echo "Please fill the required fields!";
+    } else {
+        include_once('users.php');
+        $email = $_POST['email'];
+      
+        foreach ($users as $user) {
+            if ($user['email'] == $email && $user['password'] == $password) {
+                $_SESSION['email'] = $email;
+                $_SESSION['password'] = $password;
+                $_SESSION['role'] = $user['role'];
+                header("location: dashboard.php");
+                exit();
+            }
         }
-    </script>
-</head>
-<body>
-    <div class="background-img"></div>
-
-    <div class="center">
-        <h1>Login</h1>
-        <form method="post">
-            <div class="txt_field">
-                <input type="text" required>
-                <span></span>
-                <label>Username</label>
-            </div>
-            <div class="txt_field">
-                <input type="password" required>
-                <span></span>
-                <label>Password</label>
-            </div>
-
-            <div class="pass" onclick="showPasswordResetForm()">Forgot Password?</div>
-
-            <div id="password-reset-form" style="display: none;">
-                <h2>Reset Password</h2>
-                <form method="post">
-                    <div class="txt_field">
-                        <input type="email" required>
-                        <span></span>
-                        <label>Email</label>
-                    </div>
-                    <input type="submit" value="Reset Password">
-                </form>
-            </div>
-
-            <input type="submit" value="Login">
-            <div class="signup_link">
-                Not a member? <a href="signup.html">Sign in</a>
-            </div>
-        </form>
-    </div>
-</body>
-</html>
+        echo "Incorrect Username or Password!";
+    }
+}
+?>  $password = $_POST['password'];
