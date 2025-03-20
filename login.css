@@ -1,1 +1,10 @@
+body{
+  margin: 0;
+  font-family: "Overpass", sans-serif ;
+}
 
+.hero video{
+  width: 60%;
+height: fit-content;
+margin-top: 100px;
+}
