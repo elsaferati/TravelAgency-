@@ -96,3 +96,26 @@ if (isset($_POST['loginbtn'])) {
         </div>
     </header>
 
+    <main>
+   
+   <div class="hero">
+       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+           <source src="images/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+         </video>
+     <div class="form-container">
+       <form action="" method="post">
+       <h3>login now</h3>
+       <?php
+       if(isset($error)){
+           foreach($error as $error){
+               echo '<span class="error-msg">'.$error.'</span>';
+           };
+       };
+       ?>
+       <input type="email" name="email" required placeholder="enter your email">
+       <input type="password" name="password" required placeholder="enter your password">
+       <input type="submit" name="submit" value="login now" class="form-btn">
+       <p>don't have an account? <a href="register_form.php">register now</a></p>
+     </form>
+   </div>
+   </div>
