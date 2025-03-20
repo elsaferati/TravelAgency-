@@ -132,3 +132,11 @@ footer{
 main{
 width: 912px;
 }
+.hero{
+  flex-direction: column-reverse;
+  height: 1300px;
+  margin-bottom: 20rem;
+}
+.hero video{
+  width: 900px;
+}
