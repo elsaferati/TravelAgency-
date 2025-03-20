@@ -178,4 +178,10 @@ input[type=submit]:hover {
         margin-right: 50px;
         margin-bottom: 20px;
     }
+    .from{
+        margin-right: 60px;
+    }
+    .date1{
+        margin-right: 56px;
+    }
 }
