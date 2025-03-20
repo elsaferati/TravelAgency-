@@ -120,3 +120,7 @@ span{
 footer{
   margin-top: 43.5rem;
 }
+@media only screen and (max-width: 1024px) {
+  main{
+      width: 1024px;
+  }
