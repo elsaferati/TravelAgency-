@@ -152,3 +152,6 @@ input[type="email"]{
 input[type="password" ]{
   font-size: 20px;
 }
+input[type="text" i]{
+  font-size: 20px;
+}
