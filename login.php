@@ -54,3 +54,45 @@ if (isset($_POST['loginbtn'])) {
                 <p id="under-title">Do More Than Travel</p>
             </div>
         </div>
+
+        <div class="navigation" id="navigation">
+            <div class="nav-item item-close-button">
+                <button class="close-button" onclick="closeMenu()"><img class="close-icon"
+                        src="images/close.jpg" alt="close-icon" /></button>
+            </div>
+            <div class="nav-item">
+                <a class="nav-item-href primary-button" href="log-in.php">
+                    Join us
+                </a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-item-href" href="about.html">
+                    <nav>About us</nav>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-item-href" href="contact-us.php">
+                    Contact us
+                </a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-item-href" id="menu" href="#"> Destinations </a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="albania.html">Albania</a></li>
+                        <li><a href="sweden.html">Sweden</a></li>
+                        <li><a href="italy.html">Italy</a></li>
+                        <li><a href="uk.html">UK</a></li>
+                        <li><a href="greece.html">Greece</a></li>
+                        <li><a href="spain.html">Spain</a></li>
+                    </ul>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="burger-menu">
+            <button onclick="openMenu()"><img class="burget-icon"
+                    src="images/burger.jpg" alt="burget-icon" /></button>
+        </div>
+    </header>
+
