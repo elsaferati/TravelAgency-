@@ -46,3 +46,13 @@ position: absolute;
   position: relative;
 
 }
+#btn{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right,rgb(67, 52, 169),hsl(219, 83%, 60%));
+  border-radius: 30px;
+  transition: .5s;
+}
