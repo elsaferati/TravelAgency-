@@ -56,3 +56,8 @@ position: absolute;
   border-radius: 30px;
   transition: .5s;
 }
+.social-icon{
+   
+  margin: 30px auto;
+  text-align: center;
+}
