@@ -273,3 +273,48 @@ input[type=submit]:hover {
             margin-top: 10px;
         }
         }
+        @media only screen and (max-width:412px){
+            main{
+                width: 412px;
+            }
+        .foto{
+            width: 412px;
+        }
+        .checkbox{
+            width: 310px;
+            height: 390px;
+        }
+        .destinations,
+        .datat{
+            display: block;
+        }
+        .class{
+            margin-right: 30px;
+        }
+        .searchbox{
+            margin-top: 10px;
+        }
+        }
+        @media only screen and (max-width:430.40px){
+            main{
+                width: 430px;
+            }
+        .foto{
+            width: 430px;
+        }
+        .checkbox{
+            width: 310px;
+            height: 400px;
+        }
+        .destinations,
+        .datat{
+            display: block;
+        }
+        .class{
+            margin-right: 30px;
+        }
+        .searchbox{
+            margin-top: 10px;
+        }
+        }
+        
