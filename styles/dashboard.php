@@ -24,4 +24,26 @@ $users = $userRepository->getAllUsers();
 </head>
 <body>
 <h1>User Dashboard</h1>
-    
+<table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        <?php foreach ($users as $user): ?>
+            <tr>
+                <td><?php echo $user['id']; ?></td>
+                <td><?php echo $user['name']; ?></td>
+                <td><?php echo $user['email']; ?></td>
+                <td><?php echo $user['password']; ?></td>
+                <td><a href="edit.php?id=<?php echo $user['id']; ?>">Edit</a></td>
+                <td><a href="delete.php?id=<?php echo $user['id']; ?>">Delete</a></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</body>
+</html>
