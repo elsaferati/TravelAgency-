@@ -186,3 +186,67 @@ main{
     }
 
 }
+@media only screen  and (max-width: 767px) {
+    html{
+        display: flex;
+        viewport-fit: cover;
+    }
+    main{
+        height: 123rem;
+        bottom: 0;
+    }
+    #about-us-content {
+        top: 27rem;
+        margin-left: 2rem;
+    }
+    #last-section {
+        position: absolute;
+      top: 90rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    #last-section div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+    }
+    #last-section div p{
+        padding: 1rem 2rem;
+    }
+   
+    #last-section img{
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+    }
+    #last-section ul{
+        display: block;
+        width: 65%;
+    }
+   
+    #about-us-content ul{
+        display: flex;
+        flex-direction: column;
+ 
+    }
+    #about-us-content ul li{
+        width: 75%;
+        margin: 0;
+        margin-bottom: 2rem ;
+        margin-left: 2rem;
+    }
+    .container{
+        margin: auto 2.5rem;
+        height: 18rem;
+        width: 70%;
+    }
+   
+    #img-part img{
+        width: 80%;
+        height: 25rem;
+        margin-bottom: 0;
+        margin-left: 3rem;
+    }
+    
+}
