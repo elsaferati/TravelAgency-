@@ -250,3 +250,34 @@ main{
     }
     
 }
+@media only screen  and (max-width: 281px){
+    main{
+        height: 120rem;
+    }
+    #title{
+        margin: 0;
+    }
+    strong{
+        font-size: 1.5rem;
+    }
+    #under-title{
+        font-size: 0.8rem;
+    }
+    #img-part img{
+        margin-left: 2rem;
+        object-fit: cover;
+    }
+    #about-us-content ul li{
+        width: 93%;
+        margin: 0;
+        margin-bottom: 2rem ;
+        
+    }
+    .container{
+        margin: auto 2.5rem;
+        height: 18rem;
+        width: 70%;
+    }
+    #last-section div p{
+        padding: 0 0.5rem;
+    }}
