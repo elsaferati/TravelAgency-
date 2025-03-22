@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +33,7 @@
                         alt="close-icon" /></button>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href primary-button" href="log-in.html">
+                <a class="nav-item-href primary-button" href="log-in.php">
                     Join us
                 </a>
             </div>
@@ -44,7 +43,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="contact-us.html">
+                <a class="nav-item-href" href="contact-us.php">
                     Contact us
                 </a>
             </div>
@@ -69,11 +68,11 @@
     </header>
     <main>
         <div class="contact"><h1>Contact Us</h1></div>
-        <div>
+        <div class="img1">
             <img src="images/contact-us.jpg" alt="">
              
 
-        <form id="contactForm">
+        <form id="contactForm" action="userinformation.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
     
@@ -83,7 +82,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
     
-            <button type="button" onclick="sendMessage()">Send Message</button>
+            <button type="submit" onclick="sendMessage()">Send Message</button>
         </form>
         </div>
        
@@ -92,13 +91,35 @@
                 var name = document.getElementById('name').value;
                 var email = document.getElementById('email').value;
                 var message = document.getElementById('message').value;
-    
-                
+
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                if (name.trim() === '') {
+                    alert('Please enter your name.');
+                    return;
+                }
+
+                if (email.trim() === '') {
+                    alert('Please enter your email.');
+                    return;
+                } else if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                if (message.trim() === '') {
+                    alert('Please enter your message.');
+                    return;
+                }
+
+                // If all validation passes, proceed to send the message
                 console.log('Name:', name);
                 console.log('Email:', email);
                 console.log('Message:', message);
-    
-              
+                alert('Your message was successfuly sent');
+                return true;
+
                 document.getElementById('contactForm').reset();
             }
         </script>
@@ -135,6 +156,7 @@
 
                 </ul>
             </section>
+
             <section>
                 <h3>Product</h3>
                 <ul class="footer-content">
