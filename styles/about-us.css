@@ -130,3 +130,59 @@ main{
     z-index: 1;
     box-shadow:  0 5px 202px rgba(0, 0, 0, 0.5);
 }
+.container .card .imgBx img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+ .container .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+ .container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay:  0.3s;
+}
+@media only screen  and (max-width: 1024px){
+    #img-part img{
+        margin-left: 4rem;
+    }
+    main{
+        height: 95rem;
+    }
+    #about-us-content ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    #about-us-content ul li{
+        width: 60%;
+        margin-left: 8rem;
+        margin-bottom: 1rem;
+    }
+    #about-us-content {
+        top: 27rem;
+       
+    }
+    #last-section {
+        position: inherit;
+       margin: 0;
+       padding: 0;
+      }
+   #last-section div p{
+        padding: 0 2rem;
+    }
+    #last-section div{
+        margin-top: 7rem;
+    }
+
+}
