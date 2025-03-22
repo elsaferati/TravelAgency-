@@ -9,7 +9,7 @@ body {
     height: 55px;
 }
 
-/* Button Styles */
+
 .button1, .button2 {
     width: 35px;
     height: 40px;
@@ -32,7 +32,6 @@ body {
     height: 30px;
 }
 
-/* Image Container */
 .foto {
     width: 100%;
     min-height: 140vh;
@@ -43,28 +42,57 @@ body {
     background-position: center;
 }
 
-/* Cards Container */
 .fotot {
     margin-top: 5px;
     margin-bottom: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Prevents inconsistent spacing */
+    gap: 20px; 
 }
 
-/* Individual Cards */
+
 .fotot div {
-    background-color: white;
-    width: 280px;
-    height: 470px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    text-align: center;
+    width: 270px; 
+    min-height: 400px; 
 }
+
+
+.fotot p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+select {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    width: 90%;
+    padding: 10px;
+    background-color: rgb(221, 221, 221);
+    color: rgb(46, 46, 46);
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(88, 88, 88);
+    color: rgb(204, 202, 202);
+}
+
 
 .fotot img {
     width: 100%;
@@ -73,7 +101,7 @@ body {
     border-radius: 8px;
 }
 
-/* Box Animation */
+
 .boxx {
     display: flex;
     justify-content: center;
@@ -89,7 +117,7 @@ body {
     perspective: 1000px;
 }
 
-/* Destination Section */
+
 .destn {
     background-color: rgb(245, 244, 239);
     color: rgb(142, 142, 143);
@@ -103,7 +131,7 @@ body {
     color: rgb(96, 95, 95);
 }
 
-/* Media Queries */
+
 @media (max-width: 1024px) {
     .button1, .button2 {
         width: 30px;
