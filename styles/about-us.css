@@ -189,7 +189,7 @@ main{
 @media only screen  and (max-width: 767px) {
     html{
         display: flex;
-        viewport-fit: cover;
+        vector-effect: cover;
     }
     main{
         height: 123rem;
@@ -280,4 +280,5 @@ main{
     }
     #last-section div p{
         padding: 0 0.5rem;
-    }}
+    }
+}
