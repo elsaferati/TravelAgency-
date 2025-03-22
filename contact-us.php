@@ -72,7 +72,7 @@
             <img src="images/contact-us.jpg" alt="">
              
 
-        <form id="contactForm" action="userinformation.php" method="post">
+        <form id="contactForm" action="contactDB/userinformation.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
     
