@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Overpass:wght@300&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Overpass:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/about-us.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -29,8 +29,7 @@
     
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
-                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="images/close.jpg"
-                        alt="close-icon" /></button>
+                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
                 <a class="nav-item-href primary-button" href="log-in.php">
@@ -71,20 +70,18 @@
         <div class="img1">
             <img src="images/contact-us.jpg" alt="">
              
+            <form id="contactForm" action="userinformation.php" method="post">
+    <label for="user">Name:</label>
+    <input type="text" id="user" name="user" required>
 
-        <form id="contactForm" action="contactDB/userinformation.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-    
-            <button type="button" onclick="sendMessage()">Send Message</button>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-        </form>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
         </div>
        
         <script>
@@ -95,7 +92,7 @@
 
                 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
+                // Form validation
                 if (name.trim() === '') {
                     alert('Please enter your name.');
                     return;
@@ -114,14 +111,9 @@
                     return;
                 }
 
-                // If all validation passes, proceed to send the message
-                console.log('Name:', name);
-                console.log('Email:', email);
-                console.log('Message:', message);
-                alert('Your message was successfuly sent');
-                return true;
-
-                document.getElementById('contactForm').reset();
+                // If validation passes, submit the form
+                document.getElementById('contactForm').submit();
+                alert('Your message was successfully sent');
             }
         </script>
     </main>
@@ -130,74 +122,35 @@
             <section id="social-part">
                 <h3>Social</h3>
                 <ul class="footer-content-special">
-                    <li>
-                        <a href="https://www.facebook.com">
-                            <img class="last-img" src="images/facebook.jpg" alt="facebook">
-                        </a>
-
-                    <li>
-                        <a href="https://www.instagram.com">
-                            <img class="last-img" src="images/insta.jpg" alt="instagram">
-                    </li>
-                    </a>
-                    <li>
-                        <a href="https://www.linkedIn">
-                            <img class="last-img" src="images/in.jpg" alt="linkedin">
-                    </li>
-                    </a>
-                    <li>
-                        <a href="https://www.youtube.com">
-                            <img class="last-img" src="images/youtube.jpg" alt="youtube">
-                    </li>
-                    </a>
-                    <li><a href="https://twitter.com">
-                            <img class="last-img" src="images/twitter.jpg" alt="twitter"></li>
-                    </a>
-
-
+                    <li><a href="https://www.facebook.com"><img class="last-img" src="images/facebook.jpg" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com"><img class="last-img" src="images/insta.jpg" alt="instagram"></a></li>
+                    <li><a href="https://www.linkedin.com"><img class="last-img" src="images/in.jpg" alt="linkedin"></a></li>
+                    <li><a href="https://www.youtube.com"><img class="last-img" src="images/youtube.jpg" alt="youtube"></a></li>
+                    <li><a href="https://twitter.com"><img class="last-img" src="images/twitter.jpg" alt="twitter"></a></li>
                 </ul>
             </section>
-
             <section>
                 <h3>Product</h3>
                 <ul class="footer-content">
-                    <li>
-                        <p>The plum test</p>
-                    </li>
-                    <li>
-                        <p>Become a host</p>
-                    </li>
-                    <li>
-                        <p>Affiliate program</p>
-                    </li>
+                    <li><p>The plum test</p></li>
+                    <li><p>Become a host</p></li>
+                    <li><p>Affiliate program</p></li>
                 </ul>
             </section>
             <section>
                 <h3>Company</h3>
                 <ul class="footer-content">
-                    <li>
-                        <p>Our story</p>
-                    </li>
-                    <li>
-                        <p>Journal</p>
-                    </li>
-                    <li>
-                        <p>Careers</p>
-                    </li>
+                    <li><p>Our story</p></li>
+                    <li><p>Journal</p></li>
+                    <li><p>Careers</p></li>
                 </ul>
             </section>
             <section>
                 <h3>Contact</h3>
                 <ul class="footer-content">
-                    <li>
-                        <p>Partenship</p>
-                    </li>
-                    <li>
-                        <p>FAQ</p>
-                    </li>
-                    <li>
-                        <p>Get in touch</p>
-                    </li>
+                    <li><p>Partnership</p></li>
+                    <li><p>FAQ</p></li>
+                    <li><p>Get in touch</p></li>
                 </ul>
             </section>
         </div>
