@@ -258,3 +258,168 @@ select {
   color: rgb(61, 58, 58);
   margin-bottom: 4rem;
 }
+
+@media only screen and (max-width: 1024px){
+  #third-section{
+   width: 97%;
+  }
+}
+
+
+@media only screen and (max-width: 915px) {
+html {
+ display: flex;
+}
+#cover{
+   margin-left: 5rem;
+}
+
+#third-section{
+   width: 96.3%;
+}
+
+#fourth-section {
+ display: block;
+}
+#fourth-section img {
+ width: 90%;
+ margin: 0;
+ margin-left: 3rem;
+}
+#fourth-section-content {
+ margin-left: 1.3rem;
+}
+#fifth-section img{
+   height: 40rem;
+}
+#fifth-section-content{
+   top: 15rem;
+}
+
+}
+
+@media only screen and (max-width: 767px) {
+html {
+ display: flex;
+}
+#second-section p{
+   margin-left: 1rem;
+}
+#first-section img{
+   height: 35rem;
+}
+#main-page-text{
+   top: 10rem;
+   font-size: 1rem;
+}
+#main-page-text ul{
+   padding-left: 0;
+}
+
+#cover {
+ margin-left: 1rem;
+ width: 80%;
+}
+#third-section{
+   width: 90%;
+}
+
+#fourth-section {
+ display: block;
+}
+#fourth-section img {
+ width: 70%;
+ height: 30rem;
+object-fit: cover;
+}
+#fourth-section-content {
+ margin-left: 1.3rem;
+}
+
+#fifth-section img {
+ width: 100%;
+ height: 80vh;
+ object-fit: cover;
+}
+#fifth-section-content {
+ top: 15rem;
+ margin: 0.1rem 0.5rem;
+ font-size: 1rem;
+
+}
+
+#in-fifth-section input {
+ margin-top: 0;
+ margin-left: 0;
+ padding: 0.1rem 0.1rem;
+ border-radius: 8px;
+}
+#in-fifth-section button {
+ padding: 0.1rem 0.1rem;
+ margin-left: 1rem;
+ margin-top: 0.3rem;
+ font-size: 0.3rem;
+}
+#in-fifth-section li input {
+ font-size: 0.1rem;
+ 
+}
+
+#date-part input {
+ padding: 0.1rem 0.8rem;
+}
+#contact-us-part{
+   margin-left: 1rem;
+}
+#contact-us-part select {
+ width: 50%;
+}
+
+#social-part {
+ padding-top: 3rem;
+ padding-left: 0;
+}
+#social-part a {
+ margin-left: 2rem;
+}
+}
+@media only screen and (max-width: 281px){
+strong{
+   font-size: 1.5rem ;
+}
+#under-title{
+   font-size: 0.8rem;
+}
+#main-page-text{
+   font-size: 0.8rem;
+   left: 0.5rem;
+}
+#under-main-txt{
+   font-size: 0.4rem;
+}
+#main-page-text button{
+   font-size: 0.3rem;
+  
+}
+#first-section img{
+   height: 25rem;
+}
+
+#second-section p{
+   font-size: 1.5rem;
+}
+#cover{
+   margin-left: 1.5rem;
+   width: 70%;
+}
+#fifth-section-content{
+   width: 70%;
+}
+#fifth-section-content ul{
+   margin: 0;
+   padding: 0;    
+}
+#fourth-section img{
+height: 25rem;
+}
+}
