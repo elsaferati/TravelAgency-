@@ -70,7 +70,7 @@
         <div class="img1">
             <img src="images/contact-us.jpg" alt="">
              
-            <form id="contactForm" action="userinformation.php" method="post">
+    <form id="contactForm" action="userinformation.php" method="post" onsubmit="sendMessage(event)">
     <label for="user">Name:</label>
     <input type="text" id="user" name="user" required>
 
@@ -85,36 +85,39 @@
         </div>
        
         <script>
-            function sendMessage() {
-                var name = document.getElementById('name').value;
-                var email = document.getElementById('email').value;
-                var message = document.getElementById('message').value;
+            function sendMessage(event) {
+    event.preventDefault(); 
 
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var name = document.getElementById('user').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
 
-                // Form validation
-                if (name.trim() === '') {
-                    alert('Please enter your name.');
-                    return;
-                }
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                if (email.trim() === '') {
-                    alert('Please enter your email.');
-                    return;
-                } else if (!emailRegex.test(email)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
+  
+    if (name.trim() === '') {
+        alert('Please enter your name.');
+        return;
+    }
 
-                if (message.trim() === '') {
-                    alert('Please enter your message.');
-                    return;
-                }
+    if (email.trim() === '') {
+        alert('Please enter your email.');
+        return;
+    } else if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
 
-                // If validation passes, submit the form
-                document.getElementById('contactForm').submit();
-                alert('Your message was successfully sent');
-            }
+    if (message.trim() === '') {
+        alert('Please enter your message.');
+        return;
+    }
+
+   
+    document.getElementById('contactForm').submit();  
+    alert('Your message was successfully sent');
+}
+
         </script>
     </main>
     <footer>
