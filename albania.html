@@ -239,40 +239,24 @@
 <div id="bookingModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Book Your Stay</h2>
+        <h3>Book Your Room</h3>
         <form id="bookingForm">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="checkIn">Check-in Date:</label>
-            <input type="date" id="checkIn" name="checkIn" required>
-
-            <label for="checkOut">Check-out Date:</label>
-            <input type="date" id="checkOut" name="checkOut" required>
-
-            <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" min="1" required>
-
-            <label for="roomType">Room Type:</label>
-            <select id="roomType" name="roomType">
-                <option value="single">Single Room</option>
-                <option value="double">Double Room</option>
-                <option value="suite">Suite</option>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <input type="date" id="checkIn" required>
+            <input type="date" id="checkOut" required>
+            <select id="roomType">
+                <option value="single">Single Room - $100</option>
+                <option value="double">Double Room - $180</option>
+                <option value="suite">Suite - $300</option>
             </select>
-
-            <label for="price">Total Price ($):</label>
-            <input type="text" id="price" name="price" readonly>
-
+            <input type="text" id="price" readonly>
             <button type="submit">Confirm Booking</button>
         </form>
     </div>
 </div>
+
 
 
 </main>
