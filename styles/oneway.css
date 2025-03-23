@@ -54,3 +54,55 @@ input[type=submit]{
             margin-top: 15px;
         }
     }
+    @media only screen and (max-width:912px){
+        .checkbox{
+           margin-left: 20px;
+        
+        }
+        .foto{
+            width: 1023px;
+           height: 630px;
+        }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            main{
+                width: 768px;
+            }
+            .headd {
+                height: auto;
+            }
+        
+            .button1{
+                width: 32px;
+            }
+            .button2 {
+                width: 32px;
+                margin-bottom: 10px;
+            }
+        
+            .button1 img{
+                margin-top: 6px;
+                width: 32px;
+                height: 27px;
+            }
+            .button2 img {
+                width: 27px;
+                height: 25px;
+                margin-top: 8px;
+            }
+        
+            .foto {
+                height: 650px;
+                width: 767px;
+            }
+        
+        .to label{
+            margin-right: 60px;
+        }
+            .checkbox {
+                height: 250px;
+                width: 400px;
+                font-size: medium;
+                margin-left: 50px;
+            } }
