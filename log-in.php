@@ -1,30 +1,48 @@
 <?php
 session_start();
 
+// Check if config2.php exists
+if (!file_exists(__DIR__ . '/config2.php')) {
+    die("Error: config2.php not found!");
+}
+
+require_once __DIR__ . '/config2.php';
+
 require_once('config2.php');
-include_once('userRepository.php');
-include_once('user.php');
+echo "Config file included successfully.";
+
+include_once __DIR__ . '/userRepository.php';
+include_once __DIR__ . '/user.php';
 
 if (isset($_POST['loginbtn'])) {
     if (empty($_POST['email']) || empty($_POST['password'])) {
-        echo "Please fill the required fields!";
+        die("Please fill in both email and password!");
     } else {
-        include_once('users.php');
+        include_once __DIR__ . '/users.php'; // Ensure this file exists
+
+        // Retrieve user input
         $email = $_POST['email'];
-      
+        $password = $_POST['password'];
+
+        // Debugging output (remove in production)
+        // echo "Checking login for email: $email <br>";
+
+        // Verify user credentials
+        $found = false;
         foreach ($users as $user) {
-            if ($user['email'] == $email && $user['password'] == $password) {
+            if ($user['email'] === $email && password_verify($password, $user['password'])) {
                 $_SESSION['email'] = $email;
-                $_SESSION['password'] = $password;
                 $_SESSION['role'] = $user['role'];
-                header("location: dashboard.php");
+                header("Location: dashboard.php");
                 exit();
             }
         }
-        echo "Incorrect Username or Password!";
+
+        // If no user matched, show error
+        die("Incorrect Username or Password!");
     }
 }
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">

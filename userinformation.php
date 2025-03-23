@@ -1,9 +1,8 @@
 <?php
 
 $connection = mysqli_connect('localhost', 'root', '', 'userinfo');
-
-if (!$connection) {
-    die("Connection failed: " . mysqli_connect_error());
+if (!file_exists(__DIR__ . '/config2.php')) {
+    die("Error: config2.php not found!");
 }
 
 $user = isset($_POST['user']) ? trim($_POST['user']) : '';

@@ -2,7 +2,9 @@
 include_once 'config2.php';
 include_once 'DatabaseConnection.php';
 
-
+if (!file_exists(__DIR__ . '/config2.php')) {
+    die("Error: config2.php not found!");
+}
 
 class UserRepository
 {

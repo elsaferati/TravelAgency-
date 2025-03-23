@@ -6,7 +6,9 @@ class DatabaseConnection{
     private $password="";
     private $database = "userinfo";
 
-    private $port = "4306";
+    private $port = "3306";
+
+    
 
 
     function startConnection(){
