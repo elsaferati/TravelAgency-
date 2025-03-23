@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once 'DatabaseConnection.php';
 
 // Check if config2.php exists
 if (!file_exists(__DIR__ . '/config2.php')) {
@@ -7,7 +8,7 @@ if (!file_exists(__DIR__ . '/config2.php')) {
 }
 
 require_once __DIR__ . '/config2.php';
-include_once __DIR__ . '/userRepository.php';
+include_once 'userRepository.php';
 include_once __DIR__ . '/user.php';
 
 if (isset($_POST['loginbtn'])) {
