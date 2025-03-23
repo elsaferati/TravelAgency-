@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 main{
     margin-bottom: 2rem;
@@ -14,7 +15,7 @@ main{
     padding-left: 0;
 }
 #first-section ul li img{
-    width: 44rem;
+    width: 42rem;
     height: 25rem;
     box-shadow: 2px 4px 6px rgb(72, 69, 69);
     object-fit: cover;
