@@ -7,7 +7,6 @@ if (!file_exists(__DIR__ . '/config2.php')) {
 }
 
 require_once __DIR__ . '/config2.php';
-
 include_once __DIR__ . '/userRepository.php';
 include_once __DIR__ . '/user.php';
 
@@ -15,28 +14,31 @@ if (isset($_POST['loginbtn'])) {
     if (empty($_POST['email']) || empty($_POST['password'])) {
         die("Please fill in both email and password!");
     } else {
-        include_once __DIR__ . '/users.php'; // Ensure this file exists
-
         // Retrieve user input
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        // Debugging output (remove in production)
-        // echo "Checking login for email: $email <br>";
+        // Initialize database connection
+        $dbConnection = new DatabaseConnection();
+        $conn = $dbConnection->startConnection();
 
-        // Verify user credentials
-        $found = false;
-        foreach ($users as $user) {
-            if ($user['email'] === $email && password_verify($password, $user['password'])) {
-                $_SESSION['email'] = $email;
-                $_SESSION['role'] = $user['role'];
-                header("Location: dashboard.php");
-                exit();
-            }
+        // Query the database for the user with the provided email
+        $sql = "SELECT * FROM crudtable WHERE email = :email";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['email' => $email]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // If user is found and password matches
+        if ($user && password_verify($password, $user['password'])) {
+            // Success
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['role'] = $user['role']; // Assuming 'role' column exists in the table
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            // Incorrect login details
+            die("Incorrect Username or Password!");
         }
-
-        // If no user matched, show error
-        die("Incorrect Username or Password!");
     }
 }
 ?>
@@ -175,3 +177,5 @@ if (isset($_POST['loginbtn'])) {
     </footer>
 </body>
 </html>
+
+
