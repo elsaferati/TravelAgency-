@@ -30,11 +30,18 @@ if (isset($_POST['loginbtn'])) {
 
         // If user is found and password matches
         if ($user && password_verify($password, $user['password'])) {
-            // Success
+            // Set session variables
             $_SESSION['email'] = $user['email'];
             $_SESSION['role'] = $user['role']; // Assuming 'role' column exists in the table
-            header("Location: dashboard.php");
-            exit();
+
+            // Redirect based on user role
+            if ($_SESSION['role'] == 'admin') {
+                header("Location: admin_dashboard.php");
+                exit();  // Stop further script execution
+            } else {
+                header("Location: user_dashboard.php");
+                exit();  // Stop further script execution
+            }
         } else {
             // Incorrect login details
             die("Incorrect Username or Password!");
@@ -42,6 +49,7 @@ if (isset($_POST['loginbtn'])) {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
