@@ -1,16 +1,14 @@
 <?php
-// Database connection
+
 $connection = mysqli_connect('localhost', 'root', '', 'userinfo');
 
 if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Query to fetch data from the 'userdata' table
 $query = "SELECT id, user, email, message FROM userdata";
 $result = mysqli_query($connection, $query);
 
-// Check if the query was successful
 if (!$result) {
     die("Query failed: " . mysqli_error($connection));
 }
@@ -48,7 +46,6 @@ if (!$result) {
 
 <h2 style="text-align: center;">User Messages</h2>
 
-<!-- Table to display the data -->
 <table>
     <thead>
         <tr>
@@ -60,7 +57,7 @@ if (!$result) {
     </thead>
     <tbody>
         <?php
-        // Loop through each row and display it in the table
+        
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>" . htmlspecialchars($row['id']) . "</td>";
@@ -74,7 +71,7 @@ if (!$result) {
 </table>
 
 <?php
-// Close the database connection
+
 mysqli_free_result($result);
 mysqli_close($connection);
 ?>
