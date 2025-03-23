@@ -424,4 +424,114 @@ main{
          
       
       }
+      @media only screen  and (max-width: 768px) {
+        html{
+            display: flex;
+        }
+        
+        #first-section ul{
+            display: block;
+        
+        }
+        #first-section ul li img{
+           margin: 0.3rem 0.5rem;
+           width: 97%;
+           object-fit: cover;
+        }
+    
+        #second-section{
+            width: 70%;
+            margin-left: 8rem;
+        }
+       
+        #second-section p{
+            font-size: 2rem;
+        }
+       
+        #second-section ul{
+            display: block;
+            margin-left: 0.4rem;
+    
+        }
+        #input li input{
+            margin-top: 0.5rem;
+            padding: 1rem 4.5rem;
+            font-size: 2rem;
+        }
+        #input li #date{
+            padding: 1rem 9rem;
+        }
+    
+        #second-section img{
+           margin-left: 20rem;
+           height: 5rem;
+        }
+        #input li button{
+            padding: 1rem 1.8rem;
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+    
+        #third-section div{
+            font-size: 2rem;
+            width: 120%;
+        }
+        #third-section ul li img{
+            width: 130%;
+            height: 90%;
+        }
+        #third-section ul{
+            margin-left: 5rem;
+        }
+        
+        #third-section ul li{
+            margin-bottom: 3rem;
+          
+        }
       
+        #fourth-section ul{
+            display: block;
+            margin-left: 5rem;
+        }
+    
+        #fourth-section h1{
+            font-size: 2.5rem;
+        }
+        #fourth-section ul li{
+            width: 30%;
+            height: 10rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        #fourth-section ul li img{
+            margin: auto 4rem;
+            height: 7rem;
+        }
+        #fourth-section ul li p{
+            margin: 0;
+            margin-left: 1rem;
+            font-size: 2rem;
+        }
+        
+        #fifth-section{
+            display: block;
+        }
+        .in{
+            font-size: 2rem;
+        }
+        #whole-part h2{
+            font-size: 2.5rem;
+        }
+        .title1 p{
+            font-size: 1.5rem;
+        }
+        #fifth-section img{
+            margin-left: 1rem;
+            object-fit: cover;
+            width: 70%;
+            height: 50rem;
+            margin-bottom: 1rem;
+        }
+    
+    
+    }      
