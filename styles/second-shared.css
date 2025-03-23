@@ -279,4 +279,28 @@ main{
     opacity: 1;
     bottom: -60px;
     transition-delay: 0.25s;
-} 
+}
+@media only screen  and (max-width: 1280px){
+    .container2{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 130rem;
+        
+    }
+    .container2 .box{
+        margin-bottom: 9rem;
+
+    }
+}
+    @media only screen  and (max-width: 933px){
+        .container2{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 130rem;
+            
+        }
+        .container2 .box{
+            margin-bottom: 9rem;
+    
+        }
+    }
