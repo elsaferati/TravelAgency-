@@ -22,3 +22,53 @@ main{
 #first-img{
     margin-left: 0;
 }
+#second-section{
+    text-align: center;
+    margin-top: 6rem;
+}
+
+#second-section ul{
+    display: flex;
+    margin-left: 20rem;
+}
+#second-section img{
+    height: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    object-fit: cover;
+}
+#title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    color: rgb(64, 60, 60);
+}
+#input li{
+    padding: 0  8px;
+}
+
+#input li input{
+    margin-top: 1.5rem;
+    padding: 0.5rem 3.5rem;
+    border-radius: 10px;
+    border: 2px solid rgb(22, 17, 53);
+    cursor: pointer;
+    box-shadow: 2px 4px 6px rgb(72, 69, 69);
+}
+#input li input:hover{
+    background-color: rgba(46, 39, 78, 0.181);
+}
+#input li #date{
+    padding: 0.5rem 6.6rem;
+}
+#input li button{
+    padding: 0.4rem 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(22, 17, 53, 0.236);
+    box-shadow: 2px 4px 6px rgb(72, 69, 69);
+
+}
+#input li button:hover{
+    background-color: rgba(22, 17, 53, 0.493);
+}
