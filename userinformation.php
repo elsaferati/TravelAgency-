@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect('localhost', 'root', '', 'userinfo', 4306);
+$connection = mysqli_connect('localhost', 'root', '', 'userinfo', 3306);
 
 // Check the connection
 if (!$connection) {
@@ -16,7 +16,7 @@ $query = "INSERT INTO `userdata`(`user`, `email`, `message`) VALUES ('$user', '$
 $result = mysqli_query($connection, $query);
 
 if ($result) {
-    echo "Message is sent!";
+    echo "<script>alert('Message is sent!'); window.location.href='contact-us.php';</script>";
 } else {
     echo "Error: " . mysqli_error($connection);
 }
@@ -25,4 +25,5 @@ if ($result) {
 mysqli_close($connection);
 
 ?>
+
 
