@@ -8,9 +8,6 @@ if (!file_exists(__DIR__ . '/config2.php')) {
 
 require_once __DIR__ . '/config2.php';
 
-require_once('config2.php');
-echo "Config file included successfully.";
-
 include_once __DIR__ . '/userRepository.php';
 include_once __DIR__ . '/user.php';
 
@@ -50,10 +47,10 @@ if (isset($_POST['loginbtn'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Overpass:wght@300&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Overpass:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/log-in-style.css">
     <link rel="stylesheet" href="styles/shared.css"> 
     <link rel="stylesheet" href="styles/header.css">
@@ -115,184 +112,66 @@ if (isset($_POST['loginbtn'])) {
     </header>
 
     <main>
-   
-   <div class="hero">
-       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
-           <source src="images/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
-         </video>
-     <div class="form-container">
-       <form action="" method="post">
-       <h3>login now</h3>
-       <?php
-       if(isset($error)){
-           foreach($error as $error){
-               echo '<span class="error-msg">'.$error.'</span>';
-           };
-       };
-       ?>
-       <input type="email" name="email" required placeholder="enter your email">
-       <input type="password" name="password" required placeholder="enter your password">
-       <input type="submit" name="submit" value="login now" class="form-btn">
-       <p>don't have an account? <a href="register_form.php">register now</a></p>
-     </form>
-   </div>
-   </div>
-
-    
-            
-       
-   <script>
-  
-
-  let emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-  let passRegex = /^[a-z1-9]{8,15}$/;
-  let userRegex = /^[a-zA-Z]$/;
-  
-  
-  function validateLoginForm() {
-  
-      let emailInput = document.getElementById('userId');
-      let emailError = document.getElementById('emailError');
-      let passInput = document.getElementById('password');
-      let passError = document.getElementById('passError');
-      
-  
-      emailError.innerText = '';
-      passError.innerText = '';
-  
-  
-      if (!emailRegex.test(emailInput.value)) {
-          emailInput.style.border = "1px solid red";
-          emailError.innerText = 'Invalid email';
-          return false;
-      }
-  
-      if (!passRegex.test(passInput.value)) {
-          passInput.style.border = "1px solid red";
-          passError.innerText = 'Invalid password';
-          return false;
-      }
-  
-      alert('Login form submitted successfully!');
-      return true;
-  }
-
-  
-function validateRegisterForm() {
-
-let emailInput = document.getElementById('userId');
-let emailError = document.getElementById('emailError');
-let passInput = document.getElementById('password');
-let passError = document.getElementById('passError');
-let userInput = document.getElementById('registerUser');
-let userError = document.getElementById('userError');
-
-emailError.innerText = '';
-passError.innerText = '';
-userError.innerText = '';
-
-if (!emailRegex.test(emailInput.value)) {
-    emailInput.style.border = "1px solid red";
-    emailError.innerText = 'Invalid email';
-    return false;
-}
-
-if (!passRegex.test(passInput.value)) {
-    passInput.style.border = "1px solid red";
-    passError.innerText = 'Invalid password';
-    return false;
-}
-
-if (!userRegex.test(userInput.value)) {
-    userInput.style.border = "1px solid red";
-    userError.innerText = 'Invalid user ID';
-    return false;
-}
-
-alert('Register form submitted successfully!');
-return true;
-}
-
-       
-</script>
+        <div class="hero">
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" controls>
+                <source src="images/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+            </video>
+            <div class="form-container">
+                <form action="" method="post">
+                    <h3>login now</h3>
+                    <?php
+                    if(isset($error)){
+                        foreach($error as $error){
+                            echo '<span class="error-msg">'.$error.'</span>';
+                        };
+                    };
+                    ?>
+                    <input type="email" name="email" required placeholder="enter your email">
+                    <input type="password" name="password" required placeholder="enter your password">
+                    <input type="submit" name="loginbtn" value="login now" class="form-btn">
+                    <p>don't have an account? <a href="register_form.php">register now</a></p>
+                </form>
+            </div>
+        </div>
     </main>
+
     <footer style="margin-top: 43.5rem;">
         <div id="footer-part">
             <section id="social-part">
-           <h3>Social</h3>
-             <ul class="footer-content-special">
-       <li > 
-           <a href="https://www.facebook.com">
-               <img class="last-img" src="images/facebook.jpg" alt="facebook">
-           </a>
-          
-       <li>
-           <a href="https://www.instagram.com">
-               <img  class="last-img" src="images/insta.jpg" alt="instagram"></li>
-           </a>
-       <li> 
-           <a href="https://www.linkedIn">
-               <img  class="last-img" src="images/in.jpg" alt="linkedin"></li>
-           </a>
-        <li> 
-           <a href="https://www.youtube.com">
-               <img  class="last-img" src="images/youtube.jpg" alt="youtube"></li>
-           </a>
-        <li><a href="https://twitter.com"> 
-           <img  class="last-img" src="images/twitter.jpg" alt="twitter"></li>
-       </a>
-  
-       </ul>
-       </section>
-       
-       <section>
-            <h3>Product</h3>
-            <ul class="footer-content">
-               <li>
-                   <p>The plum test</p>
-               </li>
-               <li>
-                   <p>Become a host</p>
-               </li>
-               <li>
-                   <p>Affiliate program</p>
-               </li>
-            </ul>
-       </section>
-     <section>
-       <h3>Company</h3>
-       <ul class="footer-content">
-           <li>
-               <p>Our story</p>
-           </li>
-           <li> 
-               <p>Journal</p>
-           </li>
-           <li>
-               <p>Careers</p>
-           </li>
-       </ul>
-     </section>
-     <section>
-       <h3>Contact</h3>
-       <ul class="footer-content">
-           <li>
-               <p>Partenship</p>
-           </li>
-           <li>
-               <p>FAQ</p>
-           </li>
-           <li>
-               <p>Get in touch</p>
-           </li>
-       </ul>
-     </section> 
-       </div>
-     
-
+                <h3>Social</h3>
+                <ul class="footer-content-special">
+                    <li><a href="https://www.facebook.com"><img class="last-img" src="images/facebook.jpg" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com"><img class="last-img" src="images/insta.jpg" alt="instagram"></a></li>
+                    <li><a href="https://www.linkedIn"><img class="last-img" src="images/in.jpg" alt="linkedin"></a></li>
+                    <li><a href="https://www.youtube.com"><img class="last-img" src="images/youtube.jpg" alt="youtube"></a></li>
+                    <li><a href="https://twitter.com"><img class="last-img" src="images/twitter.jpg" alt="twitter"></a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Product</h3>
+                <ul class="footer-content">
+                    <li><p>The plum test</p></li>
+                    <li><p>Become a host</p></li>
+                    <li><p>Affiliate program</p></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Company</h3>
+                <ul class="footer-content">
+                    <li><p>Our story</p></li>
+                    <li><p>Journal</p></li>
+                    <li><p>Careers</p></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Contact</h3>
+                <ul class="footer-content">
+                    <li><p>Partenship</p></li>
+                    <li><p>FAQ</p></li>
+                    <li><p>Get in touch</p></li>
+                </ul>
+            </section>
+        </div>
     </footer>
-
-   
-    
 </body>
 </html>
