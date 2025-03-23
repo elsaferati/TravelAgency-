@@ -147,3 +147,86 @@ input[type=submit]{
                 margin-top: 10px;
             }
             }
+            @media only screen and (max-width:412px){
+                main{
+                    width: 412px;
+                }
+                .foto{
+                    width: 412px;
+                }
+                .checkbox{
+                    width: 310px;
+                    height: 390px;
+                    margin-left: -3rem;
+                }
+                .destinations,
+                .datat{
+                    display: block;
+                }
+                .class{
+                    margin-right: 30px;
+                }
+                .searchbox{
+                    margin-top: 10px;
+                }
+               .date1{
+                width: 200px;
+               }
+               .end{
+                margin-left: -270px;
+                margin-top: 80px;
+               }
+                }
+                @media only screen and (max-width:540px){
+             main{
+                width: 540px;
+             }
+             .foto{
+                width: 540px;
+            }
+             .checkbox{
+                width: 310px;
+                height: 390px;
+            }
+            .destinations,
+            .datat{
+                display: block;
+            }
+            .class{
+                margin-right: 30px;
+            }
+            .searchbox{
+                margin-top: 10px;
+            }
+            .date1{
+            width: 200px;
+            }
+            .end{
+            margin-left: -270px;
+            margin-top: 80px;
+            }
+                }
+                @media only screen and (max-width:430.40px){
+                main{
+                    width: 430px;
+                }
+                .foto{
+                    width: 430px;
+                }
+                .checkbox{
+                    width: 310px;
+                    height: 400px;
+                    margin-left: 60px;
+                }
+                .destinations,
+                .datat{
+                    display: block;
+                }
+                .class{
+                    margin-right: 30px;
+                }
+                .searchbox{
+                    margin-top: 10px;
+                }
+                }
+            
