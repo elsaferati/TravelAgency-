@@ -20,3 +20,37 @@ input[type=submit]{
     margin-top: 15px;
     margin-left: 20px;
 }
+@media only screen and (max-width:1080px){
+    .foto{
+        width: 1060px;
+    }
+    .checkbox{
+        width: 120vh;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    }
+    @media only screen and (max-width:1024px){
+        main{
+            width: 1024px;
+        }
+        .foto{
+            width: auto;
+            height: 570px;
+        }
+        .checkbox{
+            height: 260px;
+            width: 700px;
+            margin-right: 50px;
+            margin-bottom: 40px;
+        }
+        .from{
+            margin-right: 60px;
+        }
+        .date1{
+            margin-right: 56px;
+        }
+        .searchbox{
+            margin-top: 15px;
+        }
+    }
