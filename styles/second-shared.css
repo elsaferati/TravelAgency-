@@ -72,3 +72,32 @@ main{
 #input li button:hover{
     background-color: rgba(22, 17, 53, 0.493);
 }
+
+#third-section ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 8rem auto;
+}
+#third-section ul li img{
+    width: 25rem;
+    height: 20rem;
+    cursor: pointer;
+    box-shadow: 1px 3px 5px rgb(64, 60, 60);
+    object-fit: cover;
+   
+}
+
+#third-section div{
+    margin: auto 1.5rem;
+    width: 80%;
+}
+#third-section div p{
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+#third-section div h2{
+    margin-bottom: 0;
+}
+.title2{
+    font-weight: bold;
+}
