@@ -1,29 +1,27 @@
 <?php
 
-$connection = mysqli_connect('localhost', 'root', '', 'userinfo');
-if (!file_exists(__DIR__ . '/config2.php')) {
-    die("Error: config2.php not found!");
+$connection = mysqli_connect('localhost', 'root', '', 'userinfo', 4306);
+
+// Check the connection
+if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
-$user = isset($_POST['user']) ? trim($_POST['user']) : '';
-$email = isset($_POST['email']) ? trim($_POST['email']) : '';
-$message = isset($_POST['message']) ? trim($_POST['message']) : '';
+$user = isset($_POST['user']) ? $_POST['user'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$message = isset($_POST['message']) ? $_POST['message'] : '';
 
-if (empty($user) || empty($email) || empty($message)) {
-    die("All fields are required.");
-}
+$query = "INSERT INTO `userdata`(`user`, `email`, `message`) VALUES ('$user', '$email', '$message')";
 
-$query = "INSERT INTO userdata (user, email, message) VALUES (?, ?, ?)";
-$stmt = mysqli_prepare($connection, $query);
-mysqli_stmt_bind_param($stmt, "sss", $user, $email, $message);
+$result = mysqli_query($connection, $query);
 
-if (mysqli_stmt_execute($stmt)) {
-    echo "<script>alert('Your message was successfully sent'); window.location.href='contact-us.php';</script>";
+if ($result) {
+    echo "Message is sent!";
 } else {
     echo "Error: " . mysqli_error($connection);
 }
 
-mysqli_stmt_close($stmt);
+// Close the connection
 mysqli_close($connection);
 
 ?>
