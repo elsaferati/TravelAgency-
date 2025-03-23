@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+}
+main{
+    margin-bottom: 2rem;
+}
+
+#first-section ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-left: 0;
+}
+#first-section ul li img{
+    width: 44rem;
+    height: 25rem;
+    box-shadow: 2px 4px 6px rgb(72, 69, 69);
+    object-fit: cover;
+}
+#first-img{
+    margin-left: 0;
+}
