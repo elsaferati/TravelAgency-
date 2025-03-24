@@ -284,7 +284,6 @@ main{
 }
 
 /* Modal Styling */
-/* Modal Styling */
 #bookingModal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -355,6 +354,7 @@ main{
 .modal-content button:hover {
     background-color: #0056b3;
 }
+
 
 @media only screen  and (max-width: 1200px){
     .container2{
