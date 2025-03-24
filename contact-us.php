@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/contact-us.css">
     <script src="script/header.js" type="text/javascript"></script>
-    <title>About-us</title>
+    <title>Contact-us</title>
 </head>
 <body>
     <header>
@@ -67,7 +67,7 @@
     </header>
     <main>
         <div class="contact"><h1>Contact Us</h1></div>
-        <div class="img1">
+        <div class="img">
             <img src="images/contact-us.jpg" alt="">
              
     <form id="contactForm" action="userinformation.php" method="post" onsubmit="sendMessage(event)">

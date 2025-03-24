@@ -17,33 +17,35 @@ main div{
     display: flex;
 }
 
-img{
-    width: 50%;
+main > .img img {
+    width: 830px;
     height: 80vh;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.contact h1 {
+
+
+.contact h1{
     text-align: center;
     color: #c2c0c0;
     margin-bottom: 20px;
     margin-left: 20px;
-}
+}  
 form {
-    max-width: 400px;
-    width: 100%;
+    width: 400px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 230px;
-    margin-right: 20px;
+    margin-left: 170px;
 }
+
 label {
     display: block;
-  margin-bottom: 8px;
+    margin-bottom: 8px;
     color: #555;
 }
+
 input,
 textarea {
     width: 100%;
@@ -54,6 +56,7 @@ textarea {
     box-sizing: border-box;
     font-size: 16px;
 }
+
 button {
     background-color: #191e83;
     color: #fff;
