@@ -292,6 +292,7 @@ main{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    display: flex; /* Ensures centering */
     justify-content: center;
     align-items: center;
 }
@@ -300,7 +301,7 @@ main{
     background: white;
     padding: 20px;
     border-radius: 12px;
-    width: 320px; /* Smaller width */
+    width: 360px; /* Slightly wider for better readability */
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease-in-out;
@@ -327,14 +328,27 @@ main{
 }
 
 /* Form Styling */
-.modal-content input, 
-.modal-content select {
+.modal-content input {
     width: 100%;
     padding: 8px;
-    margin: 8px 0;
+    margin: 6px 0;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
+}
+
+.modal-content label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Read-only input styling */
+.modal-content input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
 }
 
 /* Submit Button */
@@ -354,6 +368,7 @@ main{
 .modal-content button:hover {
     background-color: #0056b3;
 }
+
 
 
 @media only screen  and (max-width: 1200px){

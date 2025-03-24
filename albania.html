@@ -243,20 +243,21 @@
         <form id="bookingForm">
             <input type="text" id="fullName" placeholder="Full Name" required>
             <input type="email" id="email" placeholder="Email" required>
-            <input type="tel" id="phone" placeholder="Phone" required>
+            <input type="tel" id="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
+            
+            <label for="checkIn">Check-in Date</label>
             <input type="date" id="checkIn" required>
+
+            <label for="checkOut">Check-out Date</label>
             <input type="date" id="checkOut" required>
-            <select id="roomType">
-                <option value="single">Single Room - $100</option>
-                <option value="double">Double Room - $180</option>
-                <option value="suite">Suite - $300</option>
-            </select>
+
+            <label for="price">Price</label>
             <input type="text" id="price" readonly>
+
             <button type="submit">Confirm Booking</button>
         </form>
     </div>
 </div>
-
 
 
 </main>
