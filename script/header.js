@@ -7,36 +7,48 @@ function closeMenu() {
     const navigationElement = document.getElementById("navigation");
     navigationElement.style.display = "none";
 }
-// Function to open the modal
+// Open the modal
 function openModal() {
     document.getElementById("bookingModal").style.display = "flex"; // Open the modal
 }
 
-// Function to close the modal
+// Close the modal
 function closeModal() {
     document.getElementById("bookingModal").style.display = "none"; // Close the modal
 }
 
 // Optional: Close the modal if the user clicks outside of it
 window.onclick = function(event) {
-    if (event.target == document.getElementById("bookingModal")) {
+    if (event.target === document.getElementById("bookingModal")) {
         closeModal();
     }
 };
 
-// Automatically calculate price based on room type
-document.getElementById("roomType").addEventListener("change", function() {
-    let priceField = document.getElementById("price");
-    let roomType = this.value;
-    let price = roomType === "single" ? 100 : roomType === "double" ? 180 : 300;
-    priceField.value = `$${price}`;
-});
+// Event listener to calculate the price based on check-in and check-out dates
+document.getElementById("checkIn").addEventListener("change", calculatePrice);
+document.getElementById("checkOut").addEventListener("change", calculatePrice);
+
+function calculatePrice() {
+    const checkInDate = new Date(document.getElementById("checkIn").value);
+    const checkOutDate = new Date(document.getElementById("checkOut").value);
+
+    if (checkInDate && checkOutDate && checkInDate < checkOutDate) {
+        const timeDifference = checkOutDate - checkInDate;
+        const days = timeDifference / (1000 * 3600 * 24); // Convert time difference to days
+        const pricePerNight = 100; // Example price per night, can be modified
+
+        const totalPrice = days * pricePerNight;
+        document.getElementById("price").value = `$${totalPrice}`;
+    } else {
+        document.getElementById("price").value = ""; // Reset the price if dates are invalid
+    }
+}
 
 // Handle form submission
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Booking confirmed! We will contact you soon.");
-    closeModal(); // Close the modal after booking confirmation
+    closeModal();
 });
 
 // Hide the modal by default when the page loads
@@ -48,6 +60,4 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("bookButton").addEventListener("click", function() {
     openModal(); // Open the modal when the book button is clicked
 });
-
-
 
