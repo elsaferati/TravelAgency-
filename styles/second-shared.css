@@ -1,8 +1,6 @@
 body{
     margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
 }
 main{
     margin-bottom: 2rem;
@@ -16,7 +14,7 @@ main{
     padding-left: 0;
 }
 #first-section ul li img{
-    width: 42rem;
+    width: 44rem;
     height: 25rem;
     box-shadow: 2px 4px 6px rgb(72, 69, 69);
     object-fit: cover;
@@ -24,6 +22,7 @@ main{
 #first-img{
     margin-left: 0;
 }
+
 #second-section{
     text-align: center;
     margin-top: 6rem;
@@ -103,6 +102,7 @@ main{
 .title2{
     font-weight: bold;
 }
+
 #fourth-section{
     margin-top: 5rem;
 }
@@ -132,60 +132,61 @@ main{
     margin-left: 1rem;
 }
 #fifth-section{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#fifth-section img{
+    height: 35rem;
+   width: 30%;
+   margin-left: 6rem;
+   box-shadow: 3px 6px 8px rgb(72, 69, 69);
+   object-fit: cover;
+}
+
+#whole-part{
+    margin-right: 15rem;
+}
+.in{
+    border: 3px solid rgb(64, 60, 60);
     display: flex;
+    width: 30rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    box-shadow: 2px 1px 4px rgb(72, 69, 69);
     justify-content: space-between;
-    align-items: center;
- }
- 
- #fifth-section img{
-     height: 35rem;
-    width: 30%;
-    margin-left: 6rem;
-    box-shadow: 3px 6px 8px rgb(72, 69, 69);
-    object-fit: cover;
- }
- 
- #whole-part{
-     margin-right: 15rem;
- }
- .in{
-     border: 3px solid rgb(64, 60, 60);
-     display: flex;
-     width: 30rem;
-     margin-left: 0;
-     margin-bottom: 1rem;
-     box-shadow: 2px 1px 4px rgb(72, 69, 69);
-     justify-content: space-between;
-     
- }
- .in li {
-     margin: auto 0;
-     
- }
- 
- .title1{
-     font-size: large;
-     font-weight: bold;
- }
- .right{
-     padding-left: 0;
- }
- 
- .left{
-     padding-right: 0.5rem;
- }
- 
- .right p{
-     margin-bottom: 0;
- }
- .title1 p{
-    margin-top: 0.3rem;
-    margin-bottom: 2rem;
- }
- .top p{
-     margin-top: 1.5rem;
- }
- .sixth-section{
+    
+}
+.in li {
+    margin: auto 0;
+    
+}
+
+.title1{
+    font-size: large;
+    font-weight: bold;
+}
+.right{
+    padding-left: 0;
+}
+
+.left{
+    padding-right: 0.5rem;
+}
+
+.right p{
+    margin-bottom: 0;
+}
+.title1 p{
+   margin-top: 0.3rem;
+   margin-bottom: 2rem;
+}
+.top p{
+    margin-top: 1.5rem;
+}
+
+.sixth-section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,6 +229,7 @@ main{
     filter: grayscale(0) brightness(1);
     margin-left: 20px;
 }
+
 .container2:hover .box{
     filter: grayscale(1);
 }
