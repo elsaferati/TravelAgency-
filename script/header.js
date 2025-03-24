@@ -17,13 +17,32 @@ function closeModal() {
     document.getElementById("bookingModal").style.display = "none";
 }
 
-// Automatically calculate price based on room type
-document.getElementById("roomType").addEventListener("change", function() {
-    let priceField = document.getElementById("price");
-    let roomType = this.value;
-    let price = roomType === "single" ? 100 : roomType === "double" ? 180 : 300;
-    priceField.value = `$${price}`;
+// Handle date change and recalculate the price
+document.getElementById("checkIn").addEventListener("change", function() {
+    updatePrice();
 });
+
+document.getElementById("checkOut").addEventListener("change", function() {
+    updatePrice();
+});
+
+// Calculate price based on dates
+function updatePrice() {
+    const checkInDate = document.getElementById("checkIn").value;
+    const checkOutDate = document.getElementById("checkOut").value;
+    const priceField = document.getElementById("price");
+
+    // Default price per night (You can adjust this value as needed)
+    const pricePerNight = 180;
+
+    // Check if dates are valid and calculate the price
+    if (checkInDate && checkOutDate && new Date(checkInDate) < new Date(checkOutDate)) {
+        const nights = Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24));
+        priceField.value = `$${pricePerNight * nights}`;
+    } else {
+        priceField.value = ""; // Clear price if dates are invalid
+    }
+}
 
 // Handle form submission
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
@@ -32,27 +51,4 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     closeModal();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const checkInInput = document.getElementById("checkIn");
-    const checkOutInput = document.getElementById("checkOut");
-    const priceInput = document.getElementById("price");
-
-    // Set a default price (assuming the price is predefined)
-    const pricePerNight = 180; // Change this value based on the room type
-
-    function calculatePrice() {
-        const checkInDate = new Date(checkInInput.value);
-        const checkOutDate = new Date(checkOutInput.value);
-
-        if (!isNaN(checkInDate) && !isNaN(checkOutDate) && checkOutDate > checkInDate) {
-            const nights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
-            priceInput.value = nights * pricePerNight;
-        } else {
-            priceInput.value = ""; // Clear if dates are invalid
-        }
-    }
-
-    checkInInput.addEventListener("change", calculatePrice);
-    checkOutInput.addEventListener("change", calculatePrice);
-});
 
