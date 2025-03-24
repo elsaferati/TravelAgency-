@@ -7,44 +7,23 @@ function closeMenu() {
     const navigationElement = document.getElementById("navigation");
     navigationElement.style.display = "none";
 }
-// Function to show the modal with smooth transition
+// Function to show the modal
 function openModal() {
-    const modal = document.getElementById("bookingModal");
-    modal.style.display = "flex";
-    modal.classList.add("open");
+    document.getElementById("bookingModal").style.display = "flex";
 }
 
-// Function to close the modal with smooth transition
+// Function to close the modal
 function closeModal() {
-    const modal = document.getElementById("bookingModal");
-    modal.classList.remove("open");
-    setTimeout(() => {
-        modal.style.display = "none";
-    }, 300); // Match the duration of the fade-out animation
+    document.getElementById("bookingModal").style.display = "none";
 }
 
-// Calculate price based on dates
-function updatePrice() {
-    const checkInDate = document.getElementById("checkIn").value;
-    const checkOutDate = document.getElementById("checkOut").value;
-    const priceField = document.getElementById("price");
-    const submitButton = document.getElementById("submitButton");
-
-    // Default price per night (adjust as needed)
-    const pricePerNight = 180;
-
-    // Check if dates are valid and calculate the price
-    if (checkInDate && checkOutDate && new Date(checkInDate) < new Date(checkOutDate)) {
-        const nights = Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24));
-        priceField.value = `$${pricePerNight * nights}`;
-
-        // Enable the submit button when dates are valid
-        submitButton.disabled = false;
-    } else {
-        priceField.value = ""; // Clear price if dates are invalid
-        submitButton.disabled = true; // Disable submit button when dates are invalid
-    }
-}
+// Automatically calculate price based on room type
+document.getElementById("roomType").addEventListener("change", function() {
+    let priceField = document.getElementById("price");
+    let roomType = this.value;
+    let price = roomType === "single" ? 100 : roomType === "double" ? 180 : 300;
+    priceField.value = `$${price}`;
+});
 
 // Handle form submission
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
@@ -53,15 +32,14 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     closeModal();
 });
 
-// Add event listeners for date inputs to update the price dynamically
+// Hide the modal by default when the page loads
 document.addEventListener("DOMContentLoaded", function() {
-    const checkInInput = document.getElementById("checkIn");
-    const checkOutInput = document.getElementById("checkOut");
-
-    // Add event listeners to update price on change of dates
-    checkInInput.addEventListener("change", updatePrice);
-    checkOutInput.addEventListener("change", updatePrice);
+    closeModal(); // Ensure the modal is hidden on page load
 });
 
+// Add event listener for the "book" button to open the modal
+document.getElementById("bookButton").addEventListener("click", function() {
+    openModal(); // Open the modal when the book button is clicked
+});
 
 
