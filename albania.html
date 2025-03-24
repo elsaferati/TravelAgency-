@@ -234,32 +234,9 @@
     </ul>
     
 </section>
- <!-- Booking Modal -->
- <div id="bookingModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h3>Book Your Room</h3>
-        <form id="bookingForm">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="tel" id="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
-            
-            <label for="checkIn">Check-in Date</label>
-            <input type="date" id="checkIn" required>
-
-            <label for="checkOut">Check-out Date</label>
-            <input type="date" id="checkOut" required>
-
-            <label for="price">Total Price ($)</label>
-            <input type="text" id="price" readonly>
-
-            <button type="submit">Confirm Booking</button>
-        </form>
-    </div>
-</div>
 
 <!-- Booking Modal -->
-<div id="bookingModal" class="modal">
+<div id="bookingModal" class="modal" style="display: none;">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h3>Book Your Room</h3>
@@ -267,23 +244,16 @@
             <input type="text" id="fullName" placeholder="Full Name" required>
             <input type="email" id="email" placeholder="Email" required>
             <input type="tel" id="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
-            
             <label for="checkIn">Check-in Date</label>
             <input type="date" id="checkIn" required>
-
             <label for="checkOut">Check-out Date</label>
             <input type="date" id="checkOut" required>
-
             <label for="price">Total Price ($)</label>
             <input type="text" id="price" readonly>
-
             <button type="submit">Confirm Booking</button>
         </form>
     </div>
 </div>
-
-<!-- Button to trigger the modal -->
-<button id="bookButton">Book Now</button>
 
  </main>
 
