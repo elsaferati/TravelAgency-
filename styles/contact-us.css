@@ -18,12 +18,10 @@ main div{
 }
 
 .img img {
-    width: 830px;
-    height: 80vh;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 830px !important;
+    height: 80vh !important;
+    border-radius: 6px !important;
 }
-
 
 .contact h1{
     text-align: center;
