@@ -7,14 +7,15 @@ function closeMenu() {
     const navigationElement = document.getElementById("navigation");
     navigationElement.style.display = "none";
 }
+// Function to open the modal
 // Open the modal
 function openModal() {
-    document.getElementById("bookingModal").style.display = "flex"; // Open the modal
+    document.getElementById("bookingModal").style.display = "flex";
 }
 
-// Close the modal
+// Function to close the modal
 function closeModal() {
-    document.getElementById("bookingModal").style.display = "none"; // Close the modal
+    document.getElementById("bookingModal").style.display = "none";
 }
 
 // Optional: Close the modal if the user clicks outside of it
@@ -60,4 +61,3 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("bookButton").addEventListener("click", function() {
     openModal(); // Open the modal when the book button is clicked
 });
-
