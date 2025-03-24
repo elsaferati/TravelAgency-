@@ -17,15 +17,6 @@ function closeModal() {
     document.getElementById("bookingModal").style.display = "none";
 }
 
-// Handle date change and recalculate the price
-document.getElementById("checkIn").addEventListener("change", function() {
-    updatePrice();
-});
-
-document.getElementById("checkOut").addEventListener("change", function() {
-    updatePrice();
-});
-
 // Calculate price based on dates
 function updatePrice() {
     const checkInDate = document.getElementById("checkIn").value;
@@ -50,5 +41,5 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     alert("Booking confirmed! We will contact you soon.");
     closeModal();
 });
-
+});
 
