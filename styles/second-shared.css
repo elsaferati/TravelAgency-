@@ -347,9 +347,13 @@ main{
 
 /* Read-only input styling */
 .modal-content input[readonly] {
-    background-color: #f0f0f0;
-    cursor: not-allowed;
+    background-color: #f8f8f8;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: #333;
 }
+
 
 /* Submit Button */
 .modal-content button {
