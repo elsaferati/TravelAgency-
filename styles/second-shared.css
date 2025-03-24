@@ -14,7 +14,7 @@ main{
     padding-left: 0;
 }
 #first-section ul li img{
-    width: 44rem;
+    width: 39.25rem;
     height: 25rem;
     box-shadow: 2px 4px 6px rgb(72, 69, 69);
     object-fit: cover;
@@ -192,18 +192,15 @@ main{
     align-items: center;
     min-height: 90vh;
     
-    
 }
 .sixth-section h1{
-    margin-left: 3rem;
+    margin-left: 0.5rem;
     font-weight: bold;
 }
 .container2{
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    width: 500px;
+    display: flex;
+    width: 300px;
     height: 500px;
     transition: 0.25s;
     margin-bottom: 5rem;
@@ -211,7 +208,7 @@ main{
 
 }
 .container2 img{
-    width: 15rem;
+    width: 13.5rem;
     height: 20rem;
     object-fit: cover;
     border:  5px solid rgb(22, 17, 53);
