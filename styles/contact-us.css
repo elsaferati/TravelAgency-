@@ -17,7 +17,7 @@ main div{
     display: flex;
 }
 
-main > .img img {
+.img img {
     width: 830px;
     height: 80vh;
     border-radius: 6px;
