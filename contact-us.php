@@ -19,7 +19,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="images/2(1).png" alt="Logo" />
+                <img class="logo" src="images/2(1).png" alt="Logo" >
             </div>
             <div class="logo-text-container">
                 <p  id="title"><a href="index.html"><strong>W A V E</strong></a></p>
@@ -125,10 +125,10 @@
             <section id="social-part">
                 <h3>Social</h3>
                 <ul class="footer-content-special">
-                    <li><a href="https://www.facebook.com"><img class="last-img" src="images/facebook.jpg" alt="facebook"></a></li>
-                    <li><a href="https://www.instagram.com"><img class="last-img" src="images/insta.jpg" alt="instagram"></a></li>
+                    <li><a href="https://www.facebook.com"><img class="last-img" src="images/facebook.jpg" alt="facebook" ></a></li>
+                    <li><a href="https://www.instagram.com"><img class="last-img" src="images/insta.jpg" alt="instagram" ></a></li>
                     <li><a href="https://www.linkedin.com"><img class="last-img" src="images/in.jpg" alt="linkedin"></a></li>
-                    <li><a href="https://www.youtube.com"><img class="last-img" src="images/youtube.jpg" alt="youtube"></a></li>
+                    <li><a href="https://www.youtube.com"><img class="last-img" src="images/youtube.jpg" alt="youtube" ></a></li>
                     <li><a href="https://twitter.com"><img class="last-img" src="images/twitter.jpg" alt="twitter"></a></li>
                 </ul>
             </section>
