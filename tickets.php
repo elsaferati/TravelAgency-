@@ -1,3 +1,12 @@
+<?php
+require_once 'models/Ticket.php';
+session_start();
+
+$isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
+
+$ticket = new Ticket();
+$tickets = $ticket->read();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,6 +90,7 @@
         <hr>
         <div class="destinations">
           <div class="from">
+          <form action="actions/create.php" method="POST">
             <label for="from">From</label>
             <div class="option">
               <select name="city" id="city"
@@ -157,6 +167,39 @@
           </div>
           <div class="searchbox">
             <input type="submit" value="Book your ticket">
+            </form>
+            <?php if ($isAdmin): ?>
+      <h2>Booked Tickets</h2>
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>Return Date</th>
+          <th>Passengers</th>
+          <th>Class</th>
+          <th>Action</th>
+        </tr>
+        <?php foreach ($tickets as $ticket): ?>
+        <tr>
+          <td><?php echo $ticket['id']; ?></td>
+          <td><?php echo $ticket['from_location']; ?></td>
+          <td><?php echo $ticket['to_location']; ?></td>
+          <td><?php echo $ticket['date']; ?></td>
+          <td><?php echo $ticket['return_date']; ?></td>
+          <td><?php echo $ticket['passengers']; ?></td>
+          <td><?php echo $ticket['class']; ?></td>
+          <td>
+          <form action="actions/delete.php" method="POST" style="display:inline;">
+              <input type="hidden" name="id" value="<?php echo $ticket['id']; ?>">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+        <?php endforeach; ?>
+      </table>
+    <?php endif; ?>
           </div>
         </div>
       </div>
