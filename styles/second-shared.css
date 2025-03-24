@@ -30,7 +30,7 @@ main{
 
 #second-section ul{
     display: flex;
-    margin-left: 20rem;
+    justify-content: center;
 }
 #second-section img{
     height: 3rem;
@@ -80,7 +80,7 @@ main{
     margin: 8rem auto;
 }
 #third-section ul li img{
-    width: 25rem;
+    width: 24.5rem;
     height: 20rem;
     cursor: pointer;
     box-shadow: 1px 3px 5px rgb(64, 60, 60);
