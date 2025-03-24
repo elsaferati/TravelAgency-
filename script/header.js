@@ -7,15 +7,22 @@ function closeMenu() {
     const navigationElement = document.getElementById("navigation");
     navigationElement.style.display = "none";
 }
-// Function to show the modal
+// Function to open the modal
 function openModal() {
-    document.getElementById("bookingModal").style.display = "flex";
+    document.getElementById("bookingModal").style.display = "flex"; // Open the modal
 }
 
 // Function to close the modal
 function closeModal() {
-    document.getElementById("bookingModal").style.display = "none";
+    document.getElementById("bookingModal").style.display = "none"; // Close the modal
 }
+
+// Optional: Close the modal if the user clicks outside of it
+window.onclick = function(event) {
+    if (event.target == document.getElementById("bookingModal")) {
+        closeModal();
+    }
+};
 
 // Automatically calculate price based on room type
 document.getElementById("roomType").addEventListener("change", function() {
@@ -29,7 +36,7 @@ document.getElementById("roomType").addEventListener("change", function() {
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Booking confirmed! We will contact you soon.");
-    closeModal();
+    closeModal(); // Close the modal after booking confirmation
 });
 
 // Hide the modal by default when the page loads
@@ -41,5 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("bookButton").addEventListener("click", function() {
     openModal(); // Open the modal when the book button is clicked
 });
+
 
 
