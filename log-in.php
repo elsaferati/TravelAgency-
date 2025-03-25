@@ -1,12 +1,16 @@
 <?php
 session_start();
+<<<<<<< Updated upstream
 include_once 'DatabaseConnection.php';
+=======
+require_once('configV.php'); // Database connection
+>>>>>>> Stashed changes
 
-// Check if config2.php exists
-if (!file_exists(__DIR__ . '/config2.php')) {
-    die("Error: config2.php not found!");
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['loginbtn'])) {
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
 
+<<<<<<< Updated upstream
 require_once __DIR__ . '/config2.php';
 include_once 'userRepository.php';
 include_once __DIR__ . '/user.php';
@@ -47,8 +51,44 @@ if (isset($_POST['loginbtn'])) {
             // Incorrect login details
             die("Incorrect Username or Password!");
         }
+=======
+    if (empty($email) || empty($password)) {
+        $_SESSION['error'] = "Please fill in all fields!";
+    } else {
+        // Check database connection
+        if (!$conn) {
+            die("Database connection failed: " . mysqli_connect_error());
+        }
+
+        // Prepare a statement to get user details securely
+        $stmt = $conn->prepare("SELECT id, email, password, role FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+        $stmt->close();
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Regenerate session ID for security
+            session_regenerate_id(true);
+
+            // Store user details in session
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['role'] = $user['role'];
+
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            $_SESSION['error'] = "Incorrect email or password!";
+        }
+>>>>>>> Stashed changes
     }
 }
+
+// Check for error messages
+$error_message = isset($_SESSION['error']) ? $_SESSION['error'] : "";
+unset($_SESSION['error']); // Clear error after displaying
 ?>
 
 
@@ -57,19 +97,19 @@ if (isset($_POST['loginbtn'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Overpass:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+=======
+    <title>Login</title>
+>>>>>>> Stashed changes
     <link rel="stylesheet" href="styles/log-in-style.css">
-    <link rel="stylesheet" href="styles/shared.css"> 
-    <link rel="stylesheet" href="styles/header.css">
-    <script src="script/header.js" type="text/javascript"></script>
-
-    <title>Log in</title>
 </head>
 <body>
+<<<<<<< Updated upstream
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
@@ -189,3 +229,20 @@ if (isset($_POST['loginbtn'])) {
 
 
 
+=======
+    <form action="" method="post">
+        <h3>Login Now</h3>
+        
+        <?php if (!empty($error_message)) { ?>
+            <span class="error-msg"><?php echo $error_message; ?></span>
+        <?php } ?>
+        
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <input type="submit" name="loginbtn" value="Login Now" class="form-btn">
+        
+        <p>Don't have an account? <a href="register_form.php">Register Now</a></p>
+    </form>
+</body>
+</html>
+>>>>>>> Stashed changes
