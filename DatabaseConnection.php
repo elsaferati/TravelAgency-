@@ -4,7 +4,7 @@ class DatabaseConnection{
     private $server="localhost";
     private $username="root";
     private $password="";
-    private $database = "userinfo";
+    private $database = "logindata";
 
     private $port = "3306";
 

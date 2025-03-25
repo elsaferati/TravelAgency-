@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/contact-us.css">
     <script src="script/header.js" type="text/javascript"></script>
-    <title>About-us</title>
+    <title>Contact-us</title>
 </head>
 <body>
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="images/2(1).png" alt="Logo" />
+                <img class="logo" src="images/2(1).png" alt="Logo" >
             </div>
             <div class="logo-text-container">
                 <p  id="title"><a href="index.html"><strong>W A V E</strong></a></p>
@@ -67,7 +67,7 @@
     </header>
     <main>
         <div class="contact"><h1>Contact Us</h1></div>
-        <div class="img1">
+        <div class="img">
             <img src="images/contact-us.jpg" alt="">
              
     <form id="contactForm" action="userinformation.php" method="post" onsubmit="sendMessage(event)">
@@ -125,10 +125,10 @@
             <section id="social-part">
                 <h3>Social</h3>
                 <ul class="footer-content-special">
-                    <li><a href="https://www.facebook.com"><img class="last-img" src="images/facebook.jpg" alt="facebook"></a></li>
-                    <li><a href="https://www.instagram.com"><img class="last-img" src="images/insta.jpg" alt="instagram"></a></li>
+                    <li><a href="https://www.facebook.com"><img class="last-img" src="images/facebook.jpg" alt="facebook" ></a></li>
+                    <li><a href="https://www.instagram.com"><img class="last-img" src="images/insta.jpg" alt="instagram" ></a></li>
                     <li><a href="https://www.linkedin.com"><img class="last-img" src="images/in.jpg" alt="linkedin"></a></li>
-                    <li><a href="https://www.youtube.com"><img class="last-img" src="images/youtube.jpg" alt="youtube"></a></li>
+                    <li><a href="https://www.youtube.com"><img class="last-img" src="images/youtube.jpg" alt="youtube" ></a></li>
                     <li><a href="https://twitter.com"><img class="last-img" src="images/twitter.jpg" alt="twitter"></a></li>
                 </ul>
             </section>
