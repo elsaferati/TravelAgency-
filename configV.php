@@ -1,21 +1,17 @@
+
+
 <?php
-$server = "localhost"; 
+$host = "localhost";
 $username = "root";
 $password = "";
-$database = "logindata"; // ✅ Make sure this matches the correct database
-$port = "3306";
+$database = "logindata";
 
-// Establish a connection
-$conn = mysqli_connect($server, $username, $password, $database, $port);
+$conn = new mysqli($host, $username, $password, $database);
 
-// Check for a successful connection
-if (!$conn) {
-    error_log("Connection failed: " . mysqli_connect_error()); // Log the error
-    die("Database connection failed: " . mysqli_connect_error()); // Show for debugging
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// Set character set to utf8mb4 for security
-mysqli_set_charset($conn, "utf8mb4");
-
-echo "Connected successfully to logindata!";
+// Remove or comment out the following line
+// echo "Connected successfully to logindata!";
 ?>
