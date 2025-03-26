@@ -1,19 +1,21 @@
 <?php
-// Include database connection
-include('db_connection.php');
+session_start();
+require_once('configV.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id']; // ID to delete
-
-    // SQL Query to delete data
-    $sql = "DELETE FROM logintable WHERE id='$id'";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Record deleted successfully.";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+if (!isset($_SESSION['user_id']) || !isset($_GET['id'])) {
+    header("Location: dashboard.php");
+    exit();
 }
 
-mysqli_close($conn);
+$userId = $_GET['id'];
+
+// Delete user
+$stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
+if ($stmt->execute([$userId])) {
+    $_SESSION['success'] = "User deleted!";
+} else {
+    $_SESSION['error'] = "Failed to delete user!";
+}
+header("Location: dashboard.php");
+exit();
 ?>
