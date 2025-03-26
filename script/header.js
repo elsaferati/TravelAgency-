@@ -24,23 +24,32 @@ window.onclick = function(event) {
     }
 };
 
-// Optionally, you can add logic to calculate the price based on the check-in/check-out dates.
-document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent form submission to process the data
-
+  // Function to calculate the price
+  function calculatePrice() {
     const checkInDate = new Date(document.getElementById("checkIn").value);
     const checkOutDate = new Date(document.getElementById("checkOut").value);
     
-    if (checkInDate && checkOutDate && checkOutDate > checkInDate) {
-        // Calculate the price based on the number of days between check-in and check-out
+    console.log("Check-in:", checkInDate, "Check-out:", checkOutDate); // Debugging
+
+    if (!isNaN(checkInDate) && !isNaN(checkOutDate) && checkOutDate > checkInDate) {
         const timeDiff = checkOutDate - checkInDate;
-        const days = timeDiff / (1000 * 3600 * 24); // Convert milliseconds to days
-        const pricePerNight = 100;  // Assume a fixed price per night (you can change this)
+        const days = timeDiff / (1000 * 3600 * 24);
+        const pricePerNight = 100;  // Set room rate
         const totalPrice = days * pricePerNight;
 
-        document.getElementById("price").value = totalPrice.toFixed(2);  // Update price field
+        document.getElementById("price").value = totalPrice.toFixed(2);
     } else {
-        alert("Please select valid check-in and check-out dates.");
+        document.getElementById("price").value = ""; // Reset price field if invalid
     }
+}
+
+// Attach event listeners to update price when dates change
+document.getElementById("checkIn").addEventListener("input", calculatePrice);
+document.getElementById("checkOut").addEventListener("input", calculatePrice);
+
+// Handle form submission
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent page reload
+    calculatePrice();  // Ensure price is calculated
 });
 
