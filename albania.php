@@ -255,6 +255,8 @@
     </div>
 </div>
 
+<script src="script/header.js" defer></script>
+
  </main>
 
 <footer>

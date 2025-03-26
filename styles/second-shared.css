@@ -329,7 +329,6 @@ main{
     width: 90%;
     padding: 10px;
     margin: 10px 0;
-    font-weight: bold; /* Ensure the font is bold */
 }
 
 /* Input fields styling */
