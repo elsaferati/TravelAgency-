@@ -25,31 +25,56 @@ window.onclick = function(event) {
 };
 
   // Function to calculate the price
-  function calculatePrice() {
+ // Calculate the price and submit the form via AJAX
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent form submission to process the data
+
     const checkInDate = new Date(document.getElementById("checkIn").value);
     const checkOutDate = new Date(document.getElementById("checkOut").value);
-    
-    console.log("Check-in:", checkInDate, "Check-out:", checkOutDate); // Debugging
 
-    if (!isNaN(checkInDate) && !isNaN(checkOutDate) && checkOutDate > checkInDate) {
+    if (checkInDate && checkOutDate && checkOutDate > checkInDate) {
+        // Calculate the price based on the number of days between check-in and check-out
         const timeDiff = checkOutDate - checkInDate;
-        const days = timeDiff / (1000 * 3600 * 24);
-        const pricePerNight = 100;  // Set room rate
+        const days = timeDiff / (1000 * 3600 * 24); // Convert milliseconds to days
+        const pricePerNight = 100;  // Assume a fixed price per night (you can change this)
         const totalPrice = days * pricePerNight;
 
+        // Set the price in the input field
         document.getElementById("price").value = totalPrice.toFixed(2);
+
+        // Prepare the data to send via AJAX
+        const bookingData = {
+            fullName: document.getElementById("fullName").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            checkIn: document.getElementById("checkIn").value,
+            checkOut: document.getElementById("checkOut").value,
+            totalPrice: totalPrice.toFixed(2)
+        };
+
+        // Send the data to the PHP script via AJAX
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "book-room.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        let formData = "";
+        for (let key in bookingData) {
+            formData += `${key}=${encodeURIComponent(bookingData[key])}&`;
+        }
+
+        // Remove the trailing '&'
+        formData = formData.slice(0, -1);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                alert("Booking confirmed!");
+                closeModal();  // Close the modal on success
+            }
+        };
+
+        xhr.send(formData);
     } else {
-        document.getElementById("price").value = ""; // Reset price field if invalid
+        alert("Please select valid check-in and check-out dates.");
     }
-}
-
-// Attach event listeners to update price when dates change
-document.getElementById("checkIn").addEventListener("input", calculatePrice);
-document.getElementById("checkOut").addEventListener("input", calculatePrice);
-
-// Handle form submission
-document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent page reload
-    calculatePrice();  // Ensure price is calculated
 });
 
