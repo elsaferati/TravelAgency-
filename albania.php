@@ -240,20 +240,21 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h3>Book Your Room</h3>
-        <form id="bookingForm">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="tel" id="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
+        <form id="bookingForm" method="POST">
+            <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
             <label for="checkIn">Check-in Date</label>
-            <input type="date" id="checkIn" required>
+            <input type="date" id="checkIn" name="check_in" required>
             <label for="checkOut">Check-out Date</label>
-            <input type="date" id="checkOut" required>
+            <input type="date" id="checkOut" name="check_out" required>
             <label for="price">Total Price ($)</label>
-            <input type="text" id="price" readonly>
+            <input type="text" id="price" name="total_price" readonly>
             <button type="submit">Confirm Booking</button>
         </form>
     </div>
 </div>
+
 
 <script src="script/header.js" defer></script>
 

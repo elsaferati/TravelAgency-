@@ -23,9 +23,7 @@ window.onclick = function(event) {
         closeModal();
     }
 };
-
-  // Function to calculate the price
- // Calculate the price and submit the form via AJAX
+// Function to calculate the price and submit the form via AJAX
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent form submission to process the data
 
@@ -65,16 +63,24 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
         // Remove the trailing '&'
         formData = formData.slice(0, -1);
 
+        // Handle the AJAX response
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                alert("Booking confirmed!");
-                closeModal();  // Close the modal on success
+                // Check if the response contains 'Booking confirmed!'
+                if (xhr.responseText === "Booking confirmed!") {
+                    alert("Booking confirmed!");
+                    closeModal();  // Close the modal on success
+                } else {
+                    alert("Error: " + xhr.responseText);
+                }
             }
         };
 
+        // Send the form data
         xhr.send(formData);
     } else {
         alert("Please select valid check-in and check-out dates.");
     }
 });
+
 
