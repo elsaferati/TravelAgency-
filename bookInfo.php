@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = mysqli_real_escape_string($connection, $_POST['phone']);
     $checkIn = $_POST['check_in'];  // No need to escape date, but it's still good practice
     $checkOut = $_POST['check_out'];
-    $totalPrice = $_POST['totalPrice'];
+    $totalPrice = $_POST['total_price'];
 
     // Prepare the SQL query to insert the booking data into the database
     $query = "INSERT INTO `bookings` (`full_name`, `email`, `phone`, `check_in`, `check_out`, `total_price`) 
