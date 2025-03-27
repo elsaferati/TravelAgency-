@@ -1,6 +1,6 @@
 <?php
 // Establish a connection to the database
-$connection = mysqli_connect('localhost', 'root', '', 'bookings', 3306);
+$connection = mysqli_connect('localhost', 'root', '', 'bookings');
 
 // Check if the connection was successful
 if (!$connection) {
@@ -20,16 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepare the SQL query to insert the booking data into the database
     $query = "INSERT INTO `bookings` (`full_name`, `email`, `phone`, `check_in`, `check_out`, `total_price`) 
               VALUES ('$fullName', '$email', '$phone', '$checkIn', '$checkOut', '$totalPrice')";
-    
-    // Execute the query
+
     $result = mysqli_query($connection, $query);
 
     // Check if the insertion was successful
     if ($result) {
-        // Return success message via AJAX
+        // Return success message
         echo "Booking confirmed!";
     } else {
-        // Return error message via AJAX
+        // Return error message
         echo "Error: " . mysqli_error($connection);
     }
 }
