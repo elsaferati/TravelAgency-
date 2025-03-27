@@ -1,8 +1,7 @@
 <?php
-// Establish a connection to the database
-$connection = mysqli_connect('localhost', 'root', '', 'bookings');
+$connection = mysqli_connect('localhost', 'root', '', 'bookings', 3306);
 
-// Check if the connection was successful
+// Check the connection
 if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
