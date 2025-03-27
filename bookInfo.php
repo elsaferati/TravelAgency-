@@ -10,11 +10,11 @@ if (!$connection) {
 // Check if form data is sent via POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Sanitize user input to prevent SQL injection
-    $fullName = mysqli_real_escape_string($connection, $_POST['fullName']);
+    $fullName = mysqli_real_escape_string($connection, $_POST['full_name']);
     $email = mysqli_real_escape_string($connection, $_POST['email']);
     $phone = mysqli_real_escape_string($connection, $_POST['phone']);
-    $checkIn = $_POST['checkIn'];  // No need to escape date, but it's still good practice
-    $checkOut = $_POST['checkOut'];
+    $checkIn = $_POST['check_in'];  // No need to escape date, but it's still good practice
+    $checkOut = $_POST['check_out'];
     $totalPrice = $_POST['totalPrice'];
 
     // Prepare the SQL query to insert the booking data into the database
@@ -36,5 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Close the connection
 mysqli_close($connection);
 ?>
+
 
 
