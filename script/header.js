@@ -23,7 +23,7 @@ window.onclick = function(event) {
         closeModal();
     }
 };
-// Function to calculate the price and submit the form via AJAX
+// Function to calculate the price before form submission
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent form submission to process the data
 
@@ -40,47 +40,12 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
         // Set the price in the input field
         document.getElementById("price").value = totalPrice.toFixed(2);
 
-        // Prepare the data to send via AJAX
-        const bookingData = {
-            fullName: document.getElementById("fullName").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            checkIn: document.getElementById("checkIn").value,
-            checkOut: document.getElementById("checkOut").value,
-            totalPrice: totalPrice.toFixed(2)
-        };
-
-        // Send the data to the PHP script via AJAX
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", "book-room.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        let formData = "";
-        for (let key in bookingData) {
-            formData += `${key}=${encodeURIComponent(bookingData[key])}&`;
-        }
-
-        // Remove the trailing '&'
-        formData = formData.slice(0, -1);
-
-        // Handle the AJAX response
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                // Check if the response contains 'Booking confirmed!'
-                if (xhr.responseText === "Booking confirmed!") {
-                    alert("Booking confirmed!");
-                    closeModal();  // Close the modal on success
-                } else {
-                    alert("Error: " + xhr.responseText);
-                }
-            }
-        };
-
-        // Send the form data
-        xhr.send(formData);
+        // Now the form will be submitted automatically with the correct data
+        this.submit();  // Submit the form after calculation
     } else {
         alert("Please select valid check-in and check-out dates.");
     }
 });
+
 
 
