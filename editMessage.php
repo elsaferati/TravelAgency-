@@ -1,51 +1,44 @@
-<?php
-// Database connection
-$connection = mysqli_connect('localhost', 'root', '', 'userinfo');
-
-// Check connection
-if (!$connection) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Get message ID from URL
-$id = isset($_GET['id']) ? $_GET['id'] : '';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get updated form data
-    $user = isset($_POST['user']) ? $_POST['user'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $message = isset($_POST['message']) ? $_POST['message'] : '';
-
-    // Update the message in the database
-    $query = "UPDATE `userdata` SET `user` = '$user', `email` = '$email', `message` = '$message' WHERE `id` = '$id'";
-    $result = mysqli_query($connection, $query);
-
-    if ($result) {
-        echo "<script>alert('Message updated successfully!'); window.location.href='contact-messages.php';</script>";
-    } else {
-        echo "Error: " . mysqli_error($connection);
-    }
-}
-
-// Fetch the message details for editing
-$query = "SELECT * FROM `userdata` WHERE `id` = '$id'";
-$result = mysqli_query($connection, $query);
-$row = mysqli_fetch_assoc($result);
-
-// If the record is not found, redirect to the contact messages page
-if (!$row) {
-    echo "<script>window.location.href='contact-messages.php';</script>";
-}
-
-mysqli_close($connection);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Message</title>
+    <style>
+        /* Add the same button styling from above */
+        button, a.button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+        }
+
+        button:hover, a.button:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        button.delete, a.delete {
+            background-color: #f44336;
+            color: white;
+        }
+
+        button.delete:hover, a.delete:hover {
+            background-color: #e53935;
+        }
+
+        button.edit, a.edit {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        button.edit:hover, a.edit:hover {
+            background-color: #007bb5;
+        }
+    </style>
 </head>
 <body>
 
@@ -61,8 +54,9 @@ mysqli_close($connection);
     <label for="message">Message:</label>
     <textarea id="message" name="message" rows="4" required><?php echo htmlspecialchars($row['message']); ?></textarea>
 
-    <button type="submit">Update Message</button>
+    <button type="submit" class="button">Update Message</button>
 </form>
 
 </body>
 </html>
+
