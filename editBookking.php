@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $updateQuery = "UPDATE bookings SET full_name='$fullName', email='$email', phone='$phone', check_in='$checkIn', check_out='$checkOut', total_price='$totalPrice' WHERE id=$id";
 
     if (mysqli_query($connection, $updateQuery)) {
-        echo "<script>alert('Booking updated!'); window.location.href='bookinsInfo.php';</script>";
+        echo "<script>alert('Booking updated!'); window.location.href='bookingsInfo.php';</script>";
     } else {
         echo "Error updating booking: " . mysqli_error($connection);
     }

@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
     $query = "DELETE FROM bookings WHERE id = $id";
 
     if (mysqli_query($connection, $query)) {
-        echo "<script>alert('Booking deleted!'); window.location.href='bookinsInfo.php';</script>";
+        echo "<script>alert('Booking deleted!'); window.location.href='bookingsInfo.php';</script>";
     } else {
         echo "Error deleting booking: " . mysqli_error($connection);
     }
