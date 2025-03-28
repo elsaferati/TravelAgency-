@@ -1,29 +1,20 @@
 <?php
+require_once 'contactDatabase.php';
+require_once 'contactMessages.php';
 
-$connection = mysqli_connect('localhost', 'root', '', 'userinfo', 3306);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $user = isset($_POST['user']) ? $_POST['user'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $message = isset($_POST['message']) ? $_POST['message'] : '';
 
-// Check the connection
-if (!$connection) {
-    die("Connection failed: " . mysqli_connect_error());
+    $messageObj = new Message();
+    if ($messageObj->create($user, $email, $message)) {
+        echo "<script>alert('Message is sent!'); window.location.href='contact-us.php';</script>";
+    } else {
+        echo "Error: " . mysqli_error($connection);
+    }
 }
-
-$user = isset($_POST['user']) ? $_POST['user'] : '';
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-$message = isset($_POST['message']) ? $_POST['message'] : '';
-
-$query = "INSERT INTO `userdata`(`user`, `email`, `message`) VALUES ('$user', '$email', '$message')";
-
-$result = mysqli_query($connection, $query);
-
-if ($result) {
-    echo "<script>alert('Message is sent!'); window.location.href='contact-us.php';</script>";
-} else {
-    echo "Error: " . mysqli_error($connection);
-}
-
-// Close the connection
-mysqli_close($connection);
-
 ?>
+
 
 
