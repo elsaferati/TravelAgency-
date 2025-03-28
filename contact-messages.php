@@ -8,7 +8,7 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$query = "SELECT id, user, email, message FROM contactMessages";
+$query = "SELECT id, user, email, message FROM userdata";
 $result = mysqli_query($connection, $query);
 
 if (!$result) {
@@ -96,10 +96,10 @@ if (!$result) {
             echo "<td>" . htmlspecialchars($row['email']) . "</td>";
             echo "<td>" . htmlspecialchars($row['message']) . "</td>";
             echo "<td class='actions'>
-                    <a href='modifyMessage.php?id=" . $row['id'] . "'>
+                    <a href='editMessage.php?id=" . $row['id'] . "'>
                         <button class='edit-btn'>Edit</button>
                     </a> | 
-                    <a href='removeMessage.php?id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this message?\")'>
+                    <a href='deleteMessage.php?id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this message?\")'>
                         <button class='delete-btn'>Delete</button>
                     </a>
                   </td>";
