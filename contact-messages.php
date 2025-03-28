@@ -53,6 +53,7 @@ if (!$result) {
             <th>User</th>
             <th>Email</th>
             <th>Message</th>
+            <th>Actions</th> <!-- Added an Actions column -->
         </tr>
     </thead>
     <tbody>
@@ -64,6 +65,10 @@ if (!$result) {
             echo "<td>" . htmlspecialchars($row['user']) . "</td>";
             echo "<td>" . htmlspecialchars($row['email']) . "</td>";
             echo "<td>" . htmlspecialchars($row['message']) . "</td>";
+            echo "<td>
+                    <a href='editMessage.php?id=" . $row['id'] . "'>Edit</a> | 
+                    <a href='deleteMessage.php?id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this message?\")'>Delete</a>
+                  </td>";
             echo "</tr>";
         }
         ?>
@@ -78,3 +83,4 @@ mysqli_close($connection);
 
 </body>
 </html>
+
