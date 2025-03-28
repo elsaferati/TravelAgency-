@@ -33,7 +33,7 @@ $result = mysqli_query($connection, $query);
 // Check if the insertion was successful
 if ($result) {
     // Display success message and redirect to a confirmation page (e.g., thank you page)
-    echo "<script>alert('Booking confirmed!'); window.location.href='confirmation.php';</script>";
+    echo "<script>alert('Booking confirmed!'); window.location.href='albania.php';</script>";
 } else {
     // Display error message if there was an issue with the query
     echo "Error: " . mysqli_error($connection);
