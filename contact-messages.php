@@ -40,6 +40,40 @@ if (!$result) {
         th {
             background-color: #f2f2f2;
         }
+
+        /* Button Styling */
+        button, a.button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+        }
+
+        button:hover, a.button:hover {
+            background-color: #4CAF50; 
+            color: #fff; 
+        }
+
+        button.delete, a.delete {
+            background-color: #f44336; 
+            color: white;
+        }
+
+        button.delete:hover, a.delete:hover {
+            background-color: #e53935; 
+        }
+
+        button.edit, a.edit {
+            background-color: #008CBA; 
+            color: white;
+        }
+
+        button.edit:hover, a.edit:hover {
+            background-color: #007bb5; 
+        }
     </style>
 </head>
 <body>
@@ -58,7 +92,6 @@ if (!$result) {
     </thead>
     <tbody>
         <?php
-        
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>" . htmlspecialchars($row['id']) . "</td>";
@@ -66,8 +99,8 @@ if (!$result) {
             echo "<td>" . htmlspecialchars($row['email']) . "</td>";
             echo "<td>" . htmlspecialchars($row['message']) . "</td>";
             echo "<td>
-                    <a href='editMessage.php?id=" . $row['id'] . "'>Edit</a> | 
-                    <a href='deleteMessage.php?id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this message?\")'>Delete</a>
+                    <a href='editMessage.php?id=" . $row['id'] . "' class='edit'>Edit</a> | 
+                    <a href='deleteMessage.php?id=" . $row['id'] . "' class='delete' onclick='return confirm(\"Are you sure you want to delete this message?\")'>Delete</a>
                   </td>";
             echo "</tr>";
         }
@@ -83,4 +116,5 @@ mysqli_close($connection);
 
 </body>
 </html>
+
 
