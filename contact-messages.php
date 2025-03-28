@@ -22,13 +22,14 @@ if (!$result) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - User Messages</title>
     <style>
+        /* Styling for table, th, td */
         table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-
-        table, th, td {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the table horizontally */
+    display: block;
+    padding-top: 20px; /* Optional: adds some space from the top */
+}
+         th, td {
             border: 1px solid #ddd;
         }
 
@@ -41,38 +42,32 @@ if (!$result) {
             background-color: #f2f2f2;
         }
 
-        /* Button Styling */
-        button, a.button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+        /* Button styling inside table */
+        .actions button {
+            margin-right: 5px;
+            padding: 5px 10px;
             border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            text-decoration: none;
+            cursor: pointer;
         }
 
-        button:hover, a.button:hover {
+        /* Edit button style */
+        .edit-btn {
             background-color: #4CAF50; 
-            color: #fff; 
+            color: white;
         }
 
-        button.delete, a.delete {
+        .edit-btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Delete button style */
+        .delete-btn {
             background-color: #f44336; 
             color: white;
         }
 
-        button.delete:hover, a.delete:hover {
-            background-color: #e53935; 
-        }
-
-        button.edit, a.edit {
-            background-color: #008CBA; 
-            color: white;
-        }
-
-        button.edit:hover, a.edit:hover {
-            background-color: #007bb5; 
+        .delete-btn:hover {
+            background-color: #e53935; /* Darker red on hover */
         }
     </style>
 </head>
@@ -98,9 +93,13 @@ if (!$result) {
             echo "<td>" . htmlspecialchars($row['user']) . "</td>";
             echo "<td>" . htmlspecialchars($row['email']) . "</td>";
             echo "<td>" . htmlspecialchars($row['message']) . "</td>";
-            echo "<td>
-                    <a href='editMessage.php?id=" . $row['id'] . "' class='edit'>Edit</a> | 
-                    <a href='deleteMessage.php?id=" . $row['id'] . "' class='delete' onclick='return confirm(\"Are you sure you want to delete this message?\")'>Delete</a>
+            echo "<td class='actions'>
+                    <a href='editMessage.php?id=" . $row['id'] . "'>
+                        <button class='edit-btn'>Edit</button>
+                    </a> | 
+                    <a href='deleteMessage.php?id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this message?\")'>
+                        <button class='delete-btn'>Delete</button>
+                    </a>
                   </td>";
             echo "</tr>";
         }
@@ -116,5 +115,6 @@ mysqli_close($connection);
 
 </body>
 </html>
+
 
 
