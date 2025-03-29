@@ -2,7 +2,8 @@
 include 'Booking.php';
 
 $booking = new Booking();
-$result = $booking->getAllBookings();
+$bookings = $booking->getAllBookings();  // Now fetching all bookings through the class method
+
 ?>
 
 <!DOCTYPE html>
@@ -55,29 +56,36 @@ $result = $booking->getAllBookings();
         </tr>
     </thead>
     <tbody>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-            <tr>
-                <td><?= htmlspecialchars($row['id']) ?></td>
-                <td><?= htmlspecialchars($row['full_name']) ?></td>
-                <td><?= htmlspecialchars($row['email']) ?></td>
-                <td><?= htmlspecialchars($row['phone']) ?></td>
-                <td><?= htmlspecialchars($row['check_in']) ?></td>
-                <td><?= htmlspecialchars($row['check_out']) ?></td>
-                <td><?= htmlspecialchars($row['total_price']) ?></td>
-                <td class='actions'>
-                    <a href='editBooking.php?id=<?= $row['id'] ?>'>
-                        <button class='edit-btn'>Edit</button>
-                    </a>
-                    <a href='deleteBooking.php?id=<?= $row['id'] ?>' onclick='return confirm("Are you sure?")'>
-                        <button class='delete-btn'>Delete</button>
-                    </a>
-                </td>
-            </tr>
-        <?php } ?>
+        <?php
+        if ($bookings) {
+            foreach ($bookings as $row) { ?>
+                <tr>
+                    <td><?= htmlspecialchars($row['Id']) ?></td>
+                    <td><?= htmlspecialchars($row['full_name']) ?></td>
+                    <td><?= htmlspecialchars($row['email']) ?></td>
+                    <td><?= htmlspecialchars($row['phone']) ?></td>
+                    <td><?= htmlspecialchars($row['check_in']) ?></td>
+                    <td><?= htmlspecialchars($row['check_out']) ?></td>
+                    <td><?= htmlspecialchars($row['total_price']) ?></td>
+                    <td class='actions'>
+                        <a href='editBooking.php?Id=<?= $row['Id'] ?>'>
+                            <button class='edit-btn'>Edit</button>
+                        </a>
+                        <a href='deleteBooking.php?Id=<?= $row['Id'] ?>' onclick='return confirm("Are you sure?")'>
+                            <button class='delete-btn'>Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            <?php } 
+        } else {
+            echo "<tr><td colspan='8'>No bookings found.</td></tr>";
+        }
+        ?>
     </tbody>
 </table>
 
 </body>
 </html>
+
 
 
