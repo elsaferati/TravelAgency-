@@ -2,14 +2,18 @@
 include 'Booking.php';
 
 if (isset($_GET['id'])) {
+    // Initialize the Booking class
     $booking = new Booking();
+    
+    // Fetch booking details by ID
     $bookingDetails = $booking->getBookingById($_GET['id']);
-
+    
+    // Check if booking exists, if not, display error message
     if (!$bookingDetails) {
         die("Booking not found!");
     }
 
-    // Handle form submission
+    // Handle form submission to update booking
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = $_POST['id'];
         $fullName = $_POST['full_name'];
@@ -19,14 +23,17 @@ if (isset($_GET['id'])) {
         $checkOut = $_POST['check_out'];
         $totalPrice = $_POST['total_price'];
 
+        // Update booking using the updateBooking method
         if ($booking->updateBooking($id, $fullName, $email, $phone, $checkIn, $checkOut, $totalPrice)) {
+            // Redirect to bookings info page after successful update
             echo "<script>alert('Booking updated!'); window.location.href='bookingsInfo.php';</script>";
         } else {
             echo "Error updating booking!";
         }
     }
 } else {
-    die("Booking ID not provided!");
+    // If no ID is provided in the URL, display an error message
+    die("Booking ID not provided! Please ensure the URL includes ?id=.");
 }
 ?>
 
