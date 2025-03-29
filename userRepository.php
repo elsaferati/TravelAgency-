@@ -1,109 +1,68 @@
 <?php
-// Include necessary files for the database connection
-include_once 'configV.php';
-include_once 'DatabaseConnection.php';
-
 class UserRepository {
-    private $connection;
-    private $table = 'crudtable'; // Ensure this matches your actual table name
+    private $conn;
 
-    function __construct() {
-        try {
-            $dbConnection = new DatabaseConnection();
-            $this->connection = $dbConnection->startConnection(); 
-        } catch (Exception $e) {
-            die("Database connection error: " . $e->getMessage());
-        }
+    public function __construct($db) {
+        $this->conn = $db;
     }
 
-    // Insert a new user into the database
-    function insertUser($user) {
-        $conn = $this->connection;
-        $name = $user->getName();
-        $email = $user->getEmail();
-        $hashedPassword = password_hash($user->getPassword(), PASSWORD_BCRYPT); // Secure password hashing
-
-        try {
-            $sql = "INSERT INTO $this->table (name, email, password) VALUES (?, ?, ?)";
-            $statement = $conn->prepare($sql);
-            $statement->execute([$name, $email, $hashedPassword]);
-
-            echo "<script>alert('User has been inserted successfully!');</script>";
-
-        } catch (Exception $e) {
-            echo "<script>alert('Error inserting user: " . $e->getMessage() . "');</script>";
+    // Fetch user by ID
+    public function getUserById($userId) {
+        $sql = "SELECT * FROM users WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        if ($stmt === false) {
+            die("Error preparing query: " . $this->conn->error);
         }
+        $stmt->bind_param("i", $userId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if ($result === false) {
+            die("Error executing query: " . $this->conn->error);
+        }
+    
+        return $result->fetch_assoc();
+    }
+    
+
+    // Fetch user by email
+    public function getUserByEmail($email) {
+        $sql = "SELECT * FROM users WHERE email = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_assoc();
+    }
+    public function getAllUsers() {
+        // Query to fetch all users from the database
+        $stmt = $this->conn->query("SELECT * FROM users");
+        
+        // Fetch all results as an associative array
+        return $stmt->fetch_all(MYSQLI_ASSOC);
     }
 
-    // Retrieve all users from the database
-    function getAllUsers() {
-        $conn = $this->connection;
-
-        try {
-            $sql = "SELECT * FROM $this->table";
-            $statement = $conn->query($sql);
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
-
-        } catch (Exception $e) {
-            echo "<script>alert('Error fetching users: " . $e->getMessage() . "');</script>";
-            return [];
-        }
+    // Insert a new user
+    public function insertUser($name, $email, $password, $role) {
+        $sql = "INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ssss", $name, $email, $password, $role);
+        return $stmt->execute();
     }
 
-    // Retrieve a single user by their ID
-    function getUserById($id) {
-        $conn = $this->connection;
-
-        try {
-            $sql = "SELECT * FROM $this->table WHERE id=?";
-            $statement = $conn->prepare($sql);
-            $statement->execute([$id]);
-
-            return $statement->fetch(PDO::FETCH_ASSOC);
-
-        } catch (Exception $e) {
-            echo "<script>alert('Error fetching user: " . $e->getMessage() . "');</script>";
-            return null;
-        }
+    // Update user details
+    public function updateUser($userId, $name, $email, $password, $role) {
+        $sql = "UPDATE users SET name = ?, email = ?, password = ?, role = ? WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ssssi", $name, $email, $password, $role, $userId);
+        return $stmt->execute();
     }
 
-    // Update an existing user in the database
-    function updateUser($id, $name, $email, $password = null) {
-        $conn = $this->connection;
-
-        try {
-            if (!empty($password)) {
-                $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-                $sql = "UPDATE $this->table SET name=?, email=?, password=? WHERE id=?";
-                $statement = $conn->prepare($sql);
-                $statement->execute([$name, $email, $hashedPassword, $id]);
-            } else {
-                $sql = "UPDATE $this->table SET name=?, email=? WHERE id=?";
-                $statement = $conn->prepare($sql);
-                $statement->execute([$name, $email, $id]);
-            }
-
-            echo "<script>alert('Update was successful');</script>";
-
-        } catch (Exception $e) {
-            echo "<script>alert('Error updating user: " . $e->getMessage() . "');</script>";
-        }
-    }
-
-    // Delete a user from the database
-    function deleteUser($id) {
-        $conn = $this->connection;
-
-        try {
-            $sql = "DELETE FROM $this->table WHERE id=?";
-            $statement = $conn->prepare($sql);
-            $statement->execute([$id]);
-
-            echo "<script>alert('Delete was successful');</script>";
-
-        } catch (Exception $e) {
-            echo "<script>alert('Error deleting user: " . $e->getMessage() . "');</script>";
-        }
+    // Delete a user
+    public function deleteUser($userId) {
+        $sql = "DELETE FROM users WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("i", $userId);
+        return $stmt->execute();
     }
 }
 ?>
