@@ -32,7 +32,7 @@ class Booking
     public function getAllBookings()
     {
         $connection = $this->db->getConnection();
-        $query = "SELECT id, full_name, email, phone, check_in, check_out, total_price FROM bookings";
+        $query = "SELECT Id, full_name, email, phone, check_in, check_out, total_price FROM bookings";
         $result = $connection->query($query);
         return $result;
     }
@@ -41,7 +41,7 @@ class Booking
     public function getBookingById($id)
     {
         $connection = $this->db->getConnection();
-        $query = "SELECT * FROM bookings WHERE id = ?";
+        $query = "SELECT * FROM bookings WHERE Id = ?";  // Updated to match 'Id' column in DB
         $stmt = $connection->prepare($query);
         $stmt->bind_param('i', $id);
         $stmt->execute();
@@ -53,7 +53,7 @@ class Booking
     public function updateBooking($id, $fullName, $email, $phone, $checkIn, $checkOut, $totalPrice)
     {
         $connection = $this->db->getConnection();
-        $query = "UPDATE bookings SET full_name=?, email=?, phone=?, check_in=?, check_out=?, total_price=? WHERE id=?";
+        $query = "UPDATE bookings SET full_name=?, email=?, phone=?, check_in=?, check_out=?, total_price=? WHERE Id=?";  // Updated to match 'Id' column in DB
         $stmt = $connection->prepare($query);
         $stmt->bind_param('sssssdi', $fullName, $email, $phone, $checkIn, $checkOut, $totalPrice, $id);
 
@@ -64,7 +64,7 @@ class Booking
     public function deleteBooking($id)
     {
         $connection = $this->db->getConnection();
-        $query = "DELETE FROM bookings WHERE id=?";
+        $query = "DELETE FROM bookings WHERE Id=?";  // Updated to match 'Id' column in DB
         $stmt = $connection->prepare($query);
         $stmt->bind_param('i', $id);
 
@@ -78,3 +78,4 @@ class Booking
     }
 }
 ?>
+
