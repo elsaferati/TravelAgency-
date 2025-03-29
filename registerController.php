@@ -1,28 +1,33 @@
 <?php
-require_once 'configV.php'; // Database configuration
+session_start();
+require_once 'DatabaseConnection.php';
+require_once 'UserRepository.php';
+
+$conn = new DatabaseConnection();
+$db = $conn->getConnection();
+$userRepo = new UserRepository($db);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
+    $role = $_POST['role'] ?? 'user'; // Default to 'user'
 
-    if ($password === $confirm_password) {
-        // Hash the password
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
-        // Prepare insert query
-        $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $username, $email, $hashed_password);
+    $existingUser = $userRepo->getUserByEmail($email);
 
-        if ($stmt->execute()) {
-            echo "Registration successful!";
-            header("Location: log-in.html");
-        } else {
-            echo "Error: " . $stmt->error;
-        }
+    if ($existingUser) {
+        header("Location: register_form.php?error=email_exists");
+        exit();
+    }
+
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+    if ($userRepo->insertUser($name, $email, $hashedPassword, $role)) {
+        header("Location: log-in.php");
+        exit();
     } else {
-        echo "Passwords do not match.";
+        header("Location: register_form.php?error=registration_failed");
+        exit();
     }
 }
 ?>
