@@ -1,108 +1,293 @@
-/* General Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styles */
+/* Base Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f8ff; /* Light blue background for the travel theme */
+  margin: 0;
+  padding: 0;  
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/* Container for the Form and Image */
-.container {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  max-width: 1200px;
-  border-radius: 10px;
-  overflow: hidden;
+/* Container for the form */
+.form-container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-/* Left Side Image Styles */
-.left {
-  flex: 1;
-  background:url('path_to_your_image.jpg') no-repeat center center/cover;
-  position: relative;
-  height: auto;
+/* Form Title */
+h2 {
+  text-align: center;
+  color: #333;
 }
 
-/* Overlay for Text on Image */
-.left::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-}
-
-/* Right Side Form Styles */
-.right {
-  flex: 1;
-  background-color: #ffffff;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Heading Styles */
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Form Field Styles */
+/* Input Fields */
 input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
+  padding: 10px;
+  margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* Button Styles */
 button {
-  background-color: #3b6e3f; /* Green background */
-  color: #ffffff;
-  padding: 12px;
+  width: 100%;
+  padding: 10px;
+  background-color: #5bc0de;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #2b4a2e; /* Darker green on hover */
+  background-color: #31b0d5;
 }
 
-/* Footer Text Styles */
-footer {
+/* Link Styles */
+a {
+  color: #5bc0de;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Message */
+.footer-message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Login and Register Page Styles */
+
+/* Container for Login/Register Panel */
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+/* Left Panel: Introduction */
+.left-panel {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-panel h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.left-panel p {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Right Panel: Forms for Login and Register */
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Toggle Button */
+#toggle-form {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Registration Form */
+#register-form {
+  display: none;
+}
+
+/* Error Messages */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Dashboard Page Styles */
+
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #007bff;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 1.8rem;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f7f7f7;
+}
+
+.user-table .btn {
+  padding: 8px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.user-table .btn:hover {
+  opacity: 0.8;
+}
+
+/* Edit Button */
+.user-table .btn {
+  background-color: #4CAF50;
+}
+
+.user-table .delete-btn {
+  background-color: #f44336;
+}
+
+/* Action buttons styling */
+.action-buttons {
+  text-align: center;
   margin-top: 20px;
-  font-size: 12px;
-  color: #666;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
-  
-  .left, .right {
-      width: 100%;
-  }
+.action-buttons .btn {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.action-buttons .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Delete confirmation */
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  color: #e74c3c;
+}
+
+form p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e74c3c;
+}
+
+form .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+form .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for Links between Forms */
+p {
+  font-size: 14px;
+}
+
+p a {
+  font-weight: bold;
 }
