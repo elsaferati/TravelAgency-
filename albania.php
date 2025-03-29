@@ -50,9 +50,9 @@
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.html">Albania</a></li>
+                        <li><a href="albania.php">Albania</a></li>
                         <li><a href="sweden.html">Sweden</a></li>
-                        <li><a href="italy.html">Italy</a></li>
+                        <li><a href="italy.php">Italy</a></li>
                         <li><a href="uk.html">UK</a></li>
                         <li><a href="greece.html">Greece</a></li>
                         <li><a href="spain.html">Spain</a></li>
@@ -240,22 +240,20 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h3>Book Your Room</h3>
-        <form id="bookingForm" method="POST">
-            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+        <form id="bookingForm" action="bookInfo.php" method="POST">
+            <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
             <input type="email" id="email" name="email" placeholder="Email" required>
             <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
             <label for="checkIn">Check-in Date</label>
-            <input type="date" id="checkIn" name="checkIn" required>
+            <input type="date" id="checkIn" name="check_in" required>
             <label for="checkOut">Check-out Date</label>
-            <input type="date" id="checkOut" name="checkOut" required>
+            <input type="date" id="checkOut" name="check_out" required>
             <label for="price">Total Price ($)</label>
-            <input type="text" id="price" name="totalPrice" readonly>
+            <input type="text" id="price" name="total_price" readonly>
             <button type="submit">Confirm Booking</button>
         </form>
     </div>
 </div>
-
-
 
 <script src="script/header.js" defer></script>
 

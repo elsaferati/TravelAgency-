@@ -1,22 +1,8 @@
 <?php
+include 'Booking.php';
 
-// Database connection
-$connection = mysqli_connect('localhost', 'root', '', 'bookings');
-
-// Check if the connection was successful
-if (!$connection) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Query to fetch booking data from the 'bookings' table
-$query = "SELECT id, full_name, email, phone, check_in, check_out, total_price FROM bookings";
-$result = mysqli_query($connection, $query);
-
-// Check if the query was successful
-if (!$result) {
-    die("Query failed: " . mysqli_error($connection));
-}
-
+$booking = new Booking();
+$bookings = $booking->getAllBookings();
 ?>
 
 <!DOCTYPE html>
@@ -24,26 +10,31 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Booking List</title>
+    <title>Booking List</title>
     <style>
         table {
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
         }
-
         table, th, td {
             border: 1px solid #ddd;
         }
-
         th, td {
             padding: 12px;
             text-align: left;
         }
-
         th {
             background-color: #f2f2f2;
         }
+        .actions button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .edit-btn { background-color: #4CAF50; color: white; }
+        .delete-btn { background-color: #f44336; color: white; }
     </style>
 </head>
 <body>
@@ -60,31 +51,39 @@ if (!$result) {
             <th>Check-in Date</th>
             <th>Check-out Date</th>
             <th>Total Price ($)</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <?php
-        // Fetch and display each row of the result set
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<tr>";
-            echo "<td>" . htmlspecialchars($row['id']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['full_name']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['email']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['phone']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['check_in']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['check_out']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['total_price']) . "</td>";
-            echo "</tr>";
-        }
-        ?>
+        <?php if (!empty($bookings)): ?>
+            <?php foreach ($bookings as $row): ?>
+                <tr>
+                    <td><?= htmlspecialchars($row['Id']) ?></td>
+                    <td><?= htmlspecialchars($row['full_name']) ?></td>
+                    <td><?= htmlspecialchars($row['email']) ?></td>
+                    <td><?= htmlspecialchars($row['phone']) ?></td>
+                    <td><?= htmlspecialchars($row['check_in']) ?></td>
+                    <td><?= htmlspecialchars($row['check_out']) ?></td>
+                    <td><?= htmlspecialchars($row['total_price']) ?></td>
+                    <td class='actions'>
+                        <a href="editBooking.php?Id=<?= $row['Id'] ?>">
+                            <button class='edit-btn'>Edit</button>
+                        </a>
+                        <a href='deleteBooking.php?Id=<?= $row['Id'] ?>' onclick='return confirm("Are you sure?")'>
+                            <button class='delete-btn'>Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr><td colspan='8'>No bookings found.</td></tr>
+        <?php endif; ?>
     </tbody>
 </table>
 
-<?php
-// Free the result and close the connection
-mysqli_free_result($result);
-mysqli_close($connection);
-?>
-
 </body>
 </html>
+
+
+
+

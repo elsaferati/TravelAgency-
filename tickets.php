@@ -1,12 +1,3 @@
-<?php
-require_once 'models/Ticket.php';
-session_start();
-
-$isAdmin = isset($_SESSION['admin']) && $_SESSION['admin'] === true;
-
-$ticket = new Ticket();
-$tickets = $ticket->read();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,9 +48,9 @@ $tickets = $ticket->read();
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.html">Albania</a></li>
+                        <li><a href="albania.php">Albania</a></li>
                         <li><a href="sweden.html">Sweden</a></li>
-                        <li><a href="italy.html">Italy</a></li>
+                        <li><a href="italy.php">Italy</a></li>
                         <li><a href="uk.html">UK</a></li>
                         <li><a href="greece.html">Greece</a></li>
                         <li><a href="spain.html">Spain</a></li>
@@ -90,10 +81,10 @@ $tickets = $ticket->read();
         <hr>
         <div class="destinations">
           <div class="from">
-          <form action="actions/create.php" method="POST">
-            <label for="from">From</label>
+          <form method="POST" action="create_ticket.php">
+          <label for="from_city">From</label>
             <div class="option">
-              <select name="city" id="city"
+              <select name="from_city" required
                 style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <option value="#"></option>
                 <option value="Italy">Rome,Italy</option>
@@ -108,9 +99,9 @@ $tickets = $ticket->read();
             </div>
           </div>
           <div class="to">
-            <label for="to">To</label>
+          <label for="to_city">To</label>
             <div class="option2">
-              <select name="city2" id="city2"
+              <select name="to_city" required
                 style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <option value="#"></option>
                 <option value="Italy">Rome,Italy</option>
@@ -126,25 +117,16 @@ $tickets = $ticket->read();
           </div>
         </div>
         <div class="datat">
-          <div class="date1">
-            <label>Date</label>
-            <div>
-              <input type="date"
-                style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            </div>
-          </div>
-          <div class="date2">
-            <label>Return-Date</label>
-            <div>
-              <input type="date"
-                style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            </div>
-          </div>
+        <label for="departure_date">Departure Date:</label>
+    <input type="date" name="departure_date" required><br>
+    
+    <label for="return_date">Return Date:</label>
+    <input type="date" name="return_date"><br>
         </div>
         <div class="end">
           <div class="passengers">
-            <label>Passengers</label>
-            <select name="p" id="p"
+          <label for="passengers">Passengers:</label>
+            <select name="passengers" required
               style="border-radius: 50px; height: 30px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
               <option value="#"></option>
               <option value="1">1</option>
@@ -155,8 +137,8 @@ $tickets = $ticket->read();
             </select>
           </div>
           <div class="class">
-            <label>Class</label>
-            <select name="c" id="c"
+          <label for="class">Class:</label>
+            <select name="class" required
               style="border-radius: 50px; height: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
               <option value="#"></option>
               <option value="economy">Economy</option>
@@ -167,40 +149,7 @@ $tickets = $ticket->read();
           </div>
           <div class="searchbox">
             <input type="submit" value="Book your ticket">
-            </form>
-            <?php if ($isAdmin): ?>
-      <h2>Booked Tickets</h2>
-      <table border="1">
-        <tr>
-          <th>ID</th>
-          <th>From</th>
-          <th>To</th>
-          <th>Date</th>
-          <th>Return Date</th>
-          <th>Passengers</th>
-          <th>Class</th>
-          <th>Action</th>
-        </tr>
-        <?php foreach ($tickets as $ticket): ?>
-        <tr>
-          <td><?php echo $ticket['id']; ?></td>
-          <td><?php echo $ticket['from_location']; ?></td>
-          <td><?php echo $ticket['to_location']; ?></td>
-          <td><?php echo $ticket['date']; ?></td>
-          <td><?php echo $ticket['return_date']; ?></td>
-          <td><?php echo $ticket['passengers']; ?></td>
-          <td><?php echo $ticket['class']; ?></td>
-          <td>
-          <form action="actions/delete.php" method="POST" style="display:inline;">
-              <input type="hidden" name="id" value="<?php echo $ticket['id']; ?>">
-              <button type="submit">Delete</button>
-            </form>
-          </td>
-        </tr>
-        <?php endforeach; ?>
-      </table>
-    <?php endif; ?>
-          </div>
+          
         </div>
       </div>
     </div>
