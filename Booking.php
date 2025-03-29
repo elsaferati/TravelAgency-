@@ -46,7 +46,12 @@ class Booking
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $result = $stmt->get_result();
-        return $result->fetch_assoc();
+        
+        // Check if booking exists and return the data, else return false
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc();
+        }
+        return false; // If no result found, return false
     }
 
     // Method to update a booking
@@ -77,4 +82,5 @@ class Booking
         $this->db->close();
     }
 }
+
 ?>

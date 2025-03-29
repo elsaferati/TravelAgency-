@@ -25,18 +25,21 @@ if (isset($_GET['id'])) {
             echo "Error updating booking!";
         }
     }
+} else {
+    die("Booking ID not provided!");
 }
 ?>
 
 <!-- Booking Edit Form -->
 <form method="POST" action="editBooking.php">
-    <input type="hidden" name="id" value="<?= htmlspecialchars($bookingDetails['id']) ?>">
-    <input type="text" name="full_name" value="<?= htmlspecialchars($bookingDetails['full_name']) ?>" required>
-    <input type="email" name="email" value="<?= htmlspecialchars($bookingDetails['email']) ?>" required>
-    <input type="tel" name="phone" value="<?= htmlspecialchars($bookingDetails['phone']) ?>" required>
-    <input type="date" name="check_in" value="<?= htmlspecialchars($bookingDetails['check_in']) ?>" required>
-    <input type="date" name="check_out" value="<?= htmlspecialchars($bookingDetails['check_out']) ?>" required>
-    <input type="text" name="total_price" value="<?= htmlspecialchars($bookingDetails['total_price']) ?>" required readonly>
+    <input type="hidden" name="id" value="<?= isset($bookingDetails['id']) ? htmlspecialchars($bookingDetails['id']) : '' ?>">
+    <input type="text" name="full_name" value="<?= isset($bookingDetails['full_name']) ? htmlspecialchars($bookingDetails['full_name']) : '' ?>" required>
+    <input type="email" name="email" value="<?= isset($bookingDetails['email']) ? htmlspecialchars($bookingDetails['email']) : '' ?>" required>
+    <input type="tel" name="phone" value="<?= isset($bookingDetails['phone']) ? htmlspecialchars($bookingDetails['phone']) : '' ?>" required>
+    <input type="date" name="check_in" value="<?= isset($bookingDetails['check_in']) ? htmlspecialchars($bookingDetails['check_in']) : '' ?>" required>
+    <input type="date" name="check_out" value="<?= isset($bookingDetails['check_out']) ? htmlspecialchars($bookingDetails['check_out']) : '' ?>" required>
+    <input type="text" name="total_price" value="<?= isset($bookingDetails['total_price']) ? htmlspecialchars($bookingDetails['total_price']) : '' ?>" required readonly>
     <button type="submit">Update Booking</button>
 </form>
+
 
