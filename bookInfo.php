@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $booking = new Booking();
 
     if ($booking->addBooking($fullName, $email, $phone, $checkIn, $checkOut, $totalPrice)) {
-        echo "<script>alert('Booking confirmed!'); window.location.href='albania.php';</script>";
+        echo "<script>alert('Booking confirmed!');</script>";
     } else {
         echo "Error: Unable to add booking!";
     }
