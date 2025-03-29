@@ -1,30 +1,29 @@
 <?php
 session_start();
-require_once('configV.php');
+require_once 'DatabaseConnection.php';
+require_once 'UserRepository.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
+$conn = new DatabaseConnection();
+$db = $conn->getConnection();
+$userRepo = new UserRepository($db);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
     $password = $_POST['password'];
-    
-    // Fetch user from database
-    $sql = "SELECT * FROM users WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('s', $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    if ($result->num_rows === 1) {
-        $user = $result->fetch_assoc();
-        
-        // Verify password
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            header('Location: dashboard.php');
-        } else {
-            echo "Invalid credentials.";
-        }
+
+    $user = $userRepo->getUserByEmail($email);
+
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['name'] = $user['name'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['role'] = $user['role'];
+
+        header("Location: dashboard.php");
+        exit();
     } else {
-        echo "User not found.";
+        header("Location: log-in.php?error=invalid_credentials");
+        exit();
     }
 }
 ?>
