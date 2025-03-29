@@ -81,10 +81,10 @@
         <hr>
         <div class="destinations">
           <div class="from">
-        
-            <label for="from">From</label>
+          <form method="POST" action="create_ticket.php">
+          <label for="from_city">From</label>
             <div class="option">
-              <select name="city" id="city"
+              <select name="from_city" required
                 style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <option value="#"></option>
                 <option value="Italy">Rome,Italy</option>
@@ -99,9 +99,9 @@
             </div>
           </div>
           <div class="to">
-            <label for="to">To</label>
+          <label for="to_city">To</label>
             <div class="option2">
-              <select name="city2" id="city2"
+              <select name="to_city" required
                 style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                 <option value="#"></option>
                 <option value="Italy">Rome,Italy</option>
@@ -117,25 +117,16 @@
           </div>
         </div>
         <div class="datat">
-          <div class="date1">
-            <label>Date</label>
-            <div>
-              <input type="date"
-                style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            </div>
-          </div>
-          <div class="date2">
-            <label>Return-Date</label>
-            <div>
-              <input type="date"
-                style="width: 300px; height: 40px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            </div>
-          </div>
+        <label for="departure_date">Departure Date:</label>
+    <input type="date" name="departure_date" required><br>
+    
+    <label for="return_date">Return Date:</label>
+    <input type="date" name="return_date"><br>
         </div>
         <div class="end">
           <div class="passengers">
-            <label>Passengers</label>
-            <select name="p" id="p"
+          <label for="passengers">Passengers:</label>
+            <select name="passengers" required
               style="border-radius: 50px; height: 30px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
               <option value="#"></option>
               <option value="1">1</option>
@@ -146,8 +137,8 @@
             </select>
           </div>
           <div class="class">
-            <label>Class</label>
-            <select name="c" id="c"
+          <label for="class">Class:</label>
+            <select name="class" required
               style="border-radius: 50px; height: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
               <option value="#"></option>
               <option value="economy">Economy</option>
