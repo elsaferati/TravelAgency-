@@ -1,26 +1,16 @@
 <?php
-// Database connection
-$connection = mysqli_connect('localhost', 'root', '', 'bookings');
+include 'Booking.php';
 
-if (!$connection) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Check if ID is provided
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Delete query
-    $query = "DELETE FROM bookings WHERE id = $id";
+    $booking = new Booking();
 
-    if (mysqli_query($connection, $query)) {
+    if ($booking->deleteBooking($id)) {
         echo "<script>alert('Booking deleted!'); window.location.href='bookingsInfo.php';</script>";
     } else {
-        echo "Error deleting booking: " . mysqli_error($connection);
+        echo "Error deleting booking!";
     }
-} else {
-    echo "Invalid request!";
 }
-
-mysqli_close($connection);
 ?>
+
