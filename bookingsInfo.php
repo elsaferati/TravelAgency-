@@ -68,7 +68,7 @@ $bookings = $booking->getAllBookings();  // Now fetching all bookings through th
                     <td><?= htmlspecialchars($row['check_out']) ?></td>
                     <td><?= htmlspecialchars($row['total_price']) ?></td>
                     <td class='actions'>
-                        <a href='editBooking.php?Id=<?= $row['Id'] ?>'>
+                    <a href="editBooking.php?Id=<?= $row['Id'] ?>">
                             <button class='edit-btn'>Edit</button>
                         </a>
                         <a href='deleteBooking.php?Id=<?= $row['Id'] ?>' onclick='return confirm("Are you sure?")'>

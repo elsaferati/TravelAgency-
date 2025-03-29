@@ -1,12 +1,12 @@
 <?php
 include 'Booking.php';
 
-if (isset($_GET['Id'])) {
+if (isset($_GET['Id'])) {  // Make sure the Id is coming from the URL
     // Initialize the Booking class
     $booking = new Booking();
     
     // Fetch booking details by ID
-    $bookingDetails = $booking->getBookingById($_GET['Id']); // Notice that we use 'Id' here
+    $bookingDetails = $booking->getBookingById($_GET['Id']);
     
     // Check if booking exists, if not, display error message
     if (!$bookingDetails) {
@@ -15,7 +15,7 @@ if (isset($_GET['Id'])) {
 
     // Handle form submission to update booking
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $id = $_POST['Id']; // Make sure to use 'Id' here as well
+        $id = $_POST['Id'];  // Ensure 'Id' is being passed in POST
         $fullName = $_POST['full_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
@@ -39,7 +39,7 @@ if (isset($_GET['Id'])) {
 
 <!-- Booking Edit Form -->
 <form method="POST" action="editBooking.php">
-    <input type="hidden" name="Id" value="<?= isset($bookingDetails['Id']) ? htmlspecialchars($bookingDetails['Id']) : '' ?>"> <!-- Changed id to Id here -->
+    <input type="hidden" name="Id" value="<?= isset($bookingDetails['Id']) ? htmlspecialchars($bookingDetails['Id']) : '' ?>"> <!-- Ensure this is 'Id' -->
     <input type="text" name="full_name" value="<?= isset($bookingDetails['full_name']) ? htmlspecialchars($bookingDetails['full_name']) : '' ?>" required>
     <input type="email" name="email" value="<?= isset($bookingDetails['email']) ? htmlspecialchars($bookingDetails['email']) : '' ?>" required>
     <input type="tel" name="phone" value="<?= isset($bookingDetails['phone']) ? htmlspecialchars($bookingDetails['phone']) : '' ?>" required>
@@ -48,6 +48,7 @@ if (isset($_GET['Id'])) {
     <input type="text" name="total_price" value="<?= isset($bookingDetails['total_price']) ? htmlspecialchars($bookingDetails['total_price']) : '' ?>" required readonly>
     <button type="submit">Update Booking</button>
 </form>
+
 
 
 

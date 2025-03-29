@@ -1,8 +1,8 @@
 <?php
 include 'Booking.php';
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+if (isset($_GET['Id'])) {
+    $id = $_GET['Id'];
 
     $booking = new Booking();
 
