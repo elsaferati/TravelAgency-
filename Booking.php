@@ -1,5 +1,4 @@
 <?php
-
 include 'bookDatabase.php';
 
 class Booking
@@ -22,10 +21,7 @@ class Booking
         $stmt = $connection->prepare($query);
         $stmt->bind_param('sssssd', $fullName, $email, $phone, $checkIn, $checkOut, $totalPrice);
 
-        if ($stmt->execute()) {
-            return true;
-        }
-        return false;
+        return $stmt->execute();
     }
 
     // Method to fetch all bookings
@@ -34,18 +30,20 @@ class Booking
         $connection = $this->db->getConnection();
         $query = "SELECT Id, full_name, email, phone, check_in, check_out, total_price FROM bookings";
         $result = $connection->query($query);
-        return $result;
+
+        return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
     }
 
     // Method to fetch a booking by ID
     public function getBookingById($id)
     {
         $connection = $this->db->getConnection();
-        $query = "SELECT * FROM bookings WHERE Id = ?";  // Updated to match 'Id' column in DB
+        $query = "SELECT * FROM bookings WHERE Id = ?";
         $stmt = $connection->prepare($query);
         $stmt->bind_param('i', $id);
         $stmt->execute();
         $result = $stmt->get_result();
+
         return $result->fetch_assoc();
     }
 
@@ -53,7 +51,7 @@ class Booking
     public function updateBooking($id, $fullName, $email, $phone, $checkIn, $checkOut, $totalPrice)
     {
         $connection = $this->db->getConnection();
-        $query = "UPDATE bookings SET full_name=?, email=?, phone=?, check_in=?, check_out=?, total_price=? WHERE Id=?";  // Updated to match 'Id' column in DB
+        $query = "UPDATE bookings SET full_name=?, email=?, phone=?, check_in=?, check_out=?, total_price=? WHERE Id=?";
         $stmt = $connection->prepare($query);
         $stmt->bind_param('sssssdi', $fullName, $email, $phone, $checkIn, $checkOut, $totalPrice, $id);
 
@@ -64,18 +62,13 @@ class Booking
     public function deleteBooking($id)
     {
         $connection = $this->db->getConnection();
-        $query = "DELETE FROM bookings WHERE Id=?";  // Updated to match 'Id' column in DB
+        $query = "DELETE FROM bookings WHERE Id=?";
         $stmt = $connection->prepare($query);
         $stmt->bind_param('i', $id);
 
         return $stmt->execute();
     }
-
-    // Close database connection
-    public function __destruct()
-    {
-        $this->db->close();
-    }
 }
 ?>
+
 

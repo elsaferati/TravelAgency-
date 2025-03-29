@@ -2,8 +2,7 @@
 include 'Booking.php';
 
 $booking = new Booking();
-$bookings = $booking->getAllBookings();  // Now fetching all bookings through the class method
-
+$bookings = $booking->getAllBookings();
 ?>
 
 <!DOCTYPE html>
@@ -56,9 +55,8 @@ $bookings = $booking->getAllBookings();  // Now fetching all bookings through th
         </tr>
     </thead>
     <tbody>
-        <?php
-        if ($bookings) {
-            foreach ($bookings as $row) { ?>
+        <?php if (!empty($bookings)): ?>
+            <?php foreach ($bookings as $row): ?>
                 <tr>
                     <td><?= htmlspecialchars($row['Id']) ?></td>
                     <td><?= htmlspecialchars($row['full_name']) ?></td>
@@ -68,7 +66,7 @@ $bookings = $booking->getAllBookings();  // Now fetching all bookings through th
                     <td><?= htmlspecialchars($row['check_out']) ?></td>
                     <td><?= htmlspecialchars($row['total_price']) ?></td>
                     <td class='actions'>
-                    <a href="editBooking.php?Id=<?= $row['Id'] ?>">
+                        <a href="editBooking.php?Id=<?= $row['Id'] ?>">
                             <button class='edit-btn'>Edit</button>
                         </a>
                         <a href='deleteBooking.php?Id=<?= $row['Id'] ?>' onclick='return confirm("Are you sure?")'>
@@ -76,16 +74,16 @@ $bookings = $booking->getAllBookings();  // Now fetching all bookings through th
                         </a>
                     </td>
                 </tr>
-            <?php } 
-        } else {
-            echo "<tr><td colspan='8'>No bookings found.</td></tr>";
-        }
-        ?>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr><td colspan='8'>No bookings found.</td></tr>
+        <?php endif; ?>
     </tbody>
 </table>
 
 </body>
 </html>
+
 
 
 
