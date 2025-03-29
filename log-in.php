@@ -1,29 +1,24 @@
-<?php
-session_start();
-require_once 'configV.php'; // Database configuration
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Traveler</title>
+    <link rel="stylesheet" href="styles/log-in-style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="loginController.php" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
 
-    // Prepare query and execute
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        // Password verification
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['username'] = $user['username'];
-            header("Location: dashboard.php"); // Redirect to a dashboard
-            exit();
-        } else {
-            echo "Invalid password";
-        }
-    } else {
-        echo "No user found with this username.";
-    }
-}
-?>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register_form.php">Register here</a>.</p>
+    </div>
+</body>
+</html>
