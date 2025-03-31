@@ -1,180 +1,124 @@
+/* Përmirësime për hotels.css */
+
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 .headd {
     display: flex;
-    background-color: rgb(245, 244, 239);
-    height: 55px;
-}
-
-
-.button1, .button2 {
-    width: 35px;
-    height: 40px;
-    background-color: rgb(169, 207, 222);
-    margin-top: 7px;
-    margin-left: 5px;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease;
-}
-
-.button1:hover, .button2:hover {
-    background-color: rgb(117, 206, 248);
+    gap: 20px;
+    margin: 20px 0;
 }
 
 .button1 img, .button2 img {
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.button1 img:hover, .button2 img:hover {
+    transform: scale(1.1);
 }
 
 .foto {
-    width: 100%;
-    min-height: 140vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 20px;
     background-size: cover;
     background-position: center;
 }
 
 .fotot {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
 }
-
 
 .fotot div {
-    background-color: rgb(255, 255, 255);
-    margin-right: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
-    width: 270px; 
-    min-height: 400px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-
-.fotot p {
-    margin: 10px 0;
-    font-size: 16px;
-    font-weight: bold;
+.fotot div:hover {
+    transform: translateY(-5px);
 }
-
-select {
-    width: 90%;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-input[type=submit] {
-    width: 90%;
-    padding: 10px;
-    background-color: rgb(221, 221, 221);
-    color: rgb(46, 46, 46);
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: rgb(88, 88, 88);
-    color: rgb(204, 202, 202);
-}
-
 
 .fotot img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
+.fotot p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
 
-.boxx {
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 46vh;
-    background-color: white;
 }
 
-.box {
-    width: 200px;
-    height: 140px;
-    position: relative;
-    perspective: 1000px;
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-
-.destn {
-    background-color: rgb(245, 244, 239);
-    color: rgb(142, 142, 143);
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
-    padding: 10px 0;
-}
-
-.destn:hover {
-    color: rgb(96, 95, 95);
-}
-
-
-@media (max-width: 1024px) {
-    .button1, .button2 {
-        width: 30px;
-        height: 35px;
-    }
-
-    .button1 img, .button2 img {
-        width: 28px;
-        height: 28px;
-    }
-
-    .foto {
-        min-height: auto;
-    }
-
-    .fotot div {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .boxx {
-        height: 300px;
-    }
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .fotot div {
-        max-width: 300px;
+    .fotot {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-
-    .boxx {
-        height: auto;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .fotot div {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .box {
-        width: 150px;
+    
+    .modal-content {
+        width: 90%;
     }
 }
+
