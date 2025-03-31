@@ -1,5 +1,3 @@
-/* Përmirësime për hotels.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,83 +5,86 @@ body {
     background-color: #f4f4f4;
 }
 
-.headd {
+header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #005f73;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd166;
+}
+
+.hotel-list {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin: 20px 0;
-}
-
-.button1 img, .button2 img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.button1 img:hover, .button2 img:hover {
-    transform: scale(1.1);
-}
-
-.foto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
-    background-size: cover;
-    background-position: center;
 }
 
-.fotot {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.fotot div {
+.hotel {
     background: white;
     padding: 15px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-.fotot div:hover {
-    transform: translateY(-5px);
+.hotel:hover {
+    transform: scale(1.05);
 }
 
-.fotot img {
-    width: 100%;
-    height: 200px;
+.hotel img {
+    width: 250px;
+    height: 180px;
+    border-radius: 8px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
-.fotot p {
-    margin: 10px 0;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #007BFF;
+.book-button {
+    background: #005f73;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
     transition: background 0.3s;
 }
 
-.btn:hover {
-    background: #0056b3;
+.book-button:hover {
+    background: #ffd166;
+    color: black;
 }
 
-/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
@@ -92,7 +93,6 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -101,24 +101,15 @@ body {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
 }
 
 .close {
-    float: right;
-    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .fotot {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    
-    .modal-content {
-        width: 90%;
-    }
 }
 
