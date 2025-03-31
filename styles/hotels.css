@@ -10,19 +10,12 @@ body {
 }
 
 .button1 {
-/* Button Styles */
-.button1, .button2 {
     width: 35px;
     height: 40px;
     background-color: rgb(169, 207, 222);
     margin-top: 7px;
     margin-left: 5px;
     border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
 }
 
 .button1 img {
@@ -32,9 +25,7 @@ body {
 }
 
 .button1:hover {
-.button1:hover, .button2:hover {
     background-color: rgb(117, 206, 248);
-}
 }
 
 .button2 {
@@ -47,61 +38,53 @@ body {
 }
 
 .button2 img {
-.button1 img, .button2 img {
     width: 30px;
     height: 30px;
     margin-left: 3px;
     margin-top: 5px;
-}
 }
 
 .button2:hover {
     background-color: rgb(117, 206, 248);
 }
 
-/* Image Container */
-.foto {
-    width: 100%;
-    height: 140vh;
-    min-height: 140vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-size: 100% 100%;
-}
-
-/* Cards Container */
 .fotot {
-    margin-top: 5px;
-    margin-bottom: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Prevents inconsistent spacing */
+    gap: 20px; /* Hapësirë mes elementëve */
 }
 
-.fotot img {
-    height: 300px;
+.city-box {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 270px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    object-fit: cover;
 }
 
-/* Individual Cards */
-.fotot div {
-    background-color: rgb(255, 255, 255);
-    background-color: white;
-    width: 280px;
-    height: 470px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    padding-left: 5px;
+.city-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
 }
+
+.book-button {
+    background-color: rgb(169, 207, 222);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.book-button:hover {
+    background-color: rgb(117, 206, 248);
+}
+
 
 label {
     font-size: smaller;
@@ -128,28 +111,15 @@ input[type=submit] {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 6px;
     margin-right: 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 
 input[type=submit]:hover {
     background-color: rgb(88, 88, 88);
     color: rgb(204, 202, 202);
     border-color: rgb(249, 253, 251);
+
 }
 
-.fotot img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Box Animation */
 .boxx {
     display: flex;
     justify-content: center;
@@ -157,7 +127,6 @@ input[type=submit]:hover {
     height: 46vh;
     background-color: rgb(255, 255, 255);
 
-    background-color: white;
 }
 
 .box {
@@ -187,11 +156,8 @@ input[type=submit]:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: relative;
-    perspective: 1000px;
 }
 
-/* Destination Section */
 .destn {
     background-color: rgb(245, 244, 239);
     color: rgb(142, 142, 143);
@@ -199,10 +165,8 @@ input[type=submit]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
-    padding: 10px 0;
 }
 
 .destn:hover {
@@ -257,36 +221,24 @@ input[type=submit]:hover {
         height: auto;
         margin-bottom: 4px;
     }
-}
 
     .button1,
     .button2 {
-/* Media Queries */
-@media (max-width: 1024px) {
-    .button1, .button2 {
         width: 30px;
-        height: 35px;
     }
-}
-}
 
     .button1 img,
     .button2 img {
-    .button1 img, .button2 img {
         width: 28px;
-        height: 28px;
     }
 
     .foto {
         height: auto;
-        min-height: auto;
     }
 
     .fotot div {
         height: 450px;
         width: 350px;
-        width: 100%;
-        max-width: 350px;
     }
 
     .boxx {
@@ -342,14 +294,12 @@ input[type=submit]:hover {
 }
 
 @media only screen and (max-width:280px) {
-@media (max-width: 768px) {
     .fotot div {
         margin-top: 10px;
         margin-left: 10px;
         margin-right: 10px;
         height: 450px;
         width: 300px;
-        max-width: 300px;
     }
 
     .boxx {
@@ -358,7 +308,6 @@ input[type=submit]:hover {
 
     .box {
         width: 300px;
-    }
     }
 }
 
@@ -373,17 +322,12 @@ input[type=submit]:hover {
 
     .box {
         margin-right: 200px;
-        height: auto;
-        flex-direction: column;
     }
 }
 
 @media only screen and (max-width:360px) {
-@media (max-width: 480px) {
     .fotot div {
         width: 305px;
-        width: 100%;
-        max-width: 280px;
     }
 
     .box {
@@ -405,7 +349,6 @@ input[type=submit]:hover {
     .boxx {
         height: 240px;
         margin-bottom: 60px;
-        width: 150px;
     }
 }
 
@@ -413,7 +356,6 @@ input[type=submit]:hover {
     .boxx {
         height: 300px;
     }
-}
 }
 
 
