@@ -53,24 +53,54 @@ body {
 
 
 .fotot div {
-    background-color: rgb(255, 255, 255);
-    margin-right: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 270px; 
-    min-height: 400px; 
+    width: 280px;
+    min-height: 420px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.fotot div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fotot img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 .fotot p {
-    margin: 10px 0;
-    font-size: 16px;
+    margin: 15px 0 10px;
+    font-size: 18px;
     font-weight: bold;
+    color: #333;
 }
+
+.book-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+}
+
 
 select {
     width: 90%;
