@@ -1,14 +1,12 @@
 <?php
-include 'db.php';
+require_once 'Ticket.php';
 
 if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql = "DELETE FROM tickets WHERE id='$id'";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Ticket deleted successfully!";
+    $ticket = new Ticket();
+    if ($ticket->deleteTicket($_GET['id'])) {
+        echo "Bileta u fshi me sukses!";
     } else {
-        echo "Error: " . $conn->error;
+        echo "Gabim gjatë fshirjes!";
     }
 }
 ?>

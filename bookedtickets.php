@@ -61,12 +61,12 @@ $result = $conn->query($sql);
         <?php while ($row = $result->fetch_assoc()): ?>
         <tr>
             <td><?= $row['id'] ?></td>
-            <td><?= $row['from_city'] ?></td>
-            <td><?= $row['to_city'] ?></td>
-            <td><?= $row['departure_date'] ?></td>
-            <td><?= $row['return_date'] ?></td>
-            <td><?= $row['passengers'] ?></td>
-            <td><?= $row['class'] ?></td>
+            <td><?= isset($row['from_city']) ? $row['from_city'] : 'N/A' ?></td>
+            <td><?= isset($row['to_city']) ? $row['to_city'] : 'N/A' ?></td>
+            <td><?= isset($row['departure_date']) ? $row['departure_date'] : 'N/A' ?></td>
+            <td><?= isset($row['return_date']) ? $row['return_date'] : 'N/A' ?></td>
+            <td><?= isset($row['passengers']) ? $row['passengers'] : 'N/A' ?></td>
+            <td><?= isset($row['class']) ? $row['class'] : 'N/A' ?></td>
             <td>
                 <form method="POST" style="display:inline;">
                     <input type="hidden" name="ticket_id" value="<?= $row['id'] ?>">
