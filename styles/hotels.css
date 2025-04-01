@@ -359,40 +359,37 @@ input[type=submit]:hover {
 }
 
 
+/* Modal (Kuti që hapet si card) */
 .modal {
-    display: none;
+    display: none; /* Fshehur nga fillimi */
     position: fixed;
-    z-index: 999;
+    z-index: 1; /* Sigurohuni që modal është mbi të gjithë elementët e tjerë */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Transparent background */
-    padding-top: 60px;
+    background-color: rgba(0, 0, 0, 0.4); /* Ngjyrë sfondi e errët për modalin */
 }
 
-/* Rregullimi për përmbajtjen e modal-it */
+/* Përmbajtja e modalit - card */
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
+    background-color: #fff; /* Ngjyra e bardhë për brendësinë */
+    margin: 15% auto; /* Qendron në qendër të ekranit */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px; /* Përshtatje për ekranet më të vogla */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Përformon card-in me kënde të rrumbullakosura */
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Hidhni një hijë për efektin e card-it */
 }
 
-/* Stilet për butonin e mbylljes të modal-it */
+/* Ikona e mbylljes */
 .close {
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
     position: absolute;
     top: 10px;
-    right: 20px;
-    cursor: pointer;
+    right: 10px;
 }
 
 .close:hover,
@@ -401,54 +398,3 @@ input[type=submit]:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Rregullimi për inputet dhe butonat brenda modal-it */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="time"],
-select,
-button {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-button[type="submit"] {
-    background-color: rgb(169, 207, 222);
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-button[type="submit"]:hover {
-    background-color: rgb(117, 206, 248);
-}
-
-/* Responsivitet për ekranet më të vogla */
-@media only screen and (max-width: 768px) {
-    .modal-content {
-        width: 90%; /* Zvogëlon modal-in për pajisje të vogla */
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .modal-content {
-        padding: 15px; /* Redukton hapësirën për pajisje të vogla */
-    }
-    .close {
-        font-size: 22px; /* Redukton madhësinë e butonit të mbylljes */
-    }
-}
-
-
-
