@@ -119,6 +119,38 @@
 
         </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Gjejmë të gjithë butonat "Book" dhe i lidhim me modalin
+        document.querySelectorAll(".book-button").forEach(button => {
+            button.addEventListener("click", function() {
+                // Merrim emrin e qytetit nga atributi data-city i kutisë përkatëse
+                let city = this.closest('.city-box').getAttribute('data-city');
+                openModal(city);  // Hapim modalin dhe kalojmë qytetin
+            });
+        });
+    });
+    
+    function openModal(city) {
+        // Hapim modalin
+        document.getElementById('bookingModal').style.display = 'block';
+    
+        // Mbushim modalin me të dhëna të qytetit
+        let modalTitle = document.querySelector('.modal-content h3');
+        modalTitle.innerHTML = `Reserve Your Table in ${city}`; // Shtoni qytetin në titull
+    
+        // Mund të bëni lidhje më të thella për ta personalizuar modalin në bazë të qytetit
+        let restaurantSelect = document.getElementById('restaurant');
+        if (restaurantSelect) {
+            restaurantSelect.value = city; // Ndryshoni vlerën e selektorit të restorantit në qytetin përkatës
+        }
+    }
+    
+    function closeModal() {
+        // Mbyllim modalin
+        document.getElementById('bookingModal').style.display = 'none';
+    }
+    </script>
     <div id="bookingModal" class="modal" style="display: none;">
       <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
@@ -152,7 +184,7 @@
       </div>
   </div>
   
-  <script>
+  <!--<script>
     document.addEventListener("DOMContentLoaded", function() {
       // Gjejmë të gjithë butonat "Book" dhe i lidhim me modalin
       document.querySelectorAll(".book-button").forEach(button => {
@@ -183,7 +215,7 @@
       // Mbyllim modalin
       document.getElementById('bookingModal').style.display = 'none';
   }
-  </script>
+  </script>-->
   
     
   </main>
