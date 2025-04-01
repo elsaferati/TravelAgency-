@@ -119,99 +119,53 @@
 
         </div>
     </div>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Përshtatja e të gjithë butonave "Book"
-    document.querySelectorAll(".book-button").forEach(button => {
-        button.addEventListener("click", function() {
-            // Merrim atributin 'data-city' përkatës
-            let city = this.closest('.city-box').getAttribute('data-city');
-            openModal(city); // Hapim modalin dhe dërgojmë emrin e qytetit
-        });
-    });
-});
 
-function openModal(city) {
-    // Hapim modalin
-    document.getElementById('bookingModal').style.display = 'block';
-
-    // Personalizimi i modalit me qytetin përkatës
-    let modalTitle = document.querySelector('.modal-content h3');
-    modalTitle.innerHTML = `Reserve Your Table in ${city}`;  // Shtojmë qytetin në titull
-}
-
-function closeModal() {
-    // Mbyllim modalin
-    document.getElementById('bookingModal').style.display = 'none';
-}
-
-    </script>
-<!-- Div i modalit -->
+<!-- MODALI -->
 <div id="bookingModal" class="modal">
   <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
       <h3>Reserve Your Table</h3>
-      <form id="bookingForm" action="bookTable.php" method="POST">
+      <form id="bookingForm">
           <h4>Contact Information</h4>
-          <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
-          <input type="email" id="email" name="email" placeholder="Email" required>
-          <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
+          <input type="text" placeholder="Full Name">
+          <input type="email" placeholder="Email">
+          <input type="tel" placeholder="Phone">
           
           <h4>Available Time Choice</h4>
-          <label for="reservationDate">Reservation Date</label>
-          <input type="date" id="reservationDate" name="reservation_date" required>
-          <label for="reservationTime">Reservation Time</label>
-          <input type="time" id="reservationTime" name="reservation_time" required>
+          <input type="date">
+          <input type="time">
           
           <h4>Table Size</h4>
-          <label for="tableSize">Number of People</label>
-          <input type="number" id="tableSize" name="table_size" min="1" required>
+          <input type="number" min="1" placeholder="Number of People">
           
           <h4>Select Restaurant</h4>
-          <select name="restaurant" id="restaurant" required>
-              <option value="">Select restaurant</option>
-              <option value="1">La Piazza</option>
-              <option value="2">Gourmet Bistro</option>
-              <option value="3">Sunset Grill</option>
+          <select>
+              <option>Select restaurant</option>
+              <option>La Piazza</option>
+              <option>Gourmet Bistro</option>
           </select>
           
           <button type="submit">Confirm Reservation</button>
       </form>
   </div>
 </div>
+
   
-  <!--<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Gjejmë të gjithë butonat "Book" dhe i lidhim me modalin
-      document.querySelectorAll(".book-button").forEach(button => {
-          button.addEventListener("click", function() {
-              // Merrim emrin e qytetit nga atributi data-city i kutisë përkatëse
-              let city = this.closest('.city-box').getAttribute('data-city');
-              openModal(city);  // Hapim modalin dhe kalojmë qytetin
-          });
-      });
-  });
-  
-  function openModal(city) {
-      // Hapim modalin
-      document.getElementById('bookingModal').style.display = 'block';
-  
-      // Mbushim modalin me të dhëna të qytetit
-      let modalTitle = document.querySelector('.modal-content h3');
-      modalTitle.innerHTML = `Reserve Your Table in ${city}`; // Shtoni qytetin në titull
-  
-      // Mund të bëni lidhje më të thella për ta personalizuar modalin në bazë të qytetit
-      let restaurantSelect = document.getElementById('restaurant');
-      if (restaurantSelect) {
-          restaurantSelect.value = city; // Ndryshoni vlerën e selektorit të restorantit në qytetin përkatës
-      }
-  }
-  
-  function closeModal() {
-      // Mbyllim modalin
-      document.getElementById('bookingModal').style.display = 'none';
-  }
-  </script>-->
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Merr të gjithë butonat "Book"
+    document.querySelectorAll(".book-button").forEach(button => {
+        button.addEventListener("click", function() {
+            let modal = document.getElementById("bookingModal");
+            modal.style.display = "flex"; // Siguron që modalin është qendruar siç duhet
+        });
+    });
+});
+
+function closeModal() {
+    document.getElementById("bookingModal").style.display = "none";
+}
+  </script>
   
     
   </main>
