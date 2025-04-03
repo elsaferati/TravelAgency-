@@ -67,93 +67,107 @@
       <div class="button1"><img src="images/hotel.png" alt="hotel"></div>
       <div class="button2"><a href="tickets.php"><img src="images/plane.jpg" alt="plane"></a></div>
     </div>
-    <div class="foto" style="background-image: url(images/bgg.avif); ">
+    <div class="foto" style="background-image: url(images/bgg.avif);">
       <div class="fotot">
+          <div class="city-box" data-city="Paris">
+              <img src="images/paris.jpg" alt="Paris">
+              <p>Paris, France</p>
+              <button class="btn book-button">Book</button>
+          </div>
+  
+          <div class="city-box" data-city="Budapest">
+              <img src="images/budapest.jpg" alt="Budapest">
+              <p>Budapest, Hungary</p>
+              <button class="btn book-button">Book</button>
+          </div>
+  
+          <div class="city-box" data-city="NewYork">
+              <img src="images/new york.jpg" alt="New York">
+              <p>New York, USA</p>
+              <button class="btn book-button">Book</button>
+          </div>
 
-        <div><img src="images/paris.jpg" alt="paris">
-          <p>Paris,France</p>
-          <select name="hotel" id="hotel">
-            <option value="">Select hotel</option>
-          <option value="1">Ritz Hotel</option>
-          <option value="2">B&B Hotel</option>
-          <option value="3">SO Paris Hotel</option>
-          </select>
-         <input type="submit" value="Book"></div>
-       
-        <div><img src="images/budapest.jpg" alt="budapest">
-          <p>Budapest,Hungary</p>
-         <select name="hotel" id="hotel">
-            <option value="">Select Hotel</option>
-          <option value="1">Marriott Hotel</option>
-          <option value="2">City Hotel</option>
-          <option value="3">Hilton Hotel</option>
-          </select>
-        <input type="submit" value="Book">
-        </div>
-        <div><img src="images/new york.jpg" alt="new york">
-          <p>New York,USA</p>
-          <select name="hotel" id="hotel">
-            <option value="">Select Hotel</option>
-            <option value="1">The Plaza Hotel</option>
-          <option value="2">Greenwich Hotel</option>
-          <option value="3">Carlyle Hotel</option>
-          </select>
-       <input type="submit" value="Book">
-        </div>
+            <div class="city-box" data-city="Tirana">
+                <img src="images/tirana.jpg" alt="tirana">
+                <p>Tirana, Albania</p>
+                <button class="btn book-button">Book</button>
+            </div>
 
-        <div><img src="images/tirana.jpg" alt="tirana">
-          <p>Tirana,Albania</p>
-          <select name="hotel" id="hotel">
-            <option value="">Select hotel</option>
-          <option value="1">Marriott Hotel</option>
-          <option value="2">Plaza Hotel</option>
-          <option value="3">Mondial Hotel</option>
-          </select>
-         <input type="submit" value="Book">
-        </div>
-        <div><img src="images/prishtina.jpg" alt="prishtina">
-          <p>Prishtine,Kosova</p>
-          <select name="hotel" id="hotel">
-            <option value="">Select hotel</option>
-            <option value="1">Emerald hotel</option>
-          <option value="2">Garden Hotel</option>
-          <option value="3">Swiss Hotel</option>
-          </select>
-         <input type="submit" value="Book">
-        </div>
-        <div><img src="images/rome.jpg" alt="rome">
-          <p>Rome,Italy</p>
-          <select name="hotel" id="hotel">
-            <option value="">Select hotel</option>
-          <option value="1">Grand Hotel</option>
-          <option value="2">Hassler Hotel</option>
-          <option value="3">Artemide Hotel</option>
-          </select>
-         <input type="submit" value="Book">
-        </div>
+            <div class="city-box" data-city="Prishtine">
+                <img src="images/prishtina.jpg" alt="prishtina">
+                <p>Prishtine, Kosova</p>
+                <button class="btn book-button">Book</button>
+            </div>
 
-        <div><img src="images/berlin.webp" alt="berlin">
-          <p>Berlin,Germany</p>
-          <select name="hotel" id="hotel">
-            <option value="">Select hotel</option>
-          <option value="1">Meliá Hotel</option>
-          <option value="2">Hampton Hotel</option>
-          <option value="3">Hilton Hotel</option>
-          </select>
-          <input type="submit" value="Book">
+            <div class="city-box" data-city="Rome">
+                <img src="images/rome.jpg" alt="rome">
+                <p>Rome, Italy</p>
+                <button class="btn book-button">Book</button>
+            </div>
+
+            <div class="city-box" data-city="Berlin">
+                <img src="images/berlin.webp" alt="berlin">
+                <p>Berlin, Germany</p>
+                <button class="btn book-button">Book</button>
+            </div>
+
+            <div class="city-box" data-city="Stockholm">
+                <img src="images/sweden.jpg" alt="sweden">
+                <p>Stockholm, Sweden</p>
+                <button class="btn book-button">Book</button>
+            </div>
+
         </div>
-        <div><img src="images/sweden.jpg" alt="sweden">
-          <p>Stockholm,Sweden</p>
-          <select name="hotel" id="hotel">
-            <option value="">Select hotel</option>
-          <option value="1">Berns Hotel</option>
-          <option value="2">Ett Hem Hotel</option>
-          <option value="3">J Hotel</option>
-          </select>
-         <input type="submit" value="Book">
-        </div>
-      </div>
-      
+    </div>
+
+<!-- MODALI -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Reserve Your Table</h3>
+        <form id="bookingForm">
+            <h4>Contact Information</h4>
+            <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            
+            <h4>Available Time Choice</h4>
+            <input type="date" id="check_in" name="check_in" required>
+            <input type="time" id="time" name="time" required>
+            
+            <h4>Table Size</h4>
+            <input type="number" id="people" name="people" min="1" placeholder="Number of People" required>
+            
+            <h4>Select Restaurant</h4>
+            <select id="restaurant" name="restaurant" required>
+                <option value="" disabled selected>Select restaurant</option>
+                <option value="La Piazza">La Piazza</option>
+                <option value="Gourmet Bistro">Gourmet Bistro</option>
+            </select>
+            
+            <button type="submit">Confirm Reservation</button>
+        </form>
+    </div>
+  </div>
+
+  
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Merr të gjithë butonat "Book"
+    document.querySelectorAll(".book-button").forEach(button => {
+        button.addEventListener("click", function() {
+            let modal = document.getElementById("bookingModal");
+            modal.style.display = "flex"; // Siguron që modalin është qendruar siç duhet
+        });
+    });
+});
+
+function closeModal() {
+    document.getElementById("bookingModal").style.display = "none";
+}
+  </script>
+  
+    
   </main>
   <footer>
     <div id="footer-part">

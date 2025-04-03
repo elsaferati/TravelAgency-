@@ -9,172 +9,387 @@ body {
     height: 55px;
 }
 
-
-.button1, .button2 {
+.button1 {
     width: 35px;
     height: 40px;
     background-color: rgb(169, 207, 222);
     margin-top: 7px;
     margin-left: 5px;
     border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
 }
 
-.button1:hover, .button2:hover {
+.button1 img {
+    width: 33px;
+    height: 33px;
+    margin-top: 3px;
+}
+
+.button1:hover {
     background-color: rgb(117, 206, 248);
 }
 
-.button1 img, .button2 img {
-    width: 30px;
-    height: 30px;
+.button2 {
+    width: 35px;
+    height: 40px;
+    background-color: rgb(169, 207, 222);
+    margin-top: 7px;
+    margin-left: 5px;
+    border-radius: 7px;
 }
 
-.foto {
-    width: 100%;
-    min-height: 140vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
+.button2 img {
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.button2:hover {
+    background-color: rgb(117, 206, 248);
 }
 
 .fotot {
-    margin-top: 5px;
-    margin-bottom: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px; /* Hapësirë mes elementëve */
 }
 
-
-.fotot div {
-    background-color: rgb(255, 255, 255);
-    margin-right: 5px;
-    margin-bottom: 10px;
+.city-box {
+    background-color: #fff;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    width: 270px; 
-    min-height: 400px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 270px;
+}
+
+.city-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.book-button {
+    background-color: rgb(169, 207, 222);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.book-button:hover {
+    background-color: rgb(117, 206, 248);
 }
 
 
-.fotot p {
-    margin: 10px 0;
-    font-size: 16px;
-    font-weight: bold;
+label {
+    font-size: smaller;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 select {
-    width: 90%;
-    padding: 5px;
-    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 21.5px;
+}
+
+.p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 input[type=submit] {
-    width: 90%;
-    padding: 10px;
     background-color: rgb(221, 221, 221);
     color: rgb(46, 46, 46);
+    height: 40px;
+    width: 60px;
     border-radius: 7px;
-    border: none;
-    cursor: pointer;
+    border-color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 6px;
+    margin-right: 7px;
 }
 
 input[type=submit]:hover {
     background-color: rgb(88, 88, 88);
     color: rgb(204, 202, 202);
+    border-color: rgb(249, 253, 251);
+
 }
-
-
-.fotot img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
 
 .boxx {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 46vh;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+
 }
 
 .box {
+    position: absolute;
     width: 200px;
     height: 140px;
-    position: relative;
-    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
 }
 
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, black);
+}
+
+.box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .destn {
     background-color: rgb(245, 244, 239);
     color: rgb(142, 142, 143);
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
-    padding: 10px 0;
 }
 
 .destn:hover {
     color: rgb(96, 95, 95);
 }
 
-
-@media (max-width: 1024px) {
-    .button1, .button2 {
-        width: 30px;
-        height: 35px;
+@media only screen and (max-width: 1285.60px) {
+    .headd {
+        height: auto;
     }
 
-    .button1 img, .button2 img {
+    .button1,
+    .button2 {
+        width: 30px;
+    }
+
+    .button1 img,
+    .button2 img {
         width: 28px;
-        height: 28px;
     }
 
     .foto {
-        min-height: auto;
+        height: 200vh;
+    }
+
+    .checkbox {
+        width: 80%;
     }
 
     .fotot div {
-        width: 100%;
-        max-width: 350px;
+        height: 470px;
+        width: 350px;
+    }
+
+    .boxx {
+        height: 36vh;
+    }
+}
+
+@media only screen and (max-width:1096px) {
+
+    .fotot div {
+        height: 460px;
+        width: 310px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .headd {
+        height: auto;
+        margin-bottom: 4px;
+    }
+
+    .button1,
+    .button2 {
+        width: 30px;
+    }
+
+    .button1 img,
+    .button2 img {
+        width: 28px;
+    }
+
+    .foto {
+        height: auto;
+    }
+
+    .fotot div {
+        height: 450px;
+        width: 350px;
     }
 
     .boxx {
         height: 300px;
     }
+
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width:1028.48px) {
+
+    .foto {
+        height: auto;
+    }
+
     .fotot div {
-        max-width: 300px;
+        height: 450px;
+        width: 360px;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+
+    .headd {
+        height: auto;
+    }
+
+    .button1,
+    .button2 {
+        width: 30px;
+    }
+
+    .button1 img,
+    .button2 img {
+        width: 28px;
+    }
+
+    .fotot div {
+        height: 450px;
+        width: 350px;
     }
 
     .boxx {
-        height: auto;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .fotot div {
-        width: 100%;
-        max-width: 280px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        width: max-content;
     }
 
     .box {
-        width: 150px;
+        margin-left: 95px;
     }
+
+}
+
+@media only screen and (max-width:280px) {
+    .fotot div {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 450px;
+        width: 300px;
+    }
+
+    .boxx {
+        width: max-content;
+    }
+
+    .box {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .headd {
+        margin-bottom: 4px;
+    }
+
+    .fotot div {
+        margin-top: 5px;
+    }
+
+    .box {
+        margin-right: 200px;
+    }
+}
+
+@media only screen and (max-width:360px) {
+    .fotot div {
+        width: 305px;
+    }
+
+    .box {
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width:430px) {
+    .box {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width:912px) {
+    .headd {
+        margin-bottom: 3px;
+    }
+
+    .boxx {
+        height: 240px;
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width:820px) {
+    .boxx {
+        height: 300px;
+    }
+}
+
+
+.modal {
+    display: none; /* Fshehur nga fillimi */
+    position: fixed;
+    z-index: 1000; /* Sigurohet që të jetë mbi gjithçka tjetër */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ngjyrë e errët transparente për sfondin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Përmbajtja e modalit */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Ikona e mbylljes */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
 }
