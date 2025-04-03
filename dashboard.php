@@ -1,14 +1,33 @@
 <?php
-// Include the DashboardController
+// dashboard.php
+session_start();
+require_once 'UserRepository.php';
 
-require_once 'DashboardController.php';
-// Initialize the DashboardController
-$controller = new DashboardController();
-$data = $controller->loadDashboard(); // Fetch the data for the dashboard
+if (!isset($_SESSION['user_id'])) {
+    die("User not logged in.");
+} else {
+    echo "Logged in as User ID: " . $_SESSION['user_id'];
+    echo "Role: " . $_SESSION['role'];
+}
 
-// Extract the data passed from the controller
-$userData = $data['userData'];
-$allUsers = $data['allUsers'];
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: log-in.php");
+    exit();
+}
+
+// Fetch user details from the database
+$userRepository = new UserRepository();
+$user = $userRepository->getUserById($_SESSION['user_id']); // Get user by ID from session
+
+// If user not found, redirect to login page
+if (!$user) {
+    header("Location: log-in.php");
+    exit();
+}else {
+    echo "User found: " . $user->getName() . "<br>";  // Output the user's name to confirm
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,45 +36,25 @@ $allUsers = $data['allUsers'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles/log-in-style.css"> <!-- Your custom CSS -->
+    <link rel="stylesheet" href="styles/log-in-style.css">
 </head>
 <body>
     <div class="dashboard-container">
-        <h1>Welcome, <?php echo htmlspecialchars($userData['name']); ?>!</h1>
-        <p><strong>Email:</strong> <?php echo htmlspecialchars($userData['email']); ?></p>
-        <p><strong>Role:</strong> <?php echo htmlspecialchars($userData['role']); ?></p>
-
-        <!-- Admin-only section: Display all users -->
-        <?php if ($_SESSION['role'] == 'admin'): ?>
-            <h2>All Registered Users</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($allUsers as $user): ?>
-                        <tr>
-                            <td><?php echo htmlspecialchars($user['name']); ?></td>
-                            <td><?php echo htmlspecialchars($user['email']); ?></td>
-                            <td><?php echo htmlspecialchars($user['role']); ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        <?php endif; ?>
-
-        <!-- Logout Button -->
-        <div class="action-buttons">
-            <a href="logout.php" class="btn logout-btn">Logout</a>
+        <div class="dashboard-header">
+            <h1>Welcome, <?php echo $user->getName(); ?>!</h1>
+            <a href="logout.php" class="dashboard-btn">Log Out</a>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <p>Need help? <a href="contact.php">Contact support</a></p>
+        <div class="user-info">
+            <h2>Your Profile Information</h2>
+            <p><span class="user-detail">Name:</span> <?php echo $user->getName(); ?></p>
+            <p><span class="user-detail">Email:</span> <?php echo $user->getEmail(); ?></p>
+            <p><span class="user-detail">Role:</span> <?php echo $user->getRole(); ?></p>
+        </div>
+
+        <div class="actions">
+            <a href="edit-profile.php?user_id=<?php echo $user->getId(); ?>" class="dashboard-btn">Edit Profile</a>
+            <a href="delete-profile.php?user_id=<?php echo $user->getId(); ?>" class="delete">Delete Account</a>
         </div>
     </div>
 </body>
