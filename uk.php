@@ -53,12 +53,12 @@
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.html">Albania</a></li>
-                        <li><a href="sweden.html">Sweden</a></li>
-                        <li><a href="italy.html">Italy</a></li>
-                        <li><a href="uk.html">UK</a></li>
-                        <li><a href="greece.html">Greece</a></li>
-                        <li><a href="spain.html">Spain</a></li>
+                        <li><a href="albania.php">Albania</a></li>
+                        <li><a href="sweden.php">Sweden</a></li>
+                        <li><a href="italy.php">Italy</a></li>
+                        <li><a href="uk.php">UK</a></li>
+                        <li><a href="greece.php">Greece</a></li>
+                        <li><a href="spain.php">Spain</a></li>
                     </ul>
                 </div>
                 </a>
@@ -74,10 +74,10 @@
         <section id="first-section">
             <ul>
                 <li id="first-img">
-                    <img src="images/uk1.jpg" alt="ksamil">
+                    <img src="images/uk1.jpg" alt="uk">
                 </li>
                 <li>
-                    <img src="images/uk2.jpg" alt="ksasmil">
+                    <img src="images/uk2.jpg" alt="uk">
                 </li>
             </ul>
         </section>
@@ -119,7 +119,7 @@
             </style>
             <ul>
                 <li>
-                    <img src="images/uk3.webp" alt="ksamil">
+                    <img src="images/uk3.webp" alt="uk">
                     <div>
                         <h2>Montorgueil Gem</h2>
                         <p>6 guests, 3 bedrooms, 3 bathrooms</p>
@@ -134,7 +134,7 @@
 
                 </li>
                 <li>
-                    <img src="images/uk4.webp" alt="ksamil">
+                    <img src="images/uk4.webp" alt="uk">
                     <div>
                         <h2>Durance</h2>
                         <p>5 guests, 2 bedrooms, 2 bathrooms</p>
@@ -149,7 +149,7 @@
 
                 </li>
                 <li>
-                    <img src="images/uk5.webp" alt="ksamil">
+                    <img src="images/uk5.webp" alt="uk">
                     <div>
                         <h2>La Fontaine</h2>
                         <p>3 guests, 2 bedrooms, 1 bathroom</p>
