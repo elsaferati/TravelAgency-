@@ -28,7 +28,11 @@ class Booking
         $stmt->bind_param('sssssis', $fullName, $email, $phone, $checkIn, $time, $people, $restaurant);
 
         // Execute the query and return true if successful, false otherwise
-        return $stmt->execute();
+        if ($stmt->execute()) {
+            return true; // Success
+        } else {
+            return false; // Failure
+        }
     }
 
     // Method to fetch all bookings (for viewing purposes)
@@ -44,6 +48,31 @@ class Booking
 
         return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
     }
+    // Inside the Booking class in bookingres.php
+
+public function getBookingById($id)
+{
+    $connection = $this->db->getConnection();
+
+    // Query to fetch booking details by ID
+    $query = "SELECT * FROM bookingres WHERE id = ?";
+    $stmt = $connection->prepare($query);
+    $stmt->bind_param('i', $id);  // 'i' is for integer
+
+    // Execute the query
+    $stmt->execute();
+
+    // Get the result
+    $result = $stmt->get_result();
+
+    // Check if a booking was found
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc();  // Return the booking details as an associative array
+    } else {
+        return null;  // Return null if no booking is found
+    }
+}
+
 
     // Method to update a booking
     public function updateBooking($id, $fullName, $email, $phone, $checkIn, $time, $people, $restaurant)
@@ -69,5 +98,3 @@ class Booking
     }
 }
 ?>
-
-
