@@ -7,7 +7,7 @@ class Database
     // Constructor to establish connection
     public function __construct()
     {
-        $this->connection = new mysqli('localhost', 'root', '', 'bookingsres', 3306);  // Update with actual credentials
+        $this->connection = new mysqli('localhost', 'root', '', 'bookingres', 3306);  // Update with actual credentials
 
         // Check for a successful connection
         if ($this->connection->connect_error) {
