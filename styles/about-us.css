@@ -98,12 +98,9 @@ main{
 
  .container{
     position: relative;
-    width: 1100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding-left: 200px;
 }
  .container .card{
     position: relative;
@@ -113,6 +110,7 @@ main{
     margin: 30px 10px;
     padding: 20px 15px;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
