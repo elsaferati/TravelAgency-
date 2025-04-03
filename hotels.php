@@ -132,10 +132,10 @@
             <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
             
             <h4>Available Time Choice</h4>
-            <label for="check_in">Reservation Date</label>
+            <label for="check_in">Date</label>
             <input type="date" id="check_in" name="check_in" required>
             
-            <label for="time">Reservation Time</label>
+            <label for="time">Time</label>
             <input type="time" id="time" name="time" required>
             
             <h4>Table Size</h4>

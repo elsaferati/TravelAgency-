@@ -49,14 +49,14 @@ body {
 }
 
 /* Main Layout */
-.fotot{
+.fotot {
     display: flex;
     flex-wrap: wrap;
 }
+
 .foto {
     gap: 20px;
     padding: 20px;
-    
 }
 
 /* City Box Styling */
@@ -84,8 +84,8 @@ body {
     font-weight: bold;
 }
 
-.city-box .book-button {
-    background-color: rgb(169, 207, 222);
+.city-box button {
+    background-color: #ADD8E6; /* Light blue */
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -94,8 +94,8 @@ body {
     width: 100%;
 }
 
-.city-box .book-button:hover {
-    background-color: rgb(117, 206, 248);
+.city-box button:hover {
+    background-color: #87CEEB; /* Lighter blue on hover */
 }
 
 .city-box:hover {
@@ -122,10 +122,11 @@ body {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
     max-width: 600px; /* Përshtatje për ekranet më të vogla */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* To position the close button inside */
 }
 
 /* Stilet për butonin e mbylljes të modal-it */
@@ -146,24 +147,35 @@ body {
     cursor: pointer;
 }
 
-/* Rregullimi për inputet dhe butonat brenda modal-it */
+/* Përshtatja e inputeve për më shumë hapësirë dhe për më të vogla */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
 input[type="time"],
-select,
-button {
-    width: 100%;
-    padding: 12px;
+select {
+    width: 35%;  /* Redukton gjerësinë */
+    padding: 10px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px; /* Përshtat madhësinë */
 }
 
-button[type="submit"] {
+/* Vendosja e "Contact Information" dhe "Available Time Choice" në rresht */
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Hapesira mes inputeve */
+}
+
+.form-section > div {
+    flex: 1;
+}
+
+/* Modifikimi i butonit */
+.modal-content button[type="submit"] {
     background-color: rgb(169, 207, 222);
     border: none;
     color: white;
@@ -172,9 +184,11 @@ button[type="submit"] {
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
 }
 
-button[type="submit"]:hover {
+.modal-content button[type="submit"]:hover {
     background-color: rgb(117, 206, 248);
 }
 
@@ -193,3 +207,4 @@ button[type="submit"]:hover {
         font-size: 22px; /* Redukton madhësinë e butonit të mbylljes */
     }
 }
+
