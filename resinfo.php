@@ -51,7 +51,7 @@ $bookings = $booking->getAllBookings();
             <th>Date</th>
             <th>Time</th>
             <th>Table Size</th>
-            <th>Restaurants</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
