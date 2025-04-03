@@ -38,32 +38,36 @@ class Booking
         $query = "SELECT * FROM bookingres";
         $result = $connection->query($query);
 
+        if ($result === false) {
+            die("Error fetching bookings: " . $connection->error);
+        }
+
         return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
     }
+
     // Method to update a booking
-public function updateBooking($id, $fullName, $email, $phone, $checkIn, $time, $people, $restaurant)
-{
-    $connection = $this->db->getConnection();
-    $query = "UPDATE bookingres SET name=?, email=?, phonenumber=?, date=?, time=?, nrpersons=?, restaurant=? WHERE id=?";
-    
-    $stmt = $connection->prepare($query);
-    $stmt->bind_param('sssssiis', $fullName, $email, $phone, $checkIn, $time, $people, $restaurant, $id);
+    public function updateBooking($id, $fullName, $email, $phone, $checkIn, $time, $people, $restaurant)
+    {
+        $connection = $this->db->getConnection();
+        $query = "UPDATE bookingres SET name=?, email=?, phonenumber=?, date=?, time=?, nrpersons=?, restaurant=? WHERE id=?";
+        
+        $stmt = $connection->prepare($query);
+        $stmt->bind_param('sssssiis', $fullName, $email, $phone, $checkIn, $time, $people, $restaurant, $id);
 
-    return $stmt->execute();
+        return $stmt->execute();
+    }
+
+    // Method to delete a booking
+    public function deleteBooking($id)
+    {
+        $connection = $this->db->getConnection();
+        $query = "DELETE FROM bookingres WHERE id=?";
+        $stmt = $connection->prepare($query);
+        $stmt->bind_param('i', $id);
+
+        return $stmt->execute();
+    }
 }
-
-// Method to delete a booking
-public function deleteBooking($id)
-{
-    $connection = $this->db->getConnection();
-    $query = "DELETE FROM bookingres WHERE id=?";
-    $stmt = $connection->prepare($query);
-    $stmt->bind_param('i', $id);
-
-    return $stmt->execute();
-}
-
-
-}
-
 ?>
+
+

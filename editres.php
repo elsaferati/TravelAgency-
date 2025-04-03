@@ -3,14 +3,15 @@ include 'bookingres.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-
-    // Create a new Booking instance
-    $booking = new Booking();
-    $bookingDetails = $booking->getBookingById($id);
-
-    if (!$bookingDetails) {
+    if ($booking->getBookingById($id)) {
+        // Proceed with processing the booking
+    } else {
         die("Booking not found!");
     }
+} else {
+    die("Invalid request. No ID specified.");
+}
+
 
     // Handle form submission to update the booking
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {

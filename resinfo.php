@@ -2,7 +2,7 @@
 include 'bookingres.php';
 
 $booking = new Booking();
-$bookings = $booking->getAllBookings();
+$bookings = $booking->getAllBookings(); 
 ?>
 
 <!DOCTYPE html>
@@ -79,3 +79,4 @@ $bookings = $booking->getAllBookings();
 
 </body>
 </html>
+
