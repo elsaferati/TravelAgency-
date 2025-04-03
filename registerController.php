@@ -1,33 +1,31 @@
 <?php
-session_start();
-require_once 'DatabaseConnection.php';
 require_once 'UserRepository.php';
 
-$conn = new DatabaseConnection();
-$db = $conn->getConnection();
-$userRepo = new UserRepository($db);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $role = $_POST['role'] ?? 'user'; // Default to 'user'
-
-    $existingUser = $userRepo->getUserByEmail($email);
-
-    if ($existingUser) {
-        header("Location: register_form.php?error=email_exists");
-        exit();
+    if (!isset($_POST['name'], $_POST['email'], $_POST['password'], $_POST['role'])) {
+        die("❌ Missing form fields");
     }
 
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+    $role = trim($_POST['role']);
+
+    // Hash the password securely
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-    if ($userRepo->insertUser($name, $email, $hashedPassword, $role)) {
+    $userRepository = new UserRepository();
+    $success = $userRepository->registerUser($name, $email, $hashedPassword, $role);
+
+    if ($success) {
+        echo "🎉 User successfully registered!";
         header("Location: log-in.php");
-        exit();
+        exit;
     } else {
-        header("Location: register_form.php?error=registration_failed");
-        exit();
+        die("❌ Registration failed!");
     }
 }
 ?>
