@@ -4,6 +4,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+header{
+    justify-content:end;
+}
+header .navigation{
+    margin-left: 25%;
+}
+li a {
+    display: flex;
+    align-items: center;
+}
+
+li a i {
+    margin-right: 10px; /* Add space between the icon and text */
+}
 
 /* Main container */
 .container {

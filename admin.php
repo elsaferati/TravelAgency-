@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
+  <!-- Link to Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/admin.css">
   <script src="script/header.js" type="text/javascript"></script>
@@ -66,12 +68,14 @@
         <div class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
-                <li><a href="bookingsInfo.php"><img src="hotel-icon.png" alt="Hotel Icon"> Hotel Booking</a></li>
-                <li><a href="resinfo.php"><img src="restaurant-icon.png" alt="Restaurant Icon"> Restaurant Reservations</a></li>
-                <li><a href=""><img src="login-icon.png" alt="Login Icon"> Login</a></li>
-                <li><a href=""><img src="register-icon.png" alt="Register Icon"> Register</a></li>
-                <li><a href="contact-messages.php"><img src="register-icon.png" alt="Contact Icon"> Contact-us</a></li>
-                <li><a href="bookedtickets.php"><img src="tickets-icon.png" alt="Ticket Icon"> Tickets</a></li>
+            <li><a href="bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
+<li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
+<li><a href=""><i class="fas fa-sign-in-alt"></i> Login</a></li>
+<li><a href=""><i class="fas fa-user-plus"></i> Register</a></li>
+<li><a href="contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
+<li><a href="bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+
+
             </ul>
         </div>
 
