@@ -21,10 +21,16 @@
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
+            <select id="role" name="role" required>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+    </select>
 
-            <button type="submit">Register</button>
-        </form>
+            <button type="submit" name="register">Register</button>
+            </form>
         <p>Already have an account? <a href="log-in.php">Login here</a>.</p>
     </div>
 </body>
 </html>
+
+
