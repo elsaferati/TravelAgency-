@@ -66,16 +66,14 @@
 <div class="container">
         <!-- Sidebar on the left -->
         <div class="sidebar">
-            <h2>Admin Panel</h2>
+        <a href="admin.php"><h2>Admin Panel</h2></a>
             <ul>
             <li><a href="bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
-<li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
-<li><a href=""><i class="fas fa-sign-in-alt"></i> Login</a></li>
-<li><a href=""><i class="fas fa-user-plus"></i> Register</a></li>
-<li><a href="contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
-<li><a href="bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
-
-
+            <li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
+            <li><a href=""><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><a href=""><i class="fas fa-user-plus"></i> Register</a></li>
+            <li><a href="contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
+            <li><a href="bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
             </ul>
         </div>
 

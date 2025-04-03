@@ -36,10 +36,15 @@ li a i {
     top: 0;
     left: 0;
 }
-
-.sidebar h2 {
+.sidebar a{
+        text-decoration: none; /* Removes underline */
+        color: inherit; /* Inherits color from the parent element */        
+}
+.sidebar a h2 {
     text-align: center;
     margin-bottom: 30px;
+    cursor: pointer;
+
 }
 
 .sidebar ul {

@@ -115,7 +115,7 @@ $bookings = $booking->getAllBookings();
     <div class="container">
       <!-- Sidebar on the left -->
       <div class="sidebar">
-        <h2>Admin Panel</h2>
+      <a href="admin.php"><h2>Admin Panel</h2></a>
         <ul>
           <li><a href="bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
           <li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
