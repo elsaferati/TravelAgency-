@@ -13,7 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             VALUES ('$from_city', '$to_city', '$departure_date', '$return_date', '$passengers', '$class')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "New ticket booked successfully!";
+        echo "<script>
+        alert('New ticket booked successfully!');
+        window.location.href = '../view/tickets.php'; </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
