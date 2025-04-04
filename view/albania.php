@@ -267,7 +267,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h3>Book Your Room</h3>
-                <form id="bookingForm" action="bookInfo.php" method="POST">
+                <form id="bookingForm" action="../controller/bookInfo.php" method="POST">
                     <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
