@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="about.html">
+                <a class="nav-item-href" href="../about.html">
                     <nav>About us</nav>
                 </a>
             </div>
@@ -292,7 +292,7 @@
                 </form>
             </div>
         </div>
-        <script src="script/header.js" defer></script>
+        <script src="../public/script/header.js" defer></script>
 
     </main>
 
