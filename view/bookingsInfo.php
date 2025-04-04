@@ -121,8 +121,8 @@ $bookings = $booking->getAllBookings();
           <li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
           <li><a href=""><i class="fas fa-sign-in-alt"></i> Login</a></li>
           <li><a href=""><i class="fas fa-user-plus"></i> Register</a></li>
-          <li><a href="contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
-          <li><a href="bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+          <li><a href="../view/contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
+          <li><a href="../view/bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
         </ul>
       </div>
 
@@ -158,7 +158,7 @@ $bookings = $booking->getAllBookings();
                     <a href="editBooking.php?Id=<?= $row['Id'] ?>">
                       <button class="edit-btn">Edit</button>
                     </a>
-                    <a href="deleteBooking.php?Id=<?= $row['Id'] ?>" onclick="return confirm('Are you sure?')">
+                    <a href="../controller/deleteBooking.php?Id=<?= $row['Id'] ?>" onclick="return confirm('Are you sure?')">
                       <button class="delete-btn">Delete</button>
                     </a>
                   </td>
