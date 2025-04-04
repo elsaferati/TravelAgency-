@@ -52,12 +52,12 @@
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.php">Albania</a></li>
-                        <li><a href="sweden.php">Sweden</a></li>
-                        <li><a href="italy.php">Italy</a></li>
-                        <li><a href="uk.php">UK</a></li>
-                        <li><a href="greece.php">Greece</a></li>
-                        <li><a href="spain.php">Spain</a></li>
+                        <li><a href="../view/albania.php">Albania</a></li>
+                        <li><a href="../view/sweden.php">Sweden</a></li>
+                        <li><a href="../view/italy.php">Italy</a></li>
+                        <li><a href="../view/uk.php">UK</a></li>
+                        <li><a href="../view/greece.php">Greece</a></li>
+                        <li><a href="../view/spain.php">Spain</a></li>
                     </ul>
                 </div>
                 </a>
@@ -118,7 +118,7 @@
             </style>
             <ul>
                 <li>
-                    <img src="images/spain3.webp" alt="ksamil">
+                    <img src="../public/images/spain3.webp" alt="ksamil">
                     <div>
                         <h2>Montorgueil Gem</h2>
                         <p>6 guests, 3 bedrooms, 3 bathrooms</p>
@@ -132,7 +132,7 @@
 
                 </li>
                 <li>
-                    <img src="images/spain4.webp" alt="spain">
+                    <img src="../public/images/spain4.webp" alt="spain">
                     <div>
                         <h2>Durance</h2>
                         <p>5 guests, 2 bedrooms, 2 bathrooms</p>
@@ -146,7 +146,7 @@
 
                 </li>
                 <li>
-                    <img src="images/spain5.webp" alt="spain">
+                    <img src="../public/images/spain5.webp" alt="spain">
                     <div>
                         <h2>La Fontaine</h2>
                         <p>3 guests, 2 bedrooms, 1 bathroom</p>
@@ -167,11 +167,11 @@
         <section id="sixth-section">
             <h1 style="margin-left: 1rem; font-weight: bold;">Popular places in Spain</h1>
             <div class="container2">
-                <div class="box one " data-text="Ibiza"><img src="images/ibiza_2 (1).jpg" alt=""></div>
-                <div class="box two " data-text="Seville"><img src="images/seville_1 (1).jpg" alt=""></div>
-                <div class="box three " data-text="Valencia"><img src="images/valencia.jpg" alt=""></div>
-                <div class="box four " data-text="Cordoba Mezquita"><img src="images/cordoba_mezquita (1).jpg" alt=""></div>
-                <div class="box five " data-text="Segovia"><img src="images/alcazar_of_segovia.jpg" alt=""></div>
+                <div class="box one " data-text="Ibiza"><img src="../public/images/ibiza_2 (1).jpg" alt=""></div>
+                <div class="box two " data-text="Seville"><img src="../public/images/seville_1 (1).jpg" alt=""></div>
+                <div class="box three " data-text="Valencia"><img src="../public/images/valencia.jpg" alt=""></div>
+                <div class="box four " data-text="Cordoba Mezquita"><img src="../public/images/cordoba_mezquita (1).jpg" alt=""></div>
+                <div class="box five " data-text="Segovia"><img src="../public/images/alcazar_of_segovia.jpg" alt=""></div>
             </div>
 
         </section>
@@ -179,25 +179,25 @@
             <h1>Popular in Spain</h1>
             <ul>
                 <li>
-                    <img src="images/food.jpg" alt="food">
+                    <img src="../public/images/food.jpg" alt="food">
                     <p>Amazing food</p>
                 </li>
                 <li>
 
-                    <img src="images/party.jpg" alt="party">
+                    <img src="../public/images/party.jpg" alt="party">
                     <p>Great party</p>
                 </li>
                 <li>
-                    <img src="images/pool.jpg" alt="pool">
+                    <img src="../public/images/pool.jpg" alt="pool">
                     <p>Swimming pool</p>
                 </li>
                 <li>
 
-                    <img src="images/service.webp" alt="room-service">
+                    <img src="../public/images/service.webp" alt="room-service">
                     <p>Room service</p>
                 </li>
                 <li>
-                    <img src="images/community.jpg" alt="community">
+                    <img src="../public/images/community.jpg" alt="community">
                     <p>Large Groups</p>
                 </li>
 
@@ -209,7 +209,7 @@
 
 
         <section id="fifth-section">
-            <img src="images/spain6.jpg" alt="lokacioni">
+            <img src="../public/images/spain6.jpg" alt="lokacioni">
             <ul id="whole-part">
                 <h2>Get around</h2>
                 <ul class="in">
@@ -278,7 +278,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h3>Book Your Room</h3>
-                <form id="bookingForm" action="bookInfo.php" method="POST">
+                <form id="bookingForm" action="../controller/bookInfo.php" method="POST">
                     <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
@@ -303,26 +303,26 @@
                 <ul class="footer-content-special">
                     <li>
                         <a href="https://www.facebook.com">
-                            <img class="last-img" src="images/facebook.jpg" alt="facebook">
+                            <img class="last-img" src="../public/images/facebook.jpg" alt="facebook">
                         </a>
 
                     <li>
                         <a href="https://www.instagram.com">
-                            <img class="last-img" src="images/insta.jpg" alt="instagram">
+                            <img class="last-img" src="../public/images/insta.jpg" alt="instagram">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.linkedIn">
-                            <img class="last-img" src="images/in.jpg" alt="linkedin">
+                            <img class="last-img" src="../public/images/in.jpg" alt="linkedin">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.youtube.com">
-                            <img class="last-img" src="images/youtube.jpg" alt="youtube">
+                            <img class="last-img" src="../public/images/youtube.jpg" alt="youtube">
                     </li>
                     </a>
                     <li><a href="https://twitter.com">
-                            <img class="last-img" src="images/twitter.jpg" alt="twitter"></li>
+                            <img class="last-img" src="../public/images/twitter.jpg" alt="twitter"></li>
                     </a>
 
 
