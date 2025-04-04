@@ -67,7 +67,7 @@
   <main>
     <div class="headd">
       <div class="button2"><img src="../public/images/plane.jpg" alt="plane"></div>
-      <div class="button1"><img src="../public/images/hotel.png" alt="hotel"></div>
+      <div class="button1"><a href="../view/hotels.php"><img src="../public/images/hotel.png" alt="hotel"></a></div>
 
     </div>
     <div class="foto" style="background-image: url(../public/images/foto.jpg);">
