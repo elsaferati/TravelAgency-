@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../config/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
     $row = $result->fetch_assoc();
 ?>
 
-<form method="POST" action="update_ticket.php">
+<form method="POST" action="../controller/update_ticket.php">
     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
     <label for="from_city">From City:</label>
     <input type="text" name="from_city" value="<?php echo $row['from_city']; ?>" required><br>

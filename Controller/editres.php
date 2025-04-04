@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Update booking details
     if ($booking->updateBooking($id, $fullName, $email, $phone, $checkIn, $time, $people, $restaurant)) {
-        echo "<script>alert('Booking updated!'); window.location.href='resinfo.php';</script>";
+        echo "<script>alert('Booking updated!'); window.location.href='../view/resinfo.php';</script>";
     } else {
         echo "Error updating booking!";
     }

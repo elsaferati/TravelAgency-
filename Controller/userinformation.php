@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $messageObj = new Message();
     if ($messageObj->create($user, $email, $message)) {
-        echo "<script>alert('Message is sent!'); window.location.href='contact-us.php';</script>";
+        echo "<script>alert('Message is sent!'); window.location.href='../view/contact-us.php';</script>";
     } else {
         echo "Error: " . mysqli_error($connection);
     }

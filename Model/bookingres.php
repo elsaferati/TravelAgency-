@@ -1,5 +1,5 @@
 <?php
-include 'databaseres.php';  // Include the database connection class
+include '../config/databaseres.php';  // Include the database connection class
 
 class Booking
 {

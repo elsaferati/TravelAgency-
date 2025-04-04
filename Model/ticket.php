@@ -1,5 +1,5 @@
 <?php
-require_once 'ticketsdatabase.php';
+require_once '../config/ticketsdatabase.php';
 
 class Ticket {
     private $conn;
