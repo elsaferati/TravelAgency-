@@ -1,5 +1,5 @@
 <?php
-require_once '../Model/UserRepository.php';
+require_once '../model/userRepository.php';
 
 
 error_reporting(E_ALL);
@@ -30,4 +30,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("❌ Registration failed!");
     }
 }
-?>

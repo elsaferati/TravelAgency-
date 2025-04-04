@@ -1,5 +1,5 @@
 <?php
-include '../controller/bookingres.php';
+include '../model/bookingres.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Fetch form data
@@ -21,5 +21,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Error adding booking.'); window.location.href='../view/hotels.php';</script>";
     }
 }
-?>
-

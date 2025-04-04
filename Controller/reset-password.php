@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../Model/UserRepository.php';
+require_once '../model/userRepository.php';
 
 if (!isset($_SESSION['reset_email'])) {
     header("Location: ../view/forgot.php");
@@ -26,10 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['password'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Reset Password</title>
 </head>
+
 <body>
     <h2>Reset Password</h2>
     <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
@@ -39,4 +41,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['password'])) {
     </form>
     <a href="../view/log-in.php">Back to Login</a>
 </body>
+
 </html>

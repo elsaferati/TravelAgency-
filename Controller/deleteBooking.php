@@ -7,10 +7,8 @@ if (isset($_GET['Id'])) {
     $booking = new Booking();
 
     if ($booking->deleteBooking($id)) {
-        echo "<script>alert('Booking deleted!'); window.location.href='bookingsInfo.php';</script>";
+        echo "<script>alert('Booking deleted!'); window.location.href='../view/bookingsInfo.php';</script>";
     } else {
         echo "Error deleting booking!";
     }
 }
-?>
-

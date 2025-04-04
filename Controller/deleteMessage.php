@@ -6,10 +6,8 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $messageObj = new Message();
     if ($messageObj->delete($id)) {
-        echo "<script>alert('Message deleted successfully!'); window.location.href='contact-messages.php';</script>";
+        echo "<script>alert('Message deleted successfully!'); window.location.href='../view/contact-messages.php';</script>";
     } else {
         echo "Error: " . mysqli_error($connection);
     }
 }
-?>
-

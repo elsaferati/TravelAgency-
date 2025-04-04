@@ -132,7 +132,7 @@
 
                 </li>
                 <li>
-                    <img src="images/sweden4.webp" alt="sweden">
+                    <img src="../public/images/sweden4.webp" alt="sweden">
                     <div>
                         <h2>Durance</h2>
                         <p>5 guests, 2 bedrooms, 2 bathrooms</p>
@@ -146,7 +146,7 @@
 
                 </li>
                 <li>
-                    <img src="images/sweden5.webp" alt="sweden">
+                    <img src="../public/images/sweden5.webp" alt="sweden">
                     <div>
                         <h2>La Fontaine</h2>
                         <p>3 guests, 2 bedrooms, 1 bathroom</p>
@@ -166,11 +166,11 @@
         <section id="sixth-section">
             <h1 style="margin-left: 1rem; font-weight: bold;">Popular places in Sweden</h1>
             <div class="container2">
-                <div class="box one " data-text="Vasa Museum"><img src="images/Vasa Museum.jpg" alt=""></div>
-                <div class="box two " data-text="Old Town"><img src="images/oldtown.jpg" alt=""></div>
-                <div class="box three " data-text="Ghost Walk"><img src="images/ghostwalk.jpg" alt=""></div>
-                <div class="box four " data-text="Drottningholm Palace"><img src="images/palace.jpg" alt=""></div>
-                <div class="box five " data-text="Country Side"><img src="images/countyside.jpg" alt=""></div>
+                <div class="box one " data-text="Vasa Museum"><img src="../public/images/Vasa Museum.jpg" alt=""></div>
+                <div class="box two " data-text="Old Town"><img src="../public/images/oldtown.jpg" alt=""></div>
+                <div class="box three " data-text="Ghost Walk"><img src="../public/images/ghostwalk.jpg" alt=""></div>
+                <div class="box four " data-text="Drottningholm Palace"><img src="../public/images/palace.jpg" alt=""></div>
+                <div class="box five " data-text="Country Side"><img src="../public/images/countyside.jpg" alt=""></div>
             </div>
 
         </section>
@@ -179,25 +179,25 @@
             <h1>Popular in Sweden</h1>
             <ul>
                 <li>
-                    <img src="images/food.jpg" alt="food">
+                    <img src="../public/images/food.jpg" alt="food">
                     <p>Amazing food</p>
                 </li>
                 <li>
 
-                    <img src="images/party.jpg" alt="party">
+                    <img src="../public/images/party.jpg" alt="party">
                     <p>Great party</p>
                 </li>
                 <li>
-                    <img src="images/pool.jpg" alt="pool">
+                    <img src="../public/images/pool.jpg" alt="pool">
                     <p>Swimming pool</p>
                 </li>
                 <li>
 
-                    <img src="images/service.webp" alt="room-service">
+                    <img src="../public/images/service.webp" alt="room-service">
                     <p>Room service</p>
                 </li>
                 <li>
-                    <img src="images/community.jpg" alt="community">
+                    <img src="../public/images/community.jpg" alt="community">
                     <p>Large Groups</p>
                 </li>
 
@@ -209,7 +209,7 @@
 
 
         <section id="fifth-section">
-            <img src="images/sweden6.jpg" alt="lokacioni">
+            <img src="../public/images/sweden6.jpg" alt="lokacioni">
             <ul id="whole-part">
                 <h2>Get around</h2>
                 <ul class="in">
@@ -279,7 +279,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h3>Book Your Room</h3>
-                <form id="bookingForm" action="bookInfo.php" method="POST">
+                <form id="bookingForm" action="../controller/bookInfo.php" method="POST">
                     <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
@@ -294,7 +294,7 @@
             </div>
         </div>
 
-        <script src="script/header.js" defer></script>
+        <script src="../public/script/header.js" defer></script>
 
     </main>
 
@@ -305,26 +305,26 @@
                 <ul class="footer-content-special">
                     <li>
                         <a href="https://www.facebook.com">
-                            <img class="last-img" src="images/facebook.jpg" alt="facebook">
+                            <img class="last-img" src="../public/images/facebook.jpg" alt="facebook">
                         </a>
 
                     <li>
                         <a href="https://www.instagram.com">
-                            <img class="last-img" src="images/insta.jpg" alt="instagram">
+                            <img class="last-img" src="../public/images/insta.jpg" alt="instagram">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.linkedIn">
-                            <img class="last-img" src="images/in.jpg" alt="linkedin">
+                            <img class="last-img" src="../public/images/in.jpg" alt="linkedin">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.youtube.com">
-                            <img class="last-img" src="images/youtube.jpg" alt="youtube">
+                            <img class="last-img" src="../public/images/youtube.jpg" alt="youtube">
                     </li>
                     </a>
                     <li><a href="https://twitter.com">
-                            <img class="last-img" src="images/twitter.jpg" alt="twitter"></li>
+                            <img class="last-img" src="../public/images/twitter.jpg" alt="twitter"></li>
                     </a>
 
 

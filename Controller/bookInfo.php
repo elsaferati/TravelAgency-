@@ -17,9 +17,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error: Unable to add booking!";
     }
 }
-?>
-
-
-
-
-

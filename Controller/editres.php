@@ -1,5 +1,5 @@
 <?php
-include '../controller/bookingres.php';  // Ensure this includes the Booking class
+include '../model/bookingres.php';  // Ensure this includes the Booking class
 
 // Instantiate the Booking class
 $booking = new Booking();

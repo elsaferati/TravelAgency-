@@ -1,5 +1,5 @@
 <?php
-include '../controller/bookingres.php';
+include '../model/bookingres.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -9,9 +9,8 @@ if (isset($_GET['id'])) {
 
     // Delete the booking with the given ID
     if ($booking->deleteBooking($id)) {
-        echo "<script>alert('Booking deleted!'); window.location.href='resinfo.php';</script>";
+        echo "<script>alert('Booking deleted!'); window.location.href='../view/resinfo.php';</script>";
     } else {
         echo "Error deleting booking!";
     }
 }
-?>

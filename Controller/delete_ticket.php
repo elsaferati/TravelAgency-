@@ -1,5 +1,5 @@
 <?php
-require_once '../model/Ticket.php';
+require_once '../model/ticket.php';
 
 if (isset($_GET['id'])) {
     $ticket = new Ticket();
@@ -9,4 +9,3 @@ if (isset($_GET['id'])) {
         echo "Gabim gjatë fshirjes!";
     }
 }
-?>

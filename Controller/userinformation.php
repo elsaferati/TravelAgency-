@@ -1,5 +1,5 @@
 <?php
-require_once '../controller/contactDatabase.php';
+require_once '../config/contactDatabase.php';
 require_once '../model/contactMessages.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -14,7 +14,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error: " . mysqli_error($connection);
     }
 }
-?>
-
-
-

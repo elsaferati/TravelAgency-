@@ -2,7 +2,7 @@
 // LoginController.php
 session_start();
 
-require_once '../Model/UserRepository.php';
+require_once '../model/userRepository.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -28,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
 
     // Check if password matches the hash stored in the database
     if (!password_verify($password, $user->getPassword())) {
-        
     }
 
     // Rehash the password if necessary
@@ -39,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         // Update the password in the database
         $userRepository->updatePassword($email, $newHashedPassword);
     }
-    
+
 
     // If login is successful, set session variables
     $_SESSION['user_id'] = $user->getId();
@@ -49,4 +48,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     header("Location: ../view/dashboard.php");
     exit();
 }
-?>

@@ -1,5 +1,5 @@
 <?php
-require_once '../model/Ticket.php';
+require_once '../model/ticket.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
 $ticket = new Ticket();
@@ -9,4 +9,3 @@ if ($ticket->createTicket($data['from'], $data['to'], $data['departure'], $data[
 } else {
     echo json_encode(["error" => "Gabim gjatë shtimit të biletës"]);
 }
-?>

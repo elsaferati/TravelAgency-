@@ -26,27 +26,27 @@ if (isset($_GET['id'])) {
     $row = $result->fetch_assoc();
 ?>
 
-<form method="POST" action="../controller/update_ticket.php">
-    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-    <label for="from_city">From City:</label>
-    <input type="text" name="from_city" value="<?php echo $row['from_city']; ?>" required><br>
-    
-    <label for="to_city">To City:</label>
-    <input type="text" name="to_city" value="<?php echo $row['to_city']; ?>" required><br>
-    
-    <label for="departure_date">Departure Date:</label>
-    <input type="date" name="departure_date" value="<?php echo $row['departure_date']; ?>" required><br>
-    
-    <label for="return_date">Return Date:</label>
-    <input type="date" name="return_date" value="<?php echo $row['return_date']; ?>"><br>
-    
-    <label for="passengers">Passengers:</label>
-    <input type="number" name="passengers" value="<?php echo $row['passengers']; ?>" required><br>
-    
-    <label for="class">Class:</label>
-    <input type="text" name="class" value="<?php echo $row['class']; ?>" required><br>
-    
-    <input type="submit" value="Update Ticket">
-</form>
+    <form method="POST" action="../controller/update_ticket.php">
+        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+        <label for="from_city">From City:</label>
+        <input type="text" name="from_city" value="<?php echo $row['from_city']; ?>" required><br>
+
+        <label for="to_city">To City:</label>
+        <input type="text" name="to_city" value="<?php echo $row['to_city']; ?>" required><br>
+
+        <label for="departure_date">Departure Date:</label>
+        <input type="date" name="departure_date" value="<?php echo $row['departure_date']; ?>" required><br>
+
+        <label for="return_date">Return Date:</label>
+        <input type="date" name="return_date" value="<?php echo $row['return_date']; ?>"><br>
+
+        <label for="passengers">Passengers:</label>
+        <input type="number" name="passengers" value="<?php echo $row['passengers']; ?>" required><br>
+
+        <label for="class">Class:</label>
+        <input type="text" name="class" value="<?php echo $row['class']; ?>" required><br>
+
+        <input type="submit" value="Update Ticket">
+    </form>
 
 <?php } ?>
