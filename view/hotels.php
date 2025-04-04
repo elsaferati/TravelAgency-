@@ -19,7 +19,7 @@
                 <img class="logo" src="/public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
-                <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
+                <p id="title"><a href="../view/index.php"><strong>W A V E</strong></a></p>
                 <p id="under-title">Do More Than Travel</p>
             </div>
         </div>
@@ -51,7 +51,7 @@
                         <li><a href="../view/albania.php">Albania</a></li>
                         <li><a href="../view/sweden.php">Sweden</a></li>
                         <li><a href="../view/italy.php">Italy</a></li>
-                        <li><a href="../viewuk.php">UK</a></li>
+                        <li><a href="../view/uk.php">UK</a></li>
                         <li><a href="../view/greece.php">Greece</a></li>
                         <li><a href="../view/spain.php">Spain</a></li>
                     </ul>

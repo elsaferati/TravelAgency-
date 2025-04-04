@@ -23,7 +23,7 @@
                 <img class="logo" src="/public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
-                <p id="title"><a href="../public/index.php"><strong>W A V E</strong></a></p>
+                <p id="title"><a href="../view/index.php"><strong>W A V E</strong></a></p>
                 <p id="under-title">Do More Than Travel</p>
             </div>
         </div>
