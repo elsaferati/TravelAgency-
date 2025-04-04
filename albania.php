@@ -51,7 +51,7 @@
                 <div class="dropdown">
                     <ul>
                         <li><a href="albania.php">Albania</a></li>
-                        <li><a href="sweden.html">Sweden</a></li>
+                        <li><a href="sweden.php">Sweden</a></li>
                         <li><a href="italy.php">Italy</a></li>
                         <li><a href="uk.html">UK</a></li>
                         <li><a href="greece.html">Greece</a></li>
