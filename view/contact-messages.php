@@ -5,14 +5,14 @@ require_once '../model/contactMessages.php';  // Including the updated messages 
 $connection = mysqli_connect('localhost', 'root', '', 'userinfo');
 
 if (!$connection) {
-    die("Connection failed: " . mysqli_connect_error());
+  die("Connection failed: " . mysqli_connect_error());
 }
 
 $query = "SELECT id, user, email, message FROM userdata";
 $result = mysqli_query($connection, $query);
 
 if (!$result) {
-    die("Query failed: " . mysqli_error($connection));
+  die("Query failed: " . mysqli_error($connection));
 }
 ?>
 <!DOCTYPE html>
@@ -58,11 +58,14 @@ if (!$result) {
       border-collapse: collapse;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
       border: 1px solid #ddd;
     }
 
-    th, td {
+    th,
+    td {
       padding: 12px;
       text-align: left;
     }
@@ -125,7 +128,9 @@ if (!$result) {
     <div class="container">
       <!-- Sidebar on the left -->
       <div class="sidebar">
-      <a href="../view/admin.php"><h2>Admin Panel</h2></a>
+        <a href="../view/admin.php">
+          <h2>Admin Panel</h2>
+        </a>
         <ul>
           <li><a href="../view/bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
           <li><a href="../view/resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
@@ -139,19 +144,19 @@ if (!$result) {
       <!-- Title for User Messages -->
       <h1>User Messages</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>User</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          while ($row = mysqli_fetch_assoc($result)) {
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>User</th>
+              <th>Email</th>
+              <th>Message</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            while ($row = mysqli_fetch_assoc($result)) {
               echo "<tr>";
               echo "<td>" . htmlspecialchars($row['id']) . "</td>";
               echo "<td>" . htmlspecialchars($row['user']) . "</td>";
@@ -166,26 +171,18 @@ if (!$result) {
                       </a>
                     </td>";
               echo "</tr>";
-          }
-          ?>
-        </tbody>
-      </table>
+            }
+            ?>
+          </tbody>
+        </table>
 
-      <?php
-      mysqli_free_result($result);
-      mysqli_close($connection);
-      ?>
+        <?php
+        mysqli_free_result($result);
+        mysqli_close($connection);
+        ?>
     </div>
   </main>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-

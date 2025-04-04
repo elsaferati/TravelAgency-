@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="about.html">
+                <a class="nav-item-href" href="../about.html">
                     <nav>About us</nav>
                 </a>
             </div>
@@ -82,7 +82,7 @@
         </section>
 
         <section id="second-section">
-            <img src="/public/images/home.jpg" alt="">
+            <img src="../public/images/home.jpg" alt="">
             <p id="title">Book a stay in one of the best homes in Albania</p>
             <p>We selected the 1349 homes worth renting in this location</p>
             <ul id="input">
@@ -117,7 +117,7 @@
             </style>
             <ul>
                 <li>
-                    <img src="/public/images/ksamil3.webp" alt="ksamil">
+                    <img src="../public/images/ksamil3.webp" alt="ksamil">
                     <div>
                         <h2>Montorgueil Gem</h2>
                         <p>6 guests, 3 bedrooms, 3 bathrooms</p>
@@ -131,7 +131,7 @@
 
                 </li>
                 <li>
-                    <img src="/public/images/ksamil4.webp" alt="ksamil">
+                    <img src="../public/images/ksamil4.webp" alt="ksamil">
                     <div>
                         <h2>Durance</h2>
                         <p>5 guests, 2 bedrooms, 2 bathrooms</p>
@@ -145,7 +145,7 @@
 
                 </li>
                 <li>
-                    <img src="/public/images/ksmail5webp.webp" alt="ksamil">
+                    <img src="../public/images/ksmail5webp.webp" alt="ksamil">
                     <div>
                         <h2>La Fontaine</h2>
                         <p>3 guests, 2 bedrooms, 1 bathroom</p>
@@ -164,43 +164,43 @@
         <section id="sixth-section">
             <h1 style="margin-left: 1rem; font-weight: bold;">Popular places in Albania</h1>
             <div class="container2">
-                <div class="box one " data-text="Tirana"><img src="/public/images/tirana1.jpg" alt=""></div>
-                <div class="box two " data-text="Shkodra"><img src="/public/images/shkodra.jpg" alt=""></div>
-                <div class="box three " data-text="Syri i Kalter"><img src="/public/images/syri.jpg" alt=""></div>
-                <div class="box four " data-text="Korca"><img src="/public/images/korqa.webp" alt=""></div>
-                <div class="box five " data-text="Dhermi"><img src="/public/images/Dhermi.webp" alt=""></div>
+                <div class="box one " data-text="Tirana"><img src="../public/images/tirana1.jpg" alt=""></div>
+                <div class="box two " data-text="Shkodra"><img src="../public/images/shkodra.jpg" alt=""></div>
+                <div class="box three " data-text="Syri i Kalter"><img src="../public/images/syri.jpg" alt=""></div>
+                <div class="box four " data-text="Korca"><img src="../public/images/korqa.webp" alt=""></div>
+                <div class="box five " data-text="Dhermi"><img src="../public/images/Dhermi.webp" alt=""></div>
             </div>
         </section>
         <section id="fourth-section">
             <h1>Popular in Albania</h1>
             <ul>
                 <li>
-                    <img src="/public/images/food.jpg" alt="food">
+                    <img src="../public/images/food.jpg" alt="food">
                     <p>Amazing food</p>
                 </li>
                 <li>
 
-                    <img src="/public/images/party.jpg" alt="party">
+                    <img src="../public/images/party.jpg" alt="party">
                     <p>Great party</p>
                 </li>
                 <li>
-                    <img src="/public/images/pool.jpg" alt="pool">
+                    <img src="../public/images/pool.jpg" alt="pool">
                     <p>Swimming pool</p>
                 </li>
                 <li>
 
-                    <img src="/public/images/service.webp" alt="room-service">
+                    <img src="../public/images/service.webp" alt="room-service">
                     <p>Room service</p>
                 </li>
                 <li>
-                    <img src="/public/images/community.jpg" alt="community">
+                    <img src="../public/images/community.jpg" alt="community">
                     <p>Large Groups</p>
                 </li>
 
             </ul>
         </section>
         <section id="fifth-section">
-            <img src="/public/images/al.gif" alt="lokacioni">
+            <img src="../public/images/al.gif" alt="lokacioni">
             <ul id="whole-part">
                 <h2>Get around</h2>
                 <ul class="in">
@@ -282,7 +282,7 @@
             </div>
         </div>
 
-        <script src="/public/script/header.js" defer></script>
+        <script src="../public/script/header.js" defer></script>
 
     </main>
 
@@ -293,26 +293,26 @@
                 <ul class="footer-content-special">
                     <li>
                         <a href="https://www.facebook.com">
-                            <img class="last-img" src="/public/images/facebook.jpg" alt="facebook">
+                            <img class="last-img" src="../public/images/facebook.jpg" alt="facebook">
                         </a>
 
                     <li>
                         <a href="https://www.instagram.com">
-                            <img class="last-img" src="/public/images/insta.jpg" alt="instagram">
+                            <img class="last-img" src="../public/images/insta.jpg" alt="instagram">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.linkedIn">
-                            <img class="last-img" src="/public/images/in.jpg" alt="linkedin">
+                            <img class="last-img" src="../public/images/in.jpg" alt="linkedin">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.youtube.com">
-                            <img class="last-img" src="/public/images/youtube.jpg" alt="youtube">
+                            <img class="last-img" src="../public/images/youtube.jpg" alt="youtube">
                     </li>
                     </a>
                     <li><a href="https://twitter.com">
-                            <img class="last-img" src="/public/images/twitter.jpg" alt="twitter"></li>
+                            <img class="last-img" src="../public/images/twitter.jpg" alt="twitter"></li>
                     </a>
 
 

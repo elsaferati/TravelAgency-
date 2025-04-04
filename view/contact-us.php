@@ -21,7 +21,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="/public/images/2(1).png" alt="Logo">
+                <img class="logo" src="../public/images/2(1).png" alt="Logo">
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
@@ -31,7 +31,7 @@
 
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
-                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="/public/images/close.jpg" alt="close-icon" /></button>
+                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="../public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
                 <a class="nav-item-href primary-button" href="../view/log-in.php">
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="../view/about.html">
+                <a class="nav-item-href" href="../about.html">
                     <nav>About us</nav>
                 </a>
             </div>
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="burger-menu">
-            <button onclick="openMenu()"><img class="burget-icon" src="/public/images/burger.jpg" alt="burger-icon" /></button>
+            <button onclick="openMenu()"><img class="burget-icon" src="../public/images/burger.jpg" alt="burger-icon" /></button>
         </div>
     </header>
     <main>
@@ -72,7 +72,7 @@
             <h1>Contact Us</h1>
         </div>
         <div class="img">
-            <img src="/public/images/contact-us.jpg" alt="">
+            <img src="../public/images/contact-us.jpg" alt="">
 
             <form id="contactForm" action="../controller/userinformation.php" method="post" onsubmit="sendMessage(event)">
                 <label for="user">Name:</label>
@@ -128,11 +128,11 @@
             <section id="social-part">
                 <h3>Social</h3>
                 <ul class="footer-content-special">
-                    <li><a href="https://www.facebook.com"><img class="last-img" src="/public/images/facebook.jpg" alt="facebook"></a></li>
-                    <li><a href="https://www.instagram.com"><img class="last-img" src="/public/images/insta.jpg" alt="instagram"></a></li>
-                    <li><a href="https://www.linkedin.com"><img class="last-img" src="/public/images/in.jpg" alt="linkedin"></a></li>
-                    <li><a href="https://www.youtube.com"><img class="last-img" src="/public/images/youtube.jpg" alt="youtube"></a></li>
-                    <li><a href="https://twitter.com"><img class="last-img" src="/public/images/twitter.jpg" alt="twitter"></a></li>
+                    <li><a href="https://www.facebook.com"><img class="last-img" src="../public/images/facebook.jpg" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com"><img class="last-img" src="../public/images/insta.jpg" alt="instagram"></a></li>
+                    <li><a href="https://www.linkedin.com"><img class="last-img" src="../public/images/in.jpg" alt="linkedin"></a></li>
+                    <li><a href="https://www.youtube.com"><img class="last-img" src="../public/images/youtube.jpg" alt="youtube"></a></li>
+                    <li><a href="https://twitter.com"><img class="last-img" src="../public/images/twitter.jpg" alt="twitter"></a></li>
                 </ul>
             </section>
             <section>
