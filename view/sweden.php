@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/second-shared.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <script src="script/header.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../public/styles/shared.css">
+    <link rel="stylesheet" href="../public/styles/second-shared.css">
+    <link rel="stylesheet" href="../public/styles/header.css">
+    <script src="../public/script/header.js" type="text/javascript"></script>
     <title>Sweden</title>
 </head>
 
@@ -20,7 +20,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="images/2(1).png" alt="Logo" />
+                <img class="logo" src="../public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
@@ -31,7 +31,7 @@
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
                 <button class="close-button" onclick="closeMenu()"><img class="close-icon"
-                        src="images/close.jpg" alt="close-icon" /></button>
+                        src="../public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
                 <a class="nav-item-href primary-button" href="log-in.php">
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="about.html">
+                <a class="nav-item-href" href="../about.html">
                     <nav>About us</nav>
                 </a>
             </div>
@@ -65,23 +65,23 @@
         </div>
         <div class="burger-menu">
             <button onclick="openMenu()"><img class="burget-icon"
-                    src="images/burger.jpg" alt="burget-icon" /></button>
+                    src="../public/images/burger.jpg" alt="burget-icon" /></button>
         </div>
     </header>
     <main>
         <section id="first-section">
             <ul>
                 <li id="first-img">
-                    <img src="images/sweden1.jpg" alt="sweden">
+                    <img src="../public/images/sweden1.jpg" alt="sweden">
                 </li>
                 <li>
-                    <img src="images/sweden2.jpg" alt="sweden">
+                    <img src="../public/images/sweden2.jpg" alt="sweden">
                 </li>
             </ul>
         </section>
 
         <section id="second-section">
-            <img src="images/home.jpg" alt="">
+            <img src="../public/images/home.jpg" alt="">
             <p id="title">Book a stay in one of the best homes in Sweden</p>
             <p>We selected the 1349 homes worth renting in this location</p>
             <ul id="input">
@@ -118,7 +118,7 @@
             </style>
             <ul>
                 <li>
-                    <img src="images/sweden3.webp" alt="sweden">
+                    <img src="../public/images/sweden3.webp" alt="sweden">
                     <div>
                         <h2>Montorgueil Gem</h2>
                         <p>6 guests, 3 bedrooms, 3 bathrooms</p>
@@ -127,7 +127,7 @@
                             You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                        <a href="hotels.html"><button class="btn" type="button">Book</button></a>
+                        <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
@@ -141,7 +141,7 @@
                             You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                        <a href="hotels.html"><button class="btn" type="button">Book</button></a>
+                        <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
@@ -155,7 +155,7 @@
                             You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                        <a href="hotels.html"><button class="btn" type="button">Book</button></a>
+                        <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
