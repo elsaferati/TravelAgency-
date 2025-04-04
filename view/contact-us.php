@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../public/styles/shared.css">
     <link rel="stylesheet" href="../public/styles/about-us.css">
-    <link rel="stylesheet" href="..public/styles/header.css">
+    <link rel="stylesheet" href="../public/styles/header.css">
     <link rel="stylesheet" href="../public/styles/contact-us.css">
     <script src="../public/script/header.js" type="text/javascript"></script>
     <title>Contact-us</title>
