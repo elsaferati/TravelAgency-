@@ -1,27 +1,21 @@
 <?php
-include 'bookingres.php';
-include 'bookingres.php';  // Include the class for handling booking
+include 'bookingres.php';  // Ensure this includes the Booking class
+
+// Instantiate the Booking class
+$booking = new Booking();
 
 // Check if an ID is provided in the URL
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    if ($booking->getBookingById($id)) {
-        // Proceed with processing the booking
-    } else {
+    $bookingDetails = $booking->getBookingById($id); // Fetch booking details
 
-    // Create a new Booking instance
-    $booking = new Booking();
-
-    // Get the booking details by ID
-    $bookingDetails = $booking->getBookingById($id);
-
-    // Check if booking was found
     if (!$bookingDetails) {
         die("Booking not found!");
     }
 } else {
     die("Invalid request. No ID specified.");
 }
+
 // Handle form submission to update the booking
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fullName = $_POST['full_name'];
@@ -32,16 +26,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $people = $_POST['people'];
     $restaurant = $_POST['restaurant'];
 
-     // Update booking details
-        // Update the booking details
-        if ($booking->updateBooking($id, $fullName, $email, $phone, $checkIn, $time, $people, $restaurant)) {
-            echo "<script>alert('Booking updated!'); window.location.href='resinfo.php';</script>";
-        } else {
-            echo "Error updating booking!";
-        }
+    // Update booking details
+    if ($booking->updateBooking($id, $fullName, $email, $phone, $checkIn, $time, $people, $restaurant)) {
+        echo "<script>alert('Booking updated!'); window.location.href='resinfo.php';</script>";
+    } else {
+        echo "Error updating booking!";
     }
-} else {
-    die("Invalid request. No ID specified.");
 }
 ?>
 
