@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/second-shared.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <script src="script/header.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../public/styles/shared.css">
+    <link rel="stylesheet" href="../public/styles/second-shared.css">
+    <link rel="stylesheet" href="../public/styles/header.css">
+    <script src="../public/script/header.js" type="text/javascript"></script>
     <title>Spain</title>
 </head>
 
@@ -20,7 +20,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="images/2(1).png" alt="Logo" />
+                <img class="logo" src="../public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
@@ -31,10 +31,10 @@
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
                 <button class="close-button" onclick="closeMenu()"><img class="close-icon"
-                        src="images/close.jpg" alt="close-icon" /></button>
+                        src="../public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href primary-button" href="log-in.php">
+                <a class="nav-item-href primary-button" href="../view/log-in.php">
                     Join us
                 </a>
             </div>
@@ -44,7 +44,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="contact-us.php">
+                <a class="nav-item-href" href="../view/contact-us.php">
                     Contact us
                 </a>
             </div>
@@ -65,23 +65,23 @@
         </div>
         <div class="burger-menu">
             <button onclick="openMenu()"><img class="burget-icon"
-                    src="images/burger.jpg" alt="burget-icon" /></button>
+                    src="../public/images/burger.jpg" alt="burget-icon" /></button>
         </div>
     </header>
     <main>
         <section id="first-section">
             <ul>
                 <li id="first-img">
-                    <img src="images/spainn.jpg" alt="spain">
+                    <img src="../public/images/spainn.jpg" alt="spain">
                 </li>
                 <li>
-                    <img src="images/spain2.jpg" alt="spain">
+                    <img src="../public/images/spain2.jpg" alt="spain">
                 </li>
             </ul>
         </section>
 
         <section id="second-section">
-            <img src="images/home.jpg" alt="">
+            <img src="../public/images/home.jpg" alt="">
             <p id="title">Book a stay in one of the best homes in Spain</p>
             <p>We selected the 1349 homes worth renting in this location</p>
             <ul id="input">

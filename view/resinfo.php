@@ -13,9 +13,9 @@ $bookings = $booking->getAllBookings();
   <title>Dashboard</title>
   <!-- Link to Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/admin.css">
-  <script src="script/header.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="../public/styles/header.css">
+  <link rel="stylesheet" href="../public/styles/admin.css">
+  <script src="../public/script/header.js" type="text/javascript"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -112,14 +112,14 @@ $bookings = $booking->getAllBookings();
     <div class="container">
       <!-- Sidebar on the left -->
       <div class="sidebar">
-      <a href="admin.php"><h2>Admin Panel</h2></a>
+      <a href="../view/admin.php"><h2>Admin Panel</h2></a>
         <ul>
-          <li><a href="bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
-          <li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
+          <li><a href="../view/bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
+          <li><a href="../view/resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
           <li><a href=""><i class="fas fa-sign-in-alt"></i> Login</a></li>
           <li><a href=""><i class="fas fa-user-plus"></i> Register</a></li>
-          <li><a href="contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
-          <li><a href="bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+          <li><a href="../view/contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
+          <li><a href="../view/bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
         </ul>
       </div>
 
@@ -152,8 +152,8 @@ $bookings = $booking->getAllBookings();
                   <td><?= htmlspecialchars($row['time']) ?></td>
                   <td><?= htmlspecialchars($row['nrpersons']) ?></td>
                   <td class="actions">
-                    <a href="editres.php?id=<?= $row['id'] ?>"><button class="edit-btn">Edit</button></a>
-                    <a href="deleteres.php?id=<?= $row['id'] ?>" onclick="return confirm('Are you sure?')"><button class="delete-btn">Delete</button></a>
+                    <a href="../controller/editres.php?id=<?= $row['id'] ?>"><button class="edit-btn">Edit</button></a>
+                    <a href="../controller/deleteres.php?id=<?= $row['id'] ?>" onclick="return confirm('Are you sure?')"><button class="delete-btn">Delete</button></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
