@@ -35,7 +35,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="../view/about.html">
+                <a class="nav-item-href" href="../about.html">
                     <nav>About us</nav>
                 </a>
             </div>
