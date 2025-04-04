@@ -1,5 +1,5 @@
 <?php
-include 'Booking.php';
+include '../model/Booking.php';
 
 if (isset($_GET['Id'])) {
     $id = $_GET['Id'];

@@ -1,6 +1,6 @@
 <?php
-require_once 'contactDatabase.php';
-require_once 'contactMessages.php';
+require_once '../controller/contactDatabase.php';
+require_once '../model/contactMessages.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = isset($_POST['user']) ? $_POST['user'] : '';

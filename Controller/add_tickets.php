@@ -1,5 +1,5 @@
 <?php
-require_once 'Ticket.php';
+require_once '../model/Ticket.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
 $ticket = new Ticket();

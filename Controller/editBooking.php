@@ -1,5 +1,5 @@
 <?php
-include 'Booking.php';
+include '../model/Booking.php';
 
 $booking = new Booking();
 

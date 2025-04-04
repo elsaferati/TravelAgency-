@@ -1,5 +1,5 @@
 <?php
-include 'bookDatabase.php';
+include '../config/bookDatabase.php';
 
 class Booking
 {

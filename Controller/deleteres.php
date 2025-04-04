@@ -1,5 +1,5 @@
 <?php
-include 'bookingres.php';
+include '../controller/bookingres.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

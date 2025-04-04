@@ -1,6 +1,6 @@
 <?php
-require_once 'contactDatabase.php';
-require_once 'contactMessages.php';
+require_once '../config/contactDatabase.php';
+require_once '../model/contactMessages.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
     <h2>Edit User Message</h2>
-    <form method="POST" action="editMessage.php?id=<?= $id ?>">
+    <form method="POST" action="../controller/editMessage.php?id=<?= $id ?>">
         <input type="hidden" name="id" value="<?= $id ?>">
         <label for="user">Name:</label>
         <input type="text" name="user" value="<?= htmlspecialchars($message['user']) ?>" required>

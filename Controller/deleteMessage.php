@@ -1,6 +1,6 @@
 <?php
-require_once 'contactDatabase.php';
-require_once 'contactMessages.php';
+require_once '../config/contactDatabase.php';
+require_once '../model/contactMessages.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

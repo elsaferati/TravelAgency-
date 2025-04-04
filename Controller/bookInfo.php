@@ -1,5 +1,5 @@
 <?php
-include 'Booking.php';
+include '../model/Booking.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fullName = $_POST['full_name'];

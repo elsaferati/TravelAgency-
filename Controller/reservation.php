@@ -1,5 +1,5 @@
 <?php
-include 'bookingres.php';
+include '../controller/bookingres.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Fetch form data
@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Attempt to add the booking
     if ($booking->addBooking($fullName, $email, $phone, $checkIn, $time, $people, $restaurant)) {
-        echo "<script>alert('Booking successful!'); window.location.href='hotels.php';</script>";
+        echo "<script>alert('Booking successful!'); window.location.href='../view/hotels.php';</script>";
     } else {
-        echo "<script>alert('Error adding booking.'); window.location.href='hotels.php';</script>";
+        echo "<script>alert('Error adding booking.'); window.location.href='../view/hotels.php';</script>";
     }
 }
 ?>

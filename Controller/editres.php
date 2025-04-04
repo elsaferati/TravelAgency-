@@ -1,5 +1,5 @@
 <?php
-include 'bookingres.php';  // Ensure this includes the Booking class
+include '../controller/bookingres.php';  // Ensure this includes the Booking class
 
 // Instantiate the Booking class
 $booking = new Booking();
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!-- Booking Edit Form -->
-<form method="POST" action="editres.php?id=<?= htmlspecialchars($id) ?>">
+<form method="POST" action="../controller/editres.php?id=<?= htmlspecialchars($id) ?>">
     <h3>Edit Reservation</h3>
 
     <label for="full_name">Full Name:</label>

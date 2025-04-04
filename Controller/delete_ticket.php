@@ -1,5 +1,5 @@
 <?php
-require_once 'Ticket.php';
+require_once '../model/Ticket.php';
 
 if (isset($_GET['id'])) {
     $ticket = new Ticket();
