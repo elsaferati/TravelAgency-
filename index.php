@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +25,7 @@
                 <img class="logo" src="images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
-                <p id="title"><a href="index.html"><strong>W A V E</strong></a></p>
+                <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
                 <p id="under-title">Do More Than Travel</p>
             </div>
         </div>
@@ -73,80 +71,83 @@
         </div>
     </header>
     <main>
-        <section id="first-section">        
-                <img src="images/84.jpg" alt="Traveling">
-    
-                <div id="main-page-text">
-                    <ul>
-                        <li id="main-txt">
-                            <p > <h1 >Let's  travel  together ...</h1></p>
-                        </li>
-                        <li id="under-main-txt" >
-                          <p >The biggest adventure you can take is</p>
-                          <p> to live the life of your dreams.</p>
-                          <a href="tickets.php"><button>Get your Ticket</button></a>
-                        </li>
-                    </ul>
+        <section id="first-section">
+            <img src="images/84.jpg" alt="Traveling">
+
+            <div id="main-page-text">
+                <ul>
+                    <li id="main-txt">
+                        <p>
+                        <h1>Let's travel together ...</h1>
+                        </p>
+                    </li>
+                    <li id="under-main-txt">
+                        <p>The biggest adventure you can take is</p>
+                        <p> to live the life of your dreams.</p>
+                        <a href="tickets.php"><button>Get your Ticket</button></a>
+                    </li>
+                </ul>
             </div>
-           
-        </div>
+
+            </div>
         </section>
         <section id="second-section">
             <p>Book your dream stay !</p>
-            
-                <div>
-                    <button class="icon" onclick="scrolll()"><i class="fas fa-angle-left"></i></button>
-                </div>
-                <div id="cover">
-                 <ul id="scroll-images">
-                <li class="child">
-                    <a href="spain.php">
-                        <img class="cild-img" src="images/barcelona.webp" alt="Barcelona">   
-                    </a>
-                </li>
-                <li class="child">
-                    <a href="sweden.php">
-                        <img class="cild-img" src="images/stockholm.jpg" alt="Stockholm">
-                    </a>
-                </li>
-                <li class="child">
-                    <a href="albania.php">
-                        <img class="child-img" src="images/albania.jpg" alt="Ksamil">    
-                    </a>
-                </li>
-                <li class="child">
-                    <a href="greece.php">
-                        <img class="child-img" src="images/santorini.jpg" alt="Santorini">
-                    </a>
-                </li>
-                <li class="child">
-                    <a href="uk.php">
-                        <img class="child-img" src="images/uk.jpg" alt="London">
-                    </a>
-                </li>
-                <li class="child">
-                    <a href="italy.php">
-                        <img class="child-img" src="images/italyy.jpg" alt="Venecia">
-                    </a>
-                </li>
-            </ul>
+
+            <div>
+                <button class="icon" onclick="scrolll()"><i class="fas fa-angle-left"></i></button>
+            </div>
+            <div id="cover">
+                <ul id="scroll-images">
+                    <li class="child">
+                        <a href="spain.php">
+                            <img class="cild-img" src="images/barcelona.webp" alt="Barcelona">
+                        </a>
+                    </li>
+                    <li class="child">
+                        <a href="sweden.php">
+                            <img class="cild-img" src="images/stockholm.jpg" alt="Stockholm">
+                        </a>
+                    </li>
+                    <li class="child">
+                        <a href="albania.php">
+                            <img class="child-img" src="images/albania.jpg" alt="Ksamil">
+                        </a>
+                    </li>
+                    <li class="child">
+                        <a href="greece.php">
+                            <img class="child-img" src="images/santorini.jpg" alt="Santorini">
+                        </a>
+                    </li>
+                    <li class="child">
+                        <a href="uk.php">
+                            <img class="child-img" src="images/uk.jpg" alt="London">
+                        </a>
+                    </li>
+                    <li class="child">
+                        <a href="italy.php">
+                            <img class="child-img" src="images/italyy.jpg" alt="Venecia">
+                        </a>
+                    </li>
+                </ul>
             </div>
             <button class="icon" onclick="scrollr()"><i class="fas fa-angle-right"></i></button>
 
             <script>
-                function scrolll(){
-                    var left=document.querySelector(".scroll-images");
+                function scrolll() {
+                    var left = document.querySelector(".scroll-images");
                     left.scrollBy(350, 0);
                 }
-                function scrollr(){
-                    var right=document.querySelector(".scroll-images");
+
+                function scrollr() {
+                    var right = document.querySelector(".scroll-images");
                     right.scrollBy(-350, 0);
                 }
             </script>
-           
+
         </section>
         <section id="third-section">
-            <p>You have worked so hard for your money,  now let the money  work for you!</p>
+            <p>You have worked so hard for your money, now let the money work for you!</p>
             <p><a href="https://industry.traveloregon.com"> Learn about traveling</a></p>
         </section>
 
@@ -154,25 +155,25 @@
             <img src="images/what-we-offer.jpg" alt="Traveling">
             <section id="fourth-section-content">
                 <div class="our-care">
-                <p class="number">1</p>
-                <p class="title-number">High Quality </p>
-                <p>Our experts have meticulously vetted every available rental, 
-                    filtering out the thousands that don't meet our standards - saving you from disappointment.</p>
+                    <p class="number">1</p>
+                    <p class="title-number">High Quality </p>
+                    <p>Our experts have meticulously vetted every available rental,
+                        filtering out the thousands that don't meet our standards - saving you from disappointment.</p>
 
-            </div>
-            <div class="our-care">
-                <p class="number">2</p>
-                <p  class="title-number">Instant Care</p>
-                <p>An in-house care team - real humans, immediately available, 24/7.
-                     Efficient and empowered home experts, whose sole task is to make your stay exceptional</p>
-            </div>
-            <div class="our-care">
-                <p class="number">3</p>
-                <p class="title-number">Total Reassurance</p>
-                <p>In the very rare event your host cancels 48 hours after your booking, 
-                    we will find you a new Plum home up to 20% more expensive than the original. Within 5 days of check-in,
-                     it's up to 50%</p>
-            </div> 
+                </div>
+                <div class="our-care">
+                    <p class="number">2</p>
+                    <p class="title-number">Instant Care</p>
+                    <p>An in-house care team - real humans, immediately available, 24/7.
+                        Efficient and empowered home experts, whose sole task is to make your stay exceptional</p>
+                </div>
+                <div class="our-care">
+                    <p class="number">3</p>
+                    <p class="title-number">Total Reassurance</p>
+                    <p>In the very rare event your host cancels 48 hours after your booking,
+                        we will find you a new Plum home up to 20% more expensive than the original. Within 5 days of check-in,
+                        it's up to 50%</p>
+                </div>
             </section>
 
         </section>
@@ -181,100 +182,106 @@
             <div id="fifth-section-content">
                 <p>Stay in the world's most remarkable homes!</p>
                 <ul id="in-fifth-section">
-                    <a href="hotels.php"> <button type="button" >Book your restaurant</button></a>
-                 
+                    <a href="hotels.php"> <button type="button">Book your restaurant</button></a>
+
                 </ul>
-            
+
             </div>
-            
+
         </section>
     </main>
 
     <footer>
 
         <div id="contact-us-part">
-            <label for="contact-us" ><h2>Contact us</h2></label>
-        <select name="contact-us" id="contact-us">
-            <option value="">Instagram</option>
-            <option value="">Email</option>
-            <option value="">Number</option>
-            <option value="">Facebook</option>
-        </select>
+            <label for="contact-us">
+                <h2>Contact us</h2>
+            </label>
+            <select name="contact-us" id="contact-us">
+                <option value="">Instagram</option>
+                <option value="">Email</option>
+                <option value="">Number</option>
+                <option value="">Facebook</option>
+            </select>
         </div>
-        
+
         <div id="footer-part">
-             <section id="social-part">
-            <h3>Social</h3>
-              <ul class="footer-content-special">
-        <li > 
-            <a href="https://www.facebook.com">
-                <img class="last-img" src="images/facebook.jpg" alt="facebook">
-            </a>
-           
-        <li>
-            <a href="https://www.instagram.com">
-                <img  class="last-img" src="images/insta.jpg" alt="instagram"></li>
-            </a>
-        <li> 
-            <a href="https://www.linkedIn">
-                <img  class="last-img" src="images/in.jpg" alt="linkedin"></li>
-            </a>
-         <li> 
-            <a href="https://www.youtube.com">
-                <img  class="last-img" src="images/youtube.jpg" alt="youtube"></li>
-            </a>
-         <li><a href="https://twitter.com"> 
-            <img  class="last-img" src="images/twitter.jpg" alt="twitter"></li>
-        </a>
-   
-    
-    </ul>
-        </section>
-        
-        <section>
-             <h3>Product</h3>
-             <ul class="footer-content">
-                <li>
-                    <p>The plum test</p>
-                </li>
-                <li>
-                    <p>Become a host</p>
-                </li>
-                <li>
-                    <p>Affiliate program</p>
-                </li>
-             </ul>
-        </section>
-      <section>
-        <h3>Company</h3>
-        <ul class="footer-content">
-            <li>
-                <p>Our story</p>
-            </li>
-            <li> 
-                <p>Journal</p>
-            </li>
-            <li>
-                <p>Careers</p>
-            </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Contact</h3>
-        <ul class="footer-content">
-            <li>
-                <p>Partenship</p>
-            </li>
-            <li>
-                <p>FAQ</p>
-            </li>
-            <li>
-                <p>Get in touch</p>
-            </li>
-        </ul>
-      </section> 
+            <section id="social-part">
+                <h3>Social</h3>
+                <ul class="footer-content-special">
+                    <li>
+                        <a href="https://www.facebook.com">
+                            <img class="last-img" src="images/facebook.jpg" alt="facebook">
+                        </a>
+
+                    <li>
+                        <a href="https://www.instagram.com">
+                            <img class="last-img" src="images/insta.jpg" alt="instagram">
+                    </li>
+                    </a>
+                    <li>
+                        <a href="https://www.linkedIn">
+                            <img class="last-img" src="images/in.jpg" alt="linkedin">
+                    </li>
+                    </a>
+                    <li>
+                        <a href="https://www.youtube.com">
+                            <img class="last-img" src="images/youtube.jpg" alt="youtube">
+                    </li>
+                    </a>
+                    <li><a href="https://twitter.com">
+                            <img class="last-img" src="images/twitter.jpg" alt="twitter"></li>
+                    </a>
+
+
+                </ul>
+            </section>
+
+            <section>
+                <h3>Product</h3>
+                <ul class="footer-content">
+                    <li>
+                        <p>The plum test</p>
+                    </li>
+                    <li>
+                        <p>Become a host</p>
+                    </li>
+                    <li>
+                        <p>Affiliate program</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Company</h3>
+                <ul class="footer-content">
+                    <li>
+                        <p>Our story</p>
+                    </li>
+                    <li>
+                        <p>Journal</p>
+                    </li>
+                    <li>
+                        <p>Careers</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Contact</h3>
+                <ul class="footer-content">
+                    <li>
+                        <p>Partenship</p>
+                    </li>
+                    <li>
+                        <p>FAQ</p>
+                    </li>
+                    <li>
+                        <p>Get in touch</p>
+                    </li>
+                </ul>
+            </section>
         </div>
-      
+
     </footer>
 </body>
+
 </html>

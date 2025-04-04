@@ -104,16 +104,17 @@
 
         <section id="third-section">
             <style>
-                .btn{
-                    padding: 10px 25px; 
-                    border-radius: 6px; 
-                    margin-left: 7rem; 
+                .btn {
+                    padding: 10px 25px;
+                    border-radius: 6px;
+                    margin-left: 7rem;
                     margin-top: 2rem;
                     cursor: pointer;
-                    box-shadow:  1px 3px 4px rgb(72, 69, 69);
+                    box-shadow: 1px 3px 4px rgb(72, 69, 69);
                     background-color: rgb(153, 148, 148);
                 }
-                .btn:hover{
+
+                .btn:hover {
                     background-color: rgb(147, 141, 141);
                 }
             </style>
@@ -129,7 +130,7 @@
                             heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                            <button class="btn" type="button" onclick="openModal()">Book</button>
+                        <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
@@ -144,7 +145,7 @@
                             heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                            <button class="btn" type="button" onclick="openModal()">Book</button>
+                        <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
@@ -159,7 +160,7 @@
                             heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                            <button class="btn" type="button" onclick="openModal()">Book</button>
+                        <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
@@ -167,17 +168,17 @@
         </section>
 
         <hr>
-        
+
         <section id="sixth-section">
             <h1 style="margin-left: 1rem; font-weight: bold;">Popular places in UK</h1>
             <div class="container2">
-                <div class="box one "  data-text="Birmingham Museum"><img src="images/ukmuseumjpg.jpg" alt=""></div>
+                <div class="box one " data-text="Birmingham Museum"><img src="images/ukmuseumjpg.jpg" alt=""></div>
                 <div class="box two " data-text="Edinburgh Castle"><img src="images/edinburgh_castle_scotland.jpg" alt=""></div>
                 <div class="box three " data-text="Liverpool Cathedral"><img src="images/liverpool.JPG" alt=""></div>
                 <div class="box four " data-text="Oxford University"><img src="images/oxford.jpg" alt=""></div>
                 <div class="box five " data-text="Buckingham Palace"><img src="images/buckinghampalace.jpg" alt=""></div>
             </div>
-    
+
         </section>
 
         <section id="fourth-section">
@@ -209,8 +210,8 @@
             </ul>
         </section>
 
-        
-    
+
+
         <section id="fifth-section">
             <img src="images/uk6.jpg" alt="lokacioni">
             <ul id="whole-part">
@@ -275,27 +276,27 @@
 
 
         </section>
-        
-<!-- Booking Modal -->
-<div id="bookingModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h3>Book Your Room</h3>
-        <form id="bookingForm" action="bookInfo.php" method="POST">
-            <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
-            <label for="checkIn">Check-in Date</label>
-            <input type="date" id="checkIn" name="check_in" required>
-            <label for="checkOut">Check-out Date</label>
-            <input type="date" id="checkOut" name="check_out" required>
-            <label for="price">Total Price ($)</label>
-            <input type="text" id="price" name="total_price" readonly>
-            <button type="submit">Confirm Booking</button>
-        </form>
-    </div>
-</div>
-<script src="script/header.js" defer></script>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Book Your Room</h3>
+                <form id="bookingForm" action="bookInfo.php" method="POST">
+                    <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
+                    <label for="checkIn">Check-in Date</label>
+                    <input type="date" id="checkIn" name="check_in" required>
+                    <label for="checkOut">Check-out Date</label>
+                    <input type="date" id="checkOut" name="check_out" required>
+                    <label for="price">Total Price ($)</label>
+                    <input type="text" id="price" name="total_price" readonly>
+                    <button type="submit">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+        <script src="script/header.js" defer></script>
 
     </main>
 
