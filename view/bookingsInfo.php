@@ -1,5 +1,5 @@
 <?php
-include 'Booking.php';
+include '../model/Booking.php';
 
 $booking = new Booking();
 $bookings = $booking->getAllBookings();
@@ -14,9 +14,9 @@ $bookings = $booking->getAllBookings();
   <title>Dashboard</title>
   <!-- Link to Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/admin.css">
-  <script src="script/header.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="../public/styles/header.css">
+  <link rel="stylesheet" href="../public/styles/admin.css">
+  <script src="../public/script/header.js" type="text/javascript"></script>
 
   <style>
     body {
@@ -115,10 +115,10 @@ $bookings = $booking->getAllBookings();
     <div class="container">
       <!-- Sidebar on the left -->
       <div class="sidebar">
-      <a href="admin.php"><h2>Admin Panel</h2></a>
+      <a href="../view/admin.php"><h2>Admin Panel</h2></a>
         <ul>
-          <li><a href="bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
-          <li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
+          <li><a href="../view/bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
+          <li><a href="../view/resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
           <li><a href=""><i class="fas fa-sign-in-alt"></i> Login</a></li>
           <li><a href=""><i class="fas fa-user-plus"></i> Register</a></li>
           <li><a href="../view/contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
@@ -155,7 +155,7 @@ $bookings = $booking->getAllBookings();
                   <td><?= htmlspecialchars($row['check_out']) ?></td>
                   <td><?= htmlspecialchars($row['total_price']) ?></td>
                   <td class="actions">
-                    <a href="editBooking.php?Id=<?= $row['Id'] ?>">
+                    <a href="../controller/editBooking.php?Id=<?= $row['Id'] ?>">
                       <button class="edit-btn">Edit</button>
                     </a>
                     <a href="../controller/deleteBooking.php?Id=<?= $row['Id'] ?>" onclick="return confirm('Are you sure?')">

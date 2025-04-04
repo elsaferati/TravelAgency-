@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ticket_booking";
+$dbname = "../config/ticketdatabase";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $update_stmt->bind_param("ssssisi", $from, $to, $departure, $return, $passengers, $class, $ticket_id);
     
     if ($update_stmt->execute()) {
-        header("Location: bookedtickets.php");
+        header("Location: ../view/bookedtickets.php");
         exit();
     } else {
         echo "Error updating record: " . $conn->error;
@@ -76,6 +76,6 @@ $conn->close();
     </form>
     
     <br>
-    <a href="bookedtickets.php">Go back to Booked Tickets</a>
+    <a href="../view/bookedtickets.php">Go back to Booked Tickets</a>
 </body>
 </html>

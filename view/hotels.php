@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/about-us.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <script src="script/header.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="styles/hotels.css">
+    <link rel="stylesheet" href="../public/styles/shared.css">
+    <link rel="stylesheet" href="/public/styles/about-us.css">
+    <link rel="stylesheet" href="../public/styles/header.css">
+    <script src="../public/script/header.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../public/styles/hotels.css">
 </head>
 
 <body>
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="images/2(1).png" alt="Logo" />
+                <img class="logo" src="/public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
@@ -26,21 +26,21 @@
 
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
-                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="images/close.jpg"
+                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="/public/images/close.jpg"
                         alt="close-icon" /></button>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href primary-button" href="log-in.php">
+                <a class="nav-item-href primary-button" href="../view/log-in.php">
                     Join us
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="about.html">
+                <a class="nav-item-href" href="../view/about.html">
                     <nav>About us</nav>
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="contact-us.php">
+                <a class="nav-item-href" href="../view/contact-us.php">
                     Contact us
                 </a>
             </div>
@@ -48,72 +48,72 @@
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.php">Albania</a></li>
-                        <li><a href="sweden.php">Sweden</a></li>
-                        <li><a href="italy.php">Italy</a></li>
-                        <li><a href="uk.php">UK</a></li>
-                        <li><a href="greece.php">Greece</a></li>
-                        <li><a href="spain.php">Spain</a></li>
+                        <li><a href="../view/albania.php">Albania</a></li>
+                        <li><a href="../view/sweden.php">Sweden</a></li>
+                        <li><a href="../view/italy.php">Italy</a></li>
+                        <li><a href="../viewuk.php">UK</a></li>
+                        <li><a href="../view/greece.php">Greece</a></li>
+                        <li><a href="../view/spain.php">Spain</a></li>
                     </ul>
                 </div>
                 </a>
             </div>
         </div>
         <div class="burger-menu">
-            <button onclick="openMenu()"><img class="burget-icon" src="images/burger.jpg" alt="burger-icon" /></button>
+            <button onclick="openMenu()"><img class="burget-icon" src="/public/images/burger.jpg" alt="burger-icon" /></button>
         </div>
     </header>
     <main>
         <div class="headd">
-            <div class="button1"><img src="images/hotel.png" alt="hotel"></div>
-            <div class="button2"><a href="tickets.php"><img src="images/plane.jpg" alt="plane"></a></div>
+            <div class="button1"><img src="/public/images/hotel.png" alt="hotel"></div>
+            <div class="button2"><a href="../view/tickets.php"><img src="/public/images/plane.jpg" alt="plane"></a></div>
         </div>
         <div class="foto" style="background-image: url(images/bgg.avif);">
             <div class="fotot">
                 <div class="city-box" data-city="Paris">
-                    <img src="images/paris.jpg" alt="Paris">
+                    <img src="/public/images/paris.jpg" alt="Paris">
                     <p>Paris, France</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
 
                 <div class="city-box" data-city="Budapest">
-                    <img src="images/budapest.jpg" alt="Budapest">
+                    <img src="/public/images/budapest.jpg" alt="Budapest">
                     <p>Budapest, Hungary</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
 
                 <div class="city-box" data-city="NewYork">
-                    <img src="images/new york.jpg" alt="New York">
+                    <img src="/public/images/new york.jpg" alt="New York">
                     <p>New York, USA</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
 
                 <div class="city-box" data-city="Tirana">
-                    <img src="images/tirana.jpg" alt="tirana">
+                    <img src="/public/images/tirana.jpg" alt="tirana">
                     <p>Tirana, Albania</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
 
                 <div class="city-box" data-city="Prishtine">
-                    <img src="images/prishtina.jpg" alt="prishtina">
+                    <img src="/public/images/prishtina.jpg" alt="prishtina">
                     <p>Prishtine, Kosova</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
 
                 <div class="city-box" data-city="Rome">
-                    <img src="images/rome.jpg" alt="rome">
+                    <img src="/public/images/rome.jpg" alt="rome">
                     <p>Rome, Italy</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
 
                 <div class="city-box" data-city="Berlin">
-                    <img src="images/berlin.webp" alt="berlin">
+                    <img src="/public/images/berlin.webp" alt="berlin">
                     <p>Berlin, Germany</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
 
                 <div class="city-box" data-city="Stockholm">
-                    <img src="images/sweden.jpg" alt="sweden">
+                    <img src="/public/images/sweden.jpg" alt="sweden">
                     <p>Stockholm, Sweden</p>
                     <button onclick="openRestaurantModal()">Book a Table</button>
                 </div>
@@ -126,7 +126,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeRestaurantModal()">&times;</span>
                 <h3>Reserve Your Table</h3>
-                <form id="restaurantBookingForm" action="reservation.php" method="POST">
+                <form id="restaurantBookingForm" action="../controller/reservation.php" method="POST">
                     <h4>Contact Information</h4>
                     <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
                     <input type="email" id="email" name="email" placeholder="Email" required>
@@ -185,26 +185,26 @@
                 <ul class="footer-content-special">
                     <li>
                         <a href="https://www.facebook.com">
-                            <img class="last-img" src="images/facebook.jpg" alt="facebook">
+                            <img class="last-img" src="/public/images/facebook.jpg" alt="facebook">
                         </a>
 
                     <li>
                         <a href="https://www.instagram.com">
-                            <img class="last-img" src="images/insta.jpg" alt="instagram">
+                            <img class="last-img" src="/public/images/insta.jpg" alt="instagram">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.linkedIn">
-                            <img class="last-img" src="images/in.jpg" alt="linkedin">
+                            <img class="last-img" src="/public/images/in.jpg" alt="linkedin">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.youtube.com">
-                            <img class="last-img" src="images/youtube.jpg" alt="youtube">
+                            <img class="last-img" src="/public/images/youtube.jpg" alt="youtube">
                     </li>
                     </a>
                     <li><a href="https://twitter.com">
-                            <img class="last-img" src="images/twitter.jpg" alt="twitter"></li>
+                            <img class="last-img" src="/public/images/twitter.jpg" alt="twitter"></li>
                     </a>
 
 

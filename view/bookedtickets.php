@@ -72,7 +72,7 @@ $result = $conn->query($sql);
                     <input type="hidden" name="ticket_id" value="<?= $row['id'] ?>">
                     <button type="submit" name="delete" onclick="return confirm('Are you sure you want to delete this ticket?')">Delete</button>
                 </form>
-                <a href="edit_ticket.php?id=<?= $row['id'] ?>"><button>Edit</button></a>
+                <a href="../view/edit_ticket.php?id=<?= $row['id'] ?>"><button>Edit</button></a>
             </td>
         </tr>
         <?php endwhile; ?>
