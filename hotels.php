@@ -48,11 +48,11 @@
             <div class="dropdown">
                 <ul>
                     <li><a href="albania.php">Albania</a></li>
-                    <li><a href="sweden.html">Sweden</a></li>
+                    <li><a href="sweden.php">Sweden</a></li>
                     <li><a href="italy.php">Italy</a></li>
-                    <li><a href="uk.html">UK</a></li>
-                    <li><a href="greece.html">Greece</a></li>
-                    <li><a href="spain.html">Spain</a></li>
+                    <li><a href="uk.php">UK</a></li>
+                    <li><a href="greece.php">Greece</a></li>
+                    <li><a href="spain.php">Spain</a></li>
                 </ul>
             </div>
             </a>
@@ -72,100 +72,108 @@
           <div class="city-box" data-city="Paris">
               <img src="images/paris.jpg" alt="Paris">
               <p>Paris, France</p>
-              <button class="btn book-button">Book</button>
+              <button onclick="openRestaurantModal()">Book a Table</button>
           </div>
   
           <div class="city-box" data-city="Budapest">
               <img src="images/budapest.jpg" alt="Budapest">
               <p>Budapest, Hungary</p>
-              <button class="btn book-button">Book</button>
+              <button onclick="openRestaurantModal()">Book a Table</button>
           </div>
   
           <div class="city-box" data-city="NewYork">
               <img src="images/new york.jpg" alt="New York">
               <p>New York, USA</p>
-              <button class="btn book-button">Book</button>
+              <button onclick="openRestaurantModal()">Book a Table</button>
           </div>
 
             <div class="city-box" data-city="Tirana">
                 <img src="images/tirana.jpg" alt="tirana">
                 <p>Tirana, Albania</p>
-                <button class="btn book-button">Book</button>
+                <button onclick="openRestaurantModal()">Book a Table</button>
             </div>
 
             <div class="city-box" data-city="Prishtine">
                 <img src="images/prishtina.jpg" alt="prishtina">
                 <p>Prishtine, Kosova</p>
-                <button class="btn book-button">Book</button>
+                <button onclick="openRestaurantModal()">Book a Table</button>
             </div>
 
             <div class="city-box" data-city="Rome">
                 <img src="images/rome.jpg" alt="rome">
                 <p>Rome, Italy</p>
-                <button class="btn book-button">Book</button>
+                <button onclick="openRestaurantModal()">Book a Table</button>
             </div>
 
             <div class="city-box" data-city="Berlin">
                 <img src="images/berlin.webp" alt="berlin">
                 <p>Berlin, Germany</p>
-                <button class="btn book-button">Book</button>
+                <button onclick="openRestaurantModal()">Book a Table</button>
             </div>
 
             <div class="city-box" data-city="Stockholm">
                 <img src="images/sweden.jpg" alt="sweden">
                 <p>Stockholm, Sweden</p>
-                <button class="btn book-button">Book</button>
+                <button onclick="openRestaurantModal()">Book a Table</button>
             </div>
 
         </div>
     </div>
 
-<!-- MODALI -->
-<div id="bookingModal" class="modal">
+<!-- Restaurant Booking Modal -->
+<div id="restaurantBookingModal" class="modal" style="display: none;">
     <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" onclick="closeRestaurantModal()">&times;</span>
         <h3>Reserve Your Table</h3>
-        <form id="bookingForm">
+        <form id="restaurantBookingForm" action="reservation.php" method="POST">
             <h4>Contact Information</h4>
-            <input type="text" id="full_name" name="full_name" placeholder="Full Name" required>
+            <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
             <input type="email" id="email" name="email" placeholder="Email" required>
-            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
             
             <h4>Available Time Choice</h4>
+            <label for="check_in">Date</label>
             <input type="date" id="check_in" name="check_in" required>
+            
+            <label for="time">Time</label>
             <input type="time" id="time" name="time" required>
             
             <h4>Table Size</h4>
-            <input type="number" id="people" name="people" min="1" placeholder="Number of People" required>
+            <label for="people">Number of People</label>
+            <input type="number" id="people" name="people" min="1" required>
             
             <h4>Select Restaurant</h4>
-            <select id="restaurant" name="restaurant" required>
-                <option value="" disabled selected>Select restaurant</option>
-                <option value="La Piazza">La Piazza</option>
-                <option value="Gourmet Bistro">Gourmet Bistro</option>
+            <select name="restaurant" id="restaurant" required>
+                <option value="1">La Piazza</option>
+                <option value="2">Gourmet Bistro</option>
+                <option value="3">Sunset Grill</option>
             </select>
             
             <button type="submit">Confirm Reservation</button>
         </form>
     </div>
-  </div>
+</div>
 
-  
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Merr të gjithë butonat "Book"
-    document.querySelectorAll(".book-button").forEach(button => {
-        button.addEventListener("click", function() {
-            let modal = document.getElementById("bookingModal");
-            modal.style.display = "flex"; // Siguron që modalin është qendruar siç duhet
-        });
-    });
-});
 
-function closeModal() {
-    document.getElementById("bookingModal").style.display = "none";
-}
-  </script>
+<script>
+   // Function to open the restaurant booking modal
+   function openRestaurantModal() {
+       document.getElementById("restaurantBookingModal").style.display = "block";
+   }
+
+   // Function to close the restaurant booking modal
+   function closeRestaurantModal() {
+       document.getElementById("restaurantBookingModal").style.display = "none";
+   }
+
+   // Close the modal if the user clicks anywhere outside of the modal content
+   window.onclick = function(event) {
+       if (event.target == document.getElementById("restaurantBookingModal")) {
+           closeRestaurantModal();
+       }
+   };
+</script>
+
   
     
   </main>
