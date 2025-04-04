@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <script src="script/header.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../public/styles/shared.css">
+    <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="../public/styles/header.css">
+    <script src="../public/script/header.js" type="text/javascript"></script>
     <title>Travel</title>
 </head>
 
@@ -24,10 +24,10 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="images/2(1).png" alt="Logo" />
+                <img class="logo" src="../public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
-                <p id="title"><a href="index.html"><strong>W A V E</strong></a></p>
+                <p id="title"><a href="../view.index.php"><strong>W A V E</strong></a></p>
                 <p id="under-title">Do More Than Travel</p>
             </div>
         </div>
@@ -35,10 +35,10 @@
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
                 <button class="close-button" onclick="closeMenu()"><img class="close-icon"
-                        src="images/close.jpg" alt="close-icon" /></button>
+                        src="../public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href primary-button" href="log-in.php">
+                <a class="nav-item-href primary-button" href="../view/log-in.php">
                     Join us
                 </a>
             </div>
@@ -48,7 +48,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="contact-us.php">
+                <a class="nav-item-href" href="../view/contact-us.php">
                     Contact us
                 </a>
             </div>
@@ -56,12 +56,12 @@
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.php">Albania</a></li>
-                        <li><a href="sweden.php">Sweden</a></li>
-                        <li><a href="italy.php">Italy</a></li>
-                        <li><a href="uk.php">UK</a></li>
-                        <li><a href="greece.php">Greece</a></li>
-                        <li><a href="spain.php">Spain</a></li>
+                        <li><a href="../view/albania.php">Albania</a></li>
+                        <li><a href="../view/sweden.php">Sweden</a></li>
+                        <li><a href="../view/italy.php">Italy</a></li>
+                        <li><a href="../view/uk.php">UK</a></li>
+                        <li><a href="../view/greece.php">Greece</a></li>
+                        <li><a href="../view/spain.php">Spain</a></li>
                     </ul>
                 </div>
                 </a>
@@ -69,12 +69,12 @@
         </div>
         <div class="burger-menu">
             <button onclick="openMenu()"><img class="burget-icon"
-                    src="images/burger.jpg" alt="burger-icon" /></button>
+                    src="../public/images/burger.jpg" alt="burger-icon" /></button>
         </div>
     </header>
     <main>
         <section id="first-section">        
-                <img src="images/84.jpg" alt="Traveling">
+                <img src="../public/images/84.jpg" alt="Traveling">
     
                 <div id="main-page-text">
                     <ul>
@@ -84,7 +84,7 @@
                         <li id="under-main-txt" >
                           <p >The biggest adventure you can take is</p>
                           <p> to live the life of your dreams.</p>
-                          <a href="tickets.php"><button>Get your Ticket</button></a>
+                          <a href="../view/tickets.php"><button>Get your Ticket</button></a>
                         </li>
                     </ul>
             </div>
@@ -100,33 +100,33 @@
                 <div id="cover">
                  <ul id="scroll-images">
                 <li class="child">
-                    <a href="spain.php">
-                        <img class="cild-img" src="images/barcelona.webp" alt="Barcelona">   
+                    <a href="../view/spain.php">
+                        <img class="cild-img" src="../public/images/barcelona.webp" alt="Barcelona">   
                     </a>
                 </li>
                 <li class="child">
-                    <a href="sweden.php">
-                        <img class="cild-img" src="images/stockholm.jpg" alt="Stockholm">
+                    <a href="../view/sweden.php">
+                        <img class="cild-img" src="../public/images/stockholm.jpg" alt="Stockholm">
                     </a>
                 </li>
                 <li class="child">
-                    <a href="albania.php">
-                        <img class="child-img" src="images/albania.jpg" alt="Ksamil">    
+                    <a href="../view/albania.php">
+                        <img class="child-img" src="../public/images/albania.jpg" alt="Ksamil">    
                     </a>
                 </li>
                 <li class="child">
-                    <a href="greece.php">
-                        <img class="child-img" src="images/santorini.jpg" alt="Santorini">
+                    <a href="../view/greece.php">
+                        <img class="child-img" src="../public/images/santorini.jpg" alt="Santorini">
                     </a>
                 </li>
                 <li class="child">
-                    <a href="uk.php">
-                        <img class="child-img" src="images/uk.jpg" alt="London">
+                    <a href="../view/uk.php">
+                        <img class="child-img" src="../public/images/uk.jpg" alt="London">
                     </a>
                 </li>
                 <li class="child">
-                    <a href="italy.php">
-                        <img class="child-img" src="images/italyy.jpg" alt="Venecia">
+                    <a href="../view/italy.php">
+                        <img class="child-img" src="../public/images/italyy.jpg" alt="Venecia">
                     </a>
                 </li>
             </ul>
@@ -177,11 +177,11 @@
 
         </section>
         <section id="fifth-section">
-            <img src="images/foto5.jpg" alt="best-place">
+            <img src="../public/images/foto5.jpg" alt="best-place">
             <div id="fifth-section-content">
                 <p>Stay in the world's most remarkable homes!</p>
                 <ul id="in-fifth-section">
-                    <a href="hotels.php"> <button type="button" >Book your restaurant</button></a>
+                    <a href="../view/hotels.php"> <button type="button" >Book your restaurant</button></a>
                  
                 </ul>
             
@@ -208,23 +208,23 @@
               <ul class="footer-content-special">
         <li > 
             <a href="https://www.facebook.com">
-                <img class="last-img" src="images/facebook.jpg" alt="facebook">
+                <img class="last-img" src="/..public/images/facebook.jpg" alt="facebook">
             </a>
            
         <li>
             <a href="https://www.instagram.com">
-                <img  class="last-img" src="images/insta.jpg" alt="instagram"></li>
+                <img  class="last-img" src="/..public/images/insta.jpg" alt="instagram"></li>
             </a>
         <li> 
             <a href="https://www.linkedIn">
-                <img  class="last-img" src="images/in.jpg" alt="linkedin"></li>
+                <img  class="last-img" src="/..public/images/in.jpg" alt="linkedin"></li>
             </a>
          <li> 
             <a href="https://www.youtube.com">
-                <img  class="last-img" src="images/youtube.jpg" alt="youtube"></li>
+                <img  class="last-img" src="/..public/images/youtube.jpg" alt="youtube"></li>
             </a>
          <li><a href="https://twitter.com"> 
-            <img  class="last-img" src="images/twitter.jpg" alt="twitter"></li>
+            <img  class="last-img" src="/..public/images/twitter.jpg" alt="twitter"></li>
         </a>
    
     

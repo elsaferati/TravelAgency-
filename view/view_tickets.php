@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 $sql = "SELECT * FROM tickets";
 $result = $conn->query($sql);

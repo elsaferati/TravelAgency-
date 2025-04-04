@@ -20,7 +20,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="/public/images/2(1).png" alt="Logo" />
+                <img class="logo" src="../public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="../view/index.php"><strong>W A V E</strong></a></p>
@@ -31,7 +31,7 @@
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
                 <button class="close-button" onclick="closeMenu()"><img class="close-icon"
-                        src="/public/images/close.jpg" alt="close-icon" /></button>
+                        src="../public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
                 <a class="nav-item-href primary-button" href="../view/log-in.php">
@@ -65,17 +65,17 @@
         </div>
         <div class="burger-menu">
             <button onclick="openMenu()"><img class="burget-icon"
-                    src="/public/images/burger.jpg" alt="burget-icon" /></button>
+                    src="../public/images/burger.jpg" alt="burget-icon" /></button>
         </div>
     </header>
     <main>
         <section id="first-section">
             <ul>
                 <li id="first-img">
-                    <img src="/public/images/greece1.webp" alt="greece">
+                    <img src="../public/images/greece1.webp" alt="greece">
                 </li>
                 <li>
-                    <img src="/public/images/greece2.jpg" alt="greece">
+                    <img src="../public/images/greece2.jpg" alt="greece">
                 </li>
             </ul>
         </section>
@@ -118,7 +118,7 @@
             </style>
             <ul>
                 <li>
-                    <img src="/public/images/greece3.webp" alt="greece">
+                    <img src="../public/images/greece3.webp" alt="greece">
                     <div>
                         <h2>Montorgueil Gem</h2>
                         <p>6 guests, 3 bedrooms, 3 bathrooms</p>
@@ -132,7 +132,7 @@
 
                 </li>
                 <li>
-                    <img src="/public/images/greece4.webp" alt="greece">
+                    <img src="../public/images/greece4.webp" alt="greece">
                     <div>
                         <h2>Durance</h2>
                         <p>5 guests, 2 bedrooms, 2 bathrooms</p>
@@ -146,7 +146,7 @@
 
                 </li>
                 <li>
-                    <img src="/public/images/greece5.webp" alt="greece">
+                    <img src="../public/images/greece5.webp" alt="greece">
                     <div>
                         <h2>La Fontaine</h2>
                         <p>3 guests, 2 bedrooms, 1 bathroom</p>
@@ -167,11 +167,11 @@
         <section id="sixth-section">
             <h1 style="margin-left: 1rem; font-weight: bold;">Popular places in Greece</h1>
             <div class="container2">
-                <div class="box one " data-text="Meteora"><img src="/public/images/meteora.webp" alt=""></div>
-                <div class="box two " data-text="Cephalonia"><img src="/public/images/cephalonia.webp" alt=""></div>
-                <div class="box three " data-text="Delphi"><img src="/public/images/delphi.webp" alt=""></div>
-                <div class="box four " data-text="Andros"><img src="/public/images/androswebp.webp" alt=""></div>
-                <div class="box five " data-text="Rhodes"><img src="/public/images/hodes.webp" alt=""></div>
+                <div class="box one " data-text="Meteora"><img src="../public/images/meteora.webp" alt=""></div>
+                <div class="box two " data-text="Cephalonia"><img src="../public/images/cephalonia.webp" alt=""></div>
+                <div class="box three " data-text="Delphi"><img src="../public/images/delphi.webp" alt=""></div>
+                <div class="box four " data-text="Andros"><img src="../public/images/androswebp.webp" alt=""></div>
+                <div class="box five " data-text="Rhodes"><img src="../public/images/hodes.webp" alt=""></div>
             </div>
 
         </section>
@@ -180,25 +180,25 @@
             <h1>Popular in Greece</h1>
             <ul>
                 <li>
-                    <img src="/public/images/food.jpg" alt="food">
+                    <img src="../public/images/food.jpg" alt="food">
                     <p>Amazing food</p>
                 </li>
                 <li>
 
-                    <img src="/public/images/party.jpg" alt="party">
+                    <img src="../public/images/party.jpg" alt="party">
                     <p>Great party</p>
                 </li>
                 <li>
-                    <img src="/public/images/pool.jpg" alt="pool">
+                    <img src="../public/images/pool.jpg" alt="pool">
                     <p>Swimming pool</p>
                 </li>
                 <li>
 
-                    <img src="/public/images/service.webp" alt="room-service">
+                    <img src="../public/images/service.webp" alt="room-service">
                     <p>Room service</p>
                 </li>
                 <li>
-                    <img src="/public/images/community.jpg" alt="community">
+                    <img src="../public/images/community.jpg" alt="community">
                     <p>Large Groups</p>
                 </li>
 
@@ -210,7 +210,7 @@
 
 
         <section id="fifth-section">
-            <img src="/public/images/greece6.webp" alt="lokacioni">
+            <img src="../public/images/greece6.webp" alt="lokacioni">
             <ul id="whole-part">
                 <h2>Get around</h2>
                 <ul class="in">
@@ -278,7 +278,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h3>Book Your Room</h3>
-                <form id="bookingForm" action="bookInfo.php" method="POST">
+                <form id="bookingForm" action="../controller/bookInfo.php" method="POST">
                     <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
@@ -303,26 +303,26 @@
                 <ul class="footer-content-special">
                     <li>
                         <a href="https://www.facebook.com">
-                            <img class="last-img" src="/public/images/facebook.jpg" alt="facebook">
+                            <img class="last-img" src="../public/images/facebook.jpg" alt="facebook">
                         </a>
 
                     <li>
                         <a href="https://www.instagram.com">
-                            <img class="last-img" src="/public/images/insta.jpg" alt="instagram">
+                            <img class="last-img" src="../public/images/insta.jpg" alt="instagram">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.linkedIn">
-                            <img class="last-img" src="/public/images/in.jpg" alt="linkedin">
+                            <img class="last-img" src="../public/images/in.jpg" alt="linkedin">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.youtube.com">
-                            <img class="last-img" src="/public/images/youtube.jpg" alt="youtube">
+                            <img class="last-img" src="../public/images/youtube.jpg" alt="youtube">
                     </li>
                     </a>
                     <li><a href="https://twitter.com">
-                            <img class="last-img" src="/public/images/twitter.jpg" alt="twitter"></li>
+                            <img class="last-img" src="../public/images/twitter.jpg" alt="twitter"></li>
                     </a>
 
 
