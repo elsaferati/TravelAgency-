@@ -129,7 +129,7 @@
                             heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                            <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                            <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
@@ -144,7 +144,7 @@
                             heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                            <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                            <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>
@@ -159,7 +159,7 @@
                             heart of the 2nd Arrondissement
                             and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights
                             the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                            <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                            <button class="btn" type="button" onclick="openModal()">Book</button>
                     </div>
 
                 </li>

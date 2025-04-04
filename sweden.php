@@ -54,8 +54,8 @@
                         <li><a href="sweden.php">Sweden</a></li>
                         <li><a href="italy.php">Italy</a></li>
                         <li><a href="uk.php">UK</a></li>
-                        <li><a href="greece.html">Greece</a></li>
-                        <li><a href="spain.html">Spain</a></li>
+                        <li><a href="greece.php">Greece</a></li>
+                        <li><a href="spain.php">Spain</a></li>
                     </ul>
                 </div>
                 </a>
@@ -124,7 +124,7 @@
                     You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                      and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights 
                      the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                     <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                     <button class="btn" type="button" onclick="openModal()">Book</button>
                 </div>
                 
             </li>
@@ -138,7 +138,7 @@
                     You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                      and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights 
                      the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                     <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                     <button class="btn" type="button" onclick="openModal()">Book</button>
                 </div>
                 
             </li>
@@ -152,7 +152,7 @@
                     You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                      and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights 
                      the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p> 
-                     <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                     <button class="btn" type="button" onclick="openModal()">Book</button>
                 </div>
                 
             </li>
@@ -201,9 +201,6 @@
         </ul>
     </section>
 
-    
-
-   
 
     <section id="fifth-section">
         <img src="images/sweden6.jpg" alt="lokacioni">

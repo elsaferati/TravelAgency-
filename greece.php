@@ -124,7 +124,7 @@
                     You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                      and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights 
                      the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                     <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                     <button class="btn" type="button" onclick="openModal()">Book</button>
                 </div>
                 
             </li>
@@ -138,7 +138,7 @@
                     You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                      and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights 
                      the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p>
-                     <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                     <button class="btn" type="button" onclick="openModal()">Book</button>
                 </div>
                 
             </li>
@@ -152,7 +152,7 @@
                     You'll be right in the swing of things with a stay at this 18th-century apartment in the heart of the 2nd Arrondissement
                      and just a three-minute stroll from the Metro. Take your pick from the blockbuster sights 
                      the Louvre, Palais Royal, and Notre Dame are all just a short jaunt away. </p> 
-                     <a href="hotels.html"><button  class="btn" type="button">Book</button></a>
+                     <button class="btn" type="button" onclick="openModal()">Book</button>
                 </div>
                 
             </li>
@@ -202,11 +202,7 @@
         </ul>
     </section>
 
-  
-
-
-
-    <section id="fifth-section">
+  <section id="fifth-section">
         <img src="images/greece6.webp" alt="lokacioni">
         <ul id="whole-part">
             <h2>Get around</h2>
