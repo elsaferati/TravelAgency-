@@ -1,8 +1,7 @@
-
 <?php
 // dashboard.php
 session_start();
-require_once '../model/UserRepository.php';
+require_once '../model/userRepository.php';
 
 if (!isset($_SESSION['user_id'])) {
     die("User not logged in.");
@@ -26,19 +25,21 @@ $user = $userRepository->getUserById($_SESSION['user_id']); // Get user by ID fr
 if (!$user) {
     header("Location: ../view/log-in.php");
     exit();
-}else {
+} else {
     echo "User found: " . $user->getName() . "<br>";  // Output the user's name to confirm
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../public/styles/log-in-style.css">
 </head>
+
 <body>
     <div class="dashboard-container">
         <div class="dashboard-header">
@@ -59,4 +60,5 @@ if (!$user) {
         </div>
     </div>
 </body>
+
 </html>

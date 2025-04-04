@@ -1,7 +1,6 @@
-
 <?php
 session_start();
-require_once 'UserRepository.php';
+require_once '../model/userRepository.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -33,12 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete Profile</title>
     <link rel="stylesheet" href="../public/styles/log-in-style.css">
 </head>
+
 <body>
 
     <div class="dashboard-container">
@@ -49,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br>
 
         <button id="openDeleteModal" class="delete">Delete My Account</button>
-       
+
     </div>
 
     <!-- Delete Account Modal -->
@@ -98,4 +99,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </script>
 
 </body>
+
 </html>

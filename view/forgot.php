@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../model/UserRepository.php';
+require_once '../model/userRepository.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
     $email = trim($_POST['email']);
@@ -19,13 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
     <!-- Link to the CSS File -->
-     <link rel="stylesheet" href="../public/styles/log-in-style.css">
+    <link rel="stylesheet" href="../public/styles/log-in-style.css">
 </head>
+
 <body>
     <h2>Forgot Password</h2>
     <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
@@ -35,4 +37,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
     </form>
     <a href="../view/log-in.php">Back to Login</a>
 </body>
+
 </html>

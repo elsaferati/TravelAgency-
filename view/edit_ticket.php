@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $update_sql = "UPDATE tickets SET from_city=?, to_city=?, departure_date=?, return_date=?, passengers=?, class=? WHERE id=?";
     $update_stmt = $conn->prepare($update_sql);
     $update_stmt->bind_param("ssssisi", $from, $to, $departure, $return, $passengers, $class, $ticket_id);
-    
+
     if ($update_stmt->execute()) {
         header("Location: ../view/bookedtickets.php");
         exit();
@@ -52,11 +52,13 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Ticket</title>
 </head>
+
 <body>
     <h2>Edit Ticket</h2>
     <form method="POST">
@@ -65,17 +67,18 @@ $conn->close();
         Departure Date: <input type="date" name="departure_date" value="<?= isset($ticket['departure_date']) ? $ticket['departure_date'] : '' ?>" required><br>
         Return Date: <input type="date" name="return_date" value="<?= isset($ticket['return_date']) ? $ticket['return_date'] : '' ?>" required><br>
         Passengers: <input type="number" name="passengers" value="<?= isset($ticket['passengers']) ? $ticket['passengers'] : '' ?>" required><br>
-        Class: 
+        Class:
         <select name="class" required>
             <option value="economy" <?= (isset($ticket['class']) && $ticket['class'] == "economy") ? 'selected' : '' ?>>Economy</option>
             <option value="business" <?= (isset($ticket['class']) && $ticket['class'] == "business") ? 'selected' : '' ?>>Business</option>
             <option value="first" <?= (isset($ticket['class']) && $ticket['class'] == "first") ? 'selected' : '' ?>>First</option>
         </select><br>
-        
+
         <button type="submit">Update Ticket</button>
     </form>
-    
+
     <br>
     <a href="../view/bookedtickets.php">Go back to Booked Tickets</a>
 </body>
+
 </html>
