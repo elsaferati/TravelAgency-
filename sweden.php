@@ -50,10 +50,10 @@
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.html">Albania</a></li>
-                        <li><a href="sweden.html">Sweden</a></li>
-                        <li><a href="italy.html">Italy</a></li>
-                        <li><a href="uk.html">UK</a></li>
+                        <li><a href="albania.php">Albania</a></li>
+                        <li><a href="sweden.php">Sweden</a></li>
+                        <li><a href="italy.php">Italy</a></li>
+                        <li><a href="uk.php">UK</a></li>
                         <li><a href="greece.html">Greece</a></li>
                         <li><a href="spain.html">Spain</a></li>
                     </ul>
@@ -70,10 +70,10 @@
     <section id="first-section">
         <ul>
             <li id="first-img">
-                <img src="images/sweden1.jpg" alt="ksamil">
+                <img src="images/sweden1.jpg" alt="sweden">
             </li>
             <li>
-                 <img src="images/sweden2.jpg" alt="ksasmil">
+                 <img src="images/sweden2.jpg" alt="sweden">
             </li>
         </ul>
     </section>
@@ -115,7 +115,7 @@
         </style>
         <ul>
             <li>
-                <img src="images/sweden3.webp" alt="ksamil">
+                <img src="images/sweden3.webp" alt="sweden">
                 <div>
                     <h2>Montorgueil Gem</h2>
                 <p>6 guests, 3 bedrooms, 3 bathrooms</p>
@@ -129,7 +129,7 @@
                 
             </li>
             <li>
-                <img src="images/sweden4.webp" alt="ksamil">
+                <img src="images/sweden4.webp" alt="sweden">
                 <div>
                     <h2>Durance</h2>
                 <p>5 guests, 2 bedrooms, 2 bathrooms</p>
@@ -143,7 +143,7 @@
                 
             </li>
             <li>
-                <img src="images/sweden5.webp" alt="ksamil">
+                <img src="images/sweden5.webp" alt="sweden">
                 <div>
                    <h2>La Fontaine</h2>
                 <p>3 guests, 2 bedrooms, 1 bathroom</p>
@@ -245,6 +245,30 @@
         
 
     </section>
+
+
+    <!-- Booking Modal -->
+<div id="bookingModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Book Your Room</h3>
+        <form id="bookingForm" action="bookInfo.php" method="POST">
+            <input type="text" id="fullName" name="full_name" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" title="Enter a valid phone number (10-15 digits)">
+            <label for="checkIn">Check-in Date</label>
+            <input type="date" id="checkIn" name="check_in" required>
+            <label for="checkOut">Check-out Date</label>
+            <input type="date" id="checkOut" name="check_out" required>
+            <label for="price">Total Price ($)</label>
+            <input type="text" id="price" name="total_price" readonly>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+<script src="script/header.js" defer></script>
+
 </main>
 
 <footer>
