@@ -74,7 +74,7 @@
                 <img src="images/ksamil1.jpg" alt="ksamil">
             </li>
             <li>
-                 <img src="images/albania2.jpg" alt="ksasmil">
+                 <img src="images/albania2.jpg" alt="ksamil">
             </li>
         </ul>
     </section>
