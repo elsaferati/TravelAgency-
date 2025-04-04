@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tickets</title>
-  <link rel="stylesheet" href="styles/shared.css">
-  <link rel="stylesheet" href="styles/about-us.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/tickets.css">
-  <script src="script/header.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="../public/styles/shared.css">
+  <link rel="stylesheet" href="../public/styles/about-us.css">
+  <link rel="stylesheet" href="../public/styles/header.css">
+  <link rel="stylesheet" href="../public/styles/tickets.css">
+  <script src="../public/script/header.js" type="text/javascript"></script>
 </head>
 
 <body>
   <header>
     <div class="logo-container">
       <div class="logo-image-container">
-        <img class="logo" src="images/2(1).png" alt="Logo" />
+        <img class="logo" src="../public/images/2(1).png" alt="Logo" />
       </div>
       <div class="logo-text-container">
         <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
@@ -27,7 +27,7 @@
     <div class="navigation" id="navigation">
       <div class="nav-item item-close-button">
         <button class="close-button" onclick="closeMenu()"><img class="close-icon"
-            src="images/close.jpg" alt="close-icon" /></button>
+            src="../public/images/close.jpg" alt="close-icon" /></button>
       </div>
       <div class="nav-item">
         <a class="nav-item-href primary-button" href="log-in.php">
@@ -35,7 +35,7 @@
         </a>
       </div>
       <div class="nav-item">
-        <a class="nav-item-href" href="about.html">
+        <a class="nav-item-href" href="../about.html">
           <nav>About us</nav>
         </a>
       </div>
@@ -61,20 +61,20 @@
     </div>
     <div class="burger-menu">
       <button onclick="openMenu()"><img class="burget-icon"
-          src="images/burger.jpg" alt="burger-icon" /></button>
+          src="../public/images/burger.jpg" alt="burger-icon" /></button>
     </div>
   </header>
   <main>
     <div class="headd">
-      <div class="button2"><img src="images/plane.jpg" alt="plane"></div>
-      <div class="button1"><img src="images/hotel.png" alt="hotel"></div>
+      <div class="button2"><img src="../public/images/plane.jpg" alt="plane"></div>
+      <div class="button1"><img src="../public/images/hotel.png" alt="hotel"></div>
 
     </div>
-    <div class="foto" style="background-image: url(images/foto.jpg);">
+    <div class="foto" style="background-image: url(../public/images/foto.jpg);">
       <div class="checkbox">
         <div class="type">
           <div class="check">
-            <a href="oneway.html"><input type="button" value="One-way"></a>
+            <a href="../oneway.html"><input type="button" value="One-way"></a>
           </div>
           <div class="check">
             <input type="button" value="Return">
@@ -83,7 +83,7 @@
         <hr>
         <div class="destinations">
           <div class="from">
-            <form method="POST" action="create_ticket.php">
+            <form method="POST" action="../controller/create_ticket.php">
               <label for="from_city">From</label>
               <div class="option">
                 <select name="from_city" required
@@ -166,26 +166,26 @@
         <ul class="footer-content-special">
           <li>
             <a href="https://www.facebook.com">
-              <img class="last-img" src="images/facebook.jpg" alt="facebook">
+              <img class="last-img" src="../public/images/facebook.jpg" alt="facebook">
             </a>
 
           <li>
             <a href="https://www.instagram.com">
-              <img class="last-img" src="images/insta.jpg" alt="instagram">
+              <img class="last-img" src="../public/images/insta.jpg" alt="instagram">
           </li>
           </a>
           <li>
             <a href="https://www.linkedIn">
-              <img class="last-img" src="images/in.jpg" alt="linkedin">
+              <img class="last-img" src="../public/images/in.jpg" alt="linkedin">
           </li>
           </a>
           <li>
             <a href="https://www.youtube.com">
-              <img class="last-img" src="images/youtube.jpg" alt="youtube">
+              <img class="last-img" src="../public/images/youtube.jpg" alt="youtube">
           </li>
           </a>
           <li><a href="https://twitter.com">
-              <img class="last-img" src="images/twitter.jpg" alt="twitter"></li>
+              <img class="last-img" src="../public/images/twitter.jpg" alt="twitter"></li>
           </a>
 
 
