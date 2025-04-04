@@ -1,34 +1,50 @@
-<?php
-// log-in.php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!-- Link to the CSS File -->
-     <link rel="stylesheet" href="..public/styles/log-in-style.css">
+    <title>Login | Traveler</title>
+    <link rel="stylesheet" href="public/styles/log-in-style.css"> <!-- Correct path to the CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Login</h2>
-        <form action="../controller/LoginController.php" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" name="email" placeholder="Enter your email" required>
+    <div class="container">
+        <h2>Welcome Back!</h2>
 
-            <label for="password">Password:</label>
-            <input type="password" name="password" placeholder="Enter your password" required>
+        <!-- Display specific error messages based on the URL parameter -->
+        <div id="error-message-container"></div>
 
-            <button type="submit" name="login">Login</button>
+        <form action="controller/loginController.php" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required minlength="4" maxlength="50" placeholder="Enter your username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6" maxlength="50" placeholder="Enter your password">
+
+            <button type="submit">Login</button>
         </form>
-        <div class="links">
-            <a href="../view/register_form.php">Don't have an account? Register here</a>
-            <a href="#">Forgot Password?</a>
-        </div>
+
+        <p>Don't have an account? <a href="view/register_form.php">Register here</a>.</p>
     </div>
 
+    <script>
+        // Check if there is an error in the URL (via query params)
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        const errorMessageContainer = document.getElementById('error-message-container');
 
+        if (error) {
+            let message = '';
+            if (error === 'incorrect_password') {
+                message = 'Incorrect password. Please try again.';
+            } else if (error === 'user_not_found') {
+                message = 'Username not found. Please check your username.';
+            } else {
+                message = 'Invalid username or password. Please try again.';
+            }
+            // Display the error message
+            errorMessageContainer.innerHTML = `<div class="error-message" style="color: red; text-align: center;">${message}</div>`;
+        }
+    </script>
 </body>
 </html>

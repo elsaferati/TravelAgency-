@@ -16,7 +16,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="/public/images/2(1).png" alt="Logo" />
+                <img class="logo" src="../public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="../view/index.php"><strong>W A V E</strong></a></p>
@@ -66,9 +66,9 @@
     <main>
         <div class="headd">
             <div class="button1"><img src="../public/images/hotel.png" alt="hotel"></div>
-            <div class="button2"><a href="../view/tickets.php"><img src="/public/images/plane.jpg" alt="plane"></a></div>
+            <div class="button2"><a href="../view/tickets.php"><img src="../public/images/plane.jpg" alt="plane"></a></div>
         </div>
-        <div class="foto" style="background-image: url(images/bgg.avif);">
+        <div class="foto" style="background-image: url(../public/images/bgg.avif);">
             <div class="fotot">
                 <div class="city-box" data-city="Paris">
                     <img src="../public/images/paris.jpg" alt="Paris">
@@ -185,26 +185,26 @@
                 <ul class="footer-content-special">
                     <li>
                         <a href="https://www.facebook.com">
-                            <img class="last-img" src="/..public/images/facebook.jpg" alt="facebook">
+                            <img class="last-img" src="../public/images/facebook.jpg" alt="facebook">
                         </a>
 
                     <li>
                         <a href="https://www.instagram.com">
-                            <img class="last-img" src="/..public/images/insta.jpg" alt="instagram">
+                            <img class="last-img" src="../public/images/insta.jpg" alt="instagram">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.linkedIn">
-                            <img class="last-img" src="/..public/images/in.jpg" alt="linkedin">
+                            <img class="last-img" src="../public/images/in.jpg" alt="linkedin">
                     </li>
                     </a>
                     <li>
                         <a href="https://www.youtube.com">
-                            <img class="last-img" src="/..public/images/youtube.jpg" alt="youtube">
+                            <img class="last-img" src="../public/images/youtube.jpg" alt="youtube">
                     </li>
                     </a>
                     <li><a href="https://twitter.com">
-                            <img class="last-img" src="/..public/images/twitter.jpg" alt="twitter"></li>
+                            <img class="last-img" src="../public/images/twitter.jpg" alt="twitter"></li>
                     </a>
 
 

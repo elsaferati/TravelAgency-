@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="../view/about.html">
+                <a class="nav-item-href" href="../about.html">
                     <nav>About us</nav>
                 </a>
             </div>
@@ -81,7 +81,7 @@
         </section>
 
         <section id="second-section">
-            <img src="/public/images/home.jpg" alt="">
+            <img src="../public/images/home.jpg" alt="">
             <p id="title">Book a stay in one of the best homes in Greece</p>
             <p>We selected the 1349 homes worth renting in this location</p>
             <ul id="input">
