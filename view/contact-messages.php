@@ -1,6 +1,6 @@
 <?php
-require_once 'contactDatabase.php';  // Including the updated database file
-require_once 'contactMessages.php';  // Including the updated messages file
+require_once '../config/contactDatabase.php';  // Including the updated database file
+require_once '../model/contactMessages.php';  // Including the updated messages file
 
 $connection = mysqli_connect('localhost', 'root', '', 'userinfo');
 
@@ -24,9 +24,9 @@ if (!$result) {
   <title>Dashboard</title>
   <!-- Link to Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/admin.css">
-  <script src="script/header.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="../public/styles/header.css">
+  <link rel="stylesheet" href="../public/styles/admin.css">
+  <script src="../public/script/header.js" type="text/javascript"></script>
 
   <style>
     body {
@@ -125,14 +125,14 @@ if (!$result) {
     <div class="container">
       <!-- Sidebar on the left -->
       <div class="sidebar">
-      <a href="admin.php"><h2>Admin Panel</h2></a>
+      <a href="../view/admin.php"><h2>Admin Panel</h2></a>
         <ul>
-          <li><a href="bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
-          <li><a href="resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
+          <li><a href="../view/bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
+          <li><a href="../view/resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
           <li><a href=""><i class="fas fa-sign-in-alt"></i> Login</a></li>
           <li><a href=""><i class="fas fa-user-plus"></i> Register</a></li>
-          <li><a href="contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
-          <li><a href="bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+          <li><a href="../view/contact-messages.php"><i class="fas fa-envelope"></i> Contact-us</a></li>
+          <li><a href="../view/bookedtickets.php"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
         </ul>
       </div>
 
@@ -158,10 +158,10 @@ if (!$result) {
               echo "<td>" . htmlspecialchars($row['email']) . "</td>";
               echo "<td>" . htmlspecialchars($row['message']) . "</td>";
               echo "<td class='actions'>
-                      <a href='editMessage.php?id=" . $row['id'] . "'>
+                      <a href='../controller/editMessage.php?id=" . $row['id'] . "'>
                           <button class='edit-btn'>Edit</button>
                       </a> | 
-                      <a href='deleteMessage.php?id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this message?\")'>
+                      <a href='../controller/deleteMessage.php?id=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this message?\")'>
                           <button class='delete-btn'>Delete</button>
                       </a>
                     </td>";

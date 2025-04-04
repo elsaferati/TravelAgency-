@@ -1,11 +1,11 @@
 
 <?php
 session_start();
-require_once 'UserRepository.php';
+require_once '../model/UserRepository.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: log-in.php");
+    header("Location: ../view/log-in.php");
     exit();
 }
 
@@ -14,7 +14,7 @@ $userRepository = new UserRepository();
 $user = $userRepository->getUserById($_SESSION['user_id']);
 
 if (!$user) {
-    header("Location: log-in.php");
+    header("Location: ../view/log-in.php");
     exit();
 }
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $userRepository->updateUser($user->getId(), $name, $email, $password);
-    header("Location: dashboard.php");
+    header("Location: ../view/dashboard.php");
     exit();
 }
 ?>
@@ -41,14 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="styles/log-in-style.css">
+    <link rel="stylesheet" href="../public/styles/log-in-style.css">
 </head>
 <body>
 
     <h2>Welcome to your Edit Profile</h2>
     <button id="openEditModal">Edit Profile</button>
 
-    <a href="dashboard.php">Back to Dashboard</a>
+    <a href="../view/dashboard.php">Back to Dashboard</a>
 
     <!-- Edit Profile Modal -->
     <div id="editModal" class="modal">
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <h2>Edit Profile</h2>
             </div>
             <div class="modal-body">
-                <form action="edit-profile.php" method="POST">
+                <form action="../view/edit-profile.php" method="POST">
                     <label for="name">Full Name:</label>
                     <input type="text" name="name" value="<?php echo htmlspecialchars($user->getName()); ?>" required>
 

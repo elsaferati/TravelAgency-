@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/shared.css">
-    <link rel="stylesheet" href="styles/about-us.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/contact-us.css">
-    <script src="script/header.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../public/styles/shared.css">
+    <link rel="stylesheet" href="../public/styles/about-us.css">
+    <link rel="stylesheet" href="..public/styles/header.css">
+    <link rel="stylesheet" href="../public/styles/contact-us.css">
+    <script src="../public/script/header.js" type="text/javascript"></script>
     <title>Contact-us</title>
 </head>
 
@@ -21,7 +21,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="images/2(1).png" alt="Logo">
+                <img class="logo" src="/public/images/2(1).png" alt="Logo">
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="index.php"><strong>W A V E</strong></a></p>
@@ -31,20 +31,20 @@
 
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
-                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="images/close.jpg" alt="close-icon" /></button>
+                <button class="close-button" onclick="closeMenu()"><img class="close-icon" src="/public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href primary-button" href="log-in.php">
+                <a class="nav-item-href primary-button" href="../view/log-in.php">
                     Join us
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="about.html">
+                <a class="nav-item-href" href="../view/about.html">
                     <nav>About us</nav>
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="contact-us.php">
+                <a class="nav-item-href" href="../view/contact-us.php">
                     Contact us
                 </a>
             </div>
@@ -52,19 +52,19 @@
                 <a class="nav-item-href" id="menu" href="#"> Destinations </a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="albania.php">Albania</a></li>
-                        <li><a href="sweden.php">Sweden</a></li>
-                        <li><a href="italy.php">Italy</a></li>
-                        <li><a href="uk.php">UK</a></li>
-                        <li><a href="greece.php">Greece</a></li>
-                        <li><a href="spain.php">Spain</a></li>
+                        <li><a href="../view/albania.php">Albania</a></li>
+                        <li><a href="../view/sweden.php">Sweden</a></li>
+                        <li><a href="../view/italy.php">Italy</a></li>
+                        <li><a href="../view/uk.php">UK</a></li>
+                        <li><a href="../view/greece.php">Greece</a></li>
+                        <li><a href="../view/spain.php">Spain</a></li>
                     </ul>
                 </div>
                 </a>
             </div>
         </div>
         <div class="burger-menu">
-            <button onclick="openMenu()"><img class="burget-icon" src="images/burger.jpg" alt="burger-icon" /></button>
+            <button onclick="openMenu()"><img class="burget-icon" src="/public/images/burger.jpg" alt="burger-icon" /></button>
         </div>
     </header>
     <main>
@@ -72,9 +72,9 @@
             <h1>Contact Us</h1>
         </div>
         <div class="img">
-            <img src="images/contact-us.jpg" alt="">
+            <img src="/public/images/contact-us.jpg" alt="">
 
-            <form id="contactForm" action="userinformation.php" method="post" onsubmit="sendMessage(event)">
+            <form id="contactForm" action="../controller/userinformation.php" method="post" onsubmit="sendMessage(event)">
                 <label for="user">Name:</label>
                 <input type="text" id="user" name="user" required>
 
@@ -128,11 +128,11 @@
             <section id="social-part">
                 <h3>Social</h3>
                 <ul class="footer-content-special">
-                    <li><a href="https://www.facebook.com"><img class="last-img" src="images/facebook.jpg" alt="facebook"></a></li>
-                    <li><a href="https://www.instagram.com"><img class="last-img" src="images/insta.jpg" alt="instagram"></a></li>
-                    <li><a href="https://www.linkedin.com"><img class="last-img" src="images/in.jpg" alt="linkedin"></a></li>
-                    <li><a href="https://www.youtube.com"><img class="last-img" src="images/youtube.jpg" alt="youtube"></a></li>
-                    <li><a href="https://twitter.com"><img class="last-img" src="images/twitter.jpg" alt="twitter"></a></li>
+                    <li><a href="https://www.facebook.com"><img class="last-img" src="/public/images/facebook.jpg" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com"><img class="last-img" src="/public/images/insta.jpg" alt="instagram"></a></li>
+                    <li><a href="https://www.linkedin.com"><img class="last-img" src="/public/images/in.jpg" alt="linkedin"></a></li>
+                    <li><a href="https://www.youtube.com"><img class="last-img" src="/public/images/youtube.jpg" alt="youtube"></a></li>
+                    <li><a href="https://twitter.com"><img class="last-img" src="/public/images/twitter.jpg" alt="twitter"></a></li>
                 </ul>
             </section>
             <section>

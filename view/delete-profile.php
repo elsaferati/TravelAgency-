@@ -5,7 +5,7 @@ require_once 'UserRepository.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: log-in.php");
+    header("Location: ../view/log-in.php");
     exit();
 }
 
