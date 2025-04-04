@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../public/styles/shared.css">
     <link rel="stylesheet" href="../public/styles/second-shared.css">
     <link rel="stylesheet" href="../public/styles/header.css">
-    <script src="script/header.js" type="text/javascript"></script>
+    <script src="../public/script/header.js" type="text/javascript"></script>
     <title>Albania</title>
 </head>
 
@@ -34,7 +34,7 @@
                         src="/public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href primary-button" href="log-in.php">
+                <a class="nav-item-href primary-button" href="../view/log-in.php">
                     Join us
                 </a>
             </div>
