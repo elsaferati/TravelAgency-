@@ -20,7 +20,7 @@
     <header>
         <div class="logo-container">
             <div class="logo-image-container">
-                <img class="logo" src="/public/images/2(1).png" alt="Logo" />
+                <img class="logo" src="../public/images/2(1).png" alt="Logo" />
             </div>
             <div class="logo-text-container">
                 <p id="title"><a href="../view/index.php"><strong>W A V E</strong></a></p>
@@ -31,7 +31,7 @@
         <div class="navigation" id="navigation">
             <div class="nav-item item-close-button">
                 <button class="close-button" onclick="closeMenu()"><img class="close-icon"
-                        src="/public/images/close.jpg" alt="close-icon" /></button>
+                        src="../public/images/close.jpg" alt="close-icon" /></button>
             </div>
             <div class="nav-item">
                 <a class="nav-item-href primary-button" href="../view/log-in.php">
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="../view/about.html">
+                <a class="nav-item-href" href="about.html">
                     <nav>About us</nav>
                 </a>
             </div>
@@ -65,7 +65,7 @@
         </div>
         <div class="burger-menu">
             <button onclick="openMenu()"><img class="burget-icon"
-                    src="/public/images/burger.jpg" alt="burget-icon" /></button>
+                    src="../public/images/burger.jpg" alt="burget-icon" /></button>
         </div>
     </header>
 
@@ -73,10 +73,10 @@
         <section id="first-section">
             <ul>
                 <li id="first-img">
-                    <img src="/public/images/ksamil1.jpg" alt="ksamil">
+                    <img src="../public/images/ksamil1.jpg" alt="ksamil">
                 </li>
                 <li>
-                    <img src="/public/images/albania2.jpg" alt="ksamil">
+                    <img src="../public/images/albania2.jpg" alt="ksamil">
                 </li>
             </ul>
         </section>

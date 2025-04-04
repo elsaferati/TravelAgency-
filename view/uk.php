@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../public/styles/shared.css">
     <link rel="stylesheet" href="../public/styles/second-shared.css">
     <link rel="stylesheet" href="../public/styles/header.css">
-    <script src="../pulic/script/header.js" type="text/javascript"></script>
+    <script src="../public/script/header.js" type="text/javascript"></script>
     <title>Great Britain</title>
 </head>
 
