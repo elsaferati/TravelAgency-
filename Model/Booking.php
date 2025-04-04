@@ -69,6 +69,3 @@ class Booking
         return $stmt->execute();
     }
 }
-?>
-
-
