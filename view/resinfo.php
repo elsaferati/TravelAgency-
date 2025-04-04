@@ -1,8 +1,8 @@
 <?php
-include 'bookingres.php';
+include '../model/bookingres.php';
 
 $booking = new Booking();
-$bookings = $booking->getAllBookings(); 
+$bookings = $booking->getAllBookings();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,15 +41,18 @@ $bookings = $booking->getAllBookings();
     table {
       width: 90%;
       margin: 20px auto;
-      margin-left:15rem ;
+      margin-left: 15rem;
       border-collapse: collapse;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
       border: 1px solid #ddd;
     }
 
-    th, td {
+    th,
+    td {
       padding: 12px;
       text-align: left;
     }
@@ -112,7 +115,9 @@ $bookings = $booking->getAllBookings();
     <div class="container">
       <!-- Sidebar on the left -->
       <div class="sidebar">
-      <a href="../view/admin.php"><h2>Admin Panel</h2></a>
+        <a href="../view/admin.php">
+          <h2>Admin Panel</h2>
+        </a>
         <ul>
           <li><a href="../view/bookingsInfo.php"><i class="fas fa-bed"></i> Hotel Booking</a></li>
           <li><a href="../view/resinfo.php"><i class="fas fa-utensils"></i> Restaurant Reservations</a></li>
@@ -158,7 +163,9 @@ $bookings = $booking->getAllBookings();
                 </tr>
               <?php endforeach; ?>
             <?php else: ?>
-              <tr><td colspan="8">No bookings found.</td></tr>
+              <tr>
+                <td colspan="8">No bookings found.</td>
+              </tr>
             <?php endif; ?>
           </tbody>
         </table>
@@ -167,7 +174,5 @@ $bookings = $booking->getAllBookings();
   </main>
 
 </body>
+
 </html>
-
-
-

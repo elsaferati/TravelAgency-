@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | Traveler</title>
-    <link rel="stylesheet" href="../view/styles/log-in-style.css">
+    <link rel="stylesheet" href="../public/styles/log-in-style.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Create an Account</h2>
@@ -22,15 +24,14 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
             <select id="role" name="role" required>
-        <option value="user">User</option>
-        <option value="admin">Admin</option>
-    </select>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
 
             <button type="submit" name="register">Register</button>
-            </form>
+        </form>
         <p>Already have an account? <a href="../view/log-in.php">Login here</a>.</p>
     </div>
 </body>
+
 </html>
-
-

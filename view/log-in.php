@@ -4,17 +4,19 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!-- Link to the CSS File -->
-     <link rel="stylesheet" href="..public/styles/log-in-style.css">
+    <link rel="stylesheet" href="../public/styles/log-in-style.css">
 </head>
+
 <body>
     <div class="form-container">
         <h2>Login</h2>
-        <form action="../controller/LoginController.php" method="POST">
+        <form action="../controller/loginController.php" method="POST">
             <label for="email">Email:</label>
             <input type="email" name="email" placeholder="Enter your email" required>
 
@@ -31,4 +33,5 @@
 
 
 </body>
+
 </html>

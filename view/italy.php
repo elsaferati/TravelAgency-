@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="nav-item">
-                <a class="nav-item-href" href="about.html">
+                <a class="nav-item-href" href="../about.html">
                     <nav>About us</nav>
                 </a>
             </div>
@@ -53,7 +53,7 @@
                 <div class="dropdown">
                     <ul>
                         <li><a href="../view/albania.php">Albania</a></li>
-                        <li><a href="s../view/weden.php">Sweden</a></li>
+                        <li><a href="../view/weden.php">Sweden</a></li>
                         <li><a href="../view.italy.php">Italy</a></li>
                         <li><a href="../view/uk.php">UK</a></li>
                         <li><a href="../view/greece.php">Greece</a></li>
