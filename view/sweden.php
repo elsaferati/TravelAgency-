@@ -56,8 +56,8 @@
                         <li><a href="sweden.php">Sweden</a></li>
                         <li><a href="italy.php">Italy</a></li>
                         <li><a href="uk.php">UK</a></li>
-                        <li><a href="greece.html">Greece</a></li>
-                        <li><a href="spain.html">Spain</a></li>
+                        <li><a href="greece.php">Greece</a></li>
+                        <li><a href="spain.php">Spain</a></li>
                     </ul>
                 </div>
                 </a>
