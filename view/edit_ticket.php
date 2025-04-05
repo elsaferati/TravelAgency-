@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "../config/ticketdatabase";
+$dbname = "ticket_booking";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
